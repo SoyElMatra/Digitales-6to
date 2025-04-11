@@ -1,0 +1,11 @@
+ÀÄServo
+   ÃÄMAIN  0/216  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/19  Ram=1
+   ³  ÃÄ@delay_ms1  0/19  Ram=1
+   ³  ÃÄ@delay_ms1  0/19  Ram=1
+   ³  ÃÄ@delay_ms1  0/19  Ram=1
+   ³  ÃÄ@delay_ms1  0/19  Ram=1
+   ³  ÀÄ@delay_ms1  0/19  Ram=1
+   ÃÄTIMER0_isr  0/55  Ram=3
+   ÀÄtemp1s  0/28  Ram=0
