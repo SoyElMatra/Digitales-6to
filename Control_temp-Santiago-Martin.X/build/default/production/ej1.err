@@ -1,0 +1,29 @@
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:23:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:34:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:34:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:39:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:39:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:39:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:55:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:55:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:70:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:81:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:81:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:86:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:86:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:86:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:102:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:102:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:206:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@DIVFF)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@SFTOI)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:216:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_LU_627)
+Z:\6 Electronica\Martin\Digitales 6to\Ejercicio 1.X\ej1.c:15:7:  Warning#202  Variable never used:   cont
+      Memory usage:   ROM=46%      RAM=11% - 20%
+      0 Errors,  26 Warnings.
+Build Successful.
