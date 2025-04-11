@@ -1,0 +1,199 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     kbd
+006     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @INTERRUPT_AREA
+02D     @INTERRUPT_AREA
+02E     @INTERRUPT_AREA
+02F     @INTERRUPT_AREA
+030     kbd_getc.kbd_call_count
+031.0   kbd_getc.kbd_down
+031.1   flagrc0
+032     kbd_getc.last_key
+033     kbd_getc.col
+034     temp
+035     tmin
+036     tmax
+037     valor1
+038     contador1
+039     contador2
+03A-03B cont
+03C-03D qold
+03E-03F q
+040-043 h
+044     K
+045     @TRIS_C
+046     kbd_getc.kchar
+046     @PSTRINGCN7_627.P1
+046     @PRINTF_U_627.P2
+046-049 @SFTOI.P3
+046-049 @MULFF.P4
+046     lcd_init.i
+046-047 @PRINTF_LU_627.P1
+046     @delay_us1.P2
+046-047 @ITOF.P3
+046     cambiar_temp.@SCRATCH1
+046     @PSTRINGC7_627.@SCRATCH1
+046     MAIN.@SCRATCH1
+047-04A lcd_init.LCD_INIT_STRING
+047     @PRINTF_U_627.P1
+047     kbd_getc.row
+047     cambiar_temp.@SCRATCH2
+047     @PSTRINGC7_627.@SCRATCH2
+047     @PSTRINGCN7_627.@SCRATCH1
+047     MAIN.@SCRATCH2
+048     @DIV88.P1
+048     @MUL88.P2
+048     kbd_getc.@SCRATCH1
+048     cambiar_temp.@SCRATCH3
+048     @PSTRINGC7_627.@SCRATCH3
+048     @PSTRINGCN7_627.@SCRATCH2
+048     @PRINTF_LU_627.@SCRATCH1
+048     MAIN.@SCRATCH3
+049     @MUL88.P1
+049     @DIV88.P2
+049     cambiar_temp.@SCRATCH4
+049     @PSTRINGC7_627.@SCRATCH4
+049     @PSTRINGCN7_627.@SCRATCH3
+049     @PRINTF_LU_627.@SCRATCH2
+049     MAIN.@SCRATCH4
+04A-04D @DIVFF.P1
+04A-04D @MULFF.P2
+04A     @PSTRINGCN7_627.@SCRATCH4
+04A     @PRINTF_LU_627.@SCRATCH3
+04A     @DIV88.@SCRATCH1
+04B     lcd_init.@SCRATCH1
+04B     @PRINTF_LU_627.@SCRATCH4
+04C     @PRINTF_LU_627.@SCRATCH5
+04D     @PRINTF_LU_627.@SCRATCH6
+04E     lcd_putc.c
+04E-051 @DIVFF.P1
+04E     @MULFF.@SCRATCH1
+04F     @delay_ms1.P1
+04F     lcd_gotoxy.x
+04F     @MULFF.@SCRATCH2
+050     lcd_gotoxy.y
+050     @MULFF.@SCRATCH3
+051     lcd_gotoxy.address
+051     @MULFF.@SCRATCH4
+052     lcd_gotoxy.@SCRATCH1
+052     @MULFF.@SCRATCH5
+052     @DIVFF.@SCRATCH1
+053     lcd_send_byte.address
+053     @DIVFF.@SCRATCH2
+054     lcd_send_byte.n
+054     @DIVFF.@SCRATCH3
+055     lcd_read_byte.low
+055     lcd_send_byte.@SCRATCH1
+055     @DIVFF.@SCRATCH4
+056     lcd_read_byte.high
+056     lcd_send_nibble.n
+056     @DIVFF.@SCRATCH5
+057     lcd_read_byte.@SCRATCH1
+057     @DIVFF.@SCRATCH6
+058     isr_timer0.@SCRATCH1
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000059  KEYS.call
+00005D  KEYS.data
+000069  @const668.call
+00006E  @const670.call
+000077  @const674.call
+00007C  @const675.call
+000085  @const689.call
+00008E  @const694.call
+000097  @const695.call
+00009C  @const702.call
+0000A1  @const703.call
+0000A6  @const704.call
+0000AB  isr_timer1
+0000BD  isr_timer0
+0000D4  @const711.call
+0000DE  @const712.call
+0000E3  @const713.call
+0000E8  @delay_ms1
+0000FB  lcd_send_nibble
+00010C  lcd_read_nibble
+000112  lcd_send_byte
+000118  lcd_read_byte
+000154  lcd_init
+000190  kbd_init
+000192  lcd_gotoxy
+0001A4  lcd_putc
+0001D0  @PSTRINGC7_627
+000226  @MUL88
+00024B  kbd_getc
+0002B0  @ITOF
+0002CD  @MULFF
+000342  @DIVFF
+00040C  @SFTOI
+00042B  @PSTRINGCN7_627
+000482  @PRINTF_LU_627
+0004DA  @DIV88
+0004EF  @PRINTF_U_627
+000524  @delay_us1
+000533  MAIN
+000533  @cinit1
+000542  @cinit2
+000800  cambiar_temp
+
+Project Directory:
+    Z:\6 Electronica\Martin\Digitales 6to\Servo+temp+teclado+disp.X\
+
+Project Files:
+    Servo-temp-teclado-disp.c                               [11-abr-25 15:12  CRC=D90DF299]
+    C:\Program Files (x86)\PICC\devices\16F873A.h           [12-nov-13 14:35  CRC=4CB28E1D]
+    C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sept-13 15:38  CRC=D1A6378A]
+    C:\Program Files (x86)\PICC\drivers\kbd.c               [23-sept-10 09:09  CRC=8814BCFC]
+
+Source signature=07903238
+
+Units:
+    Servo-temp-teclado-disp (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F873A 1
+
+Output Files:
+    XREF file:   build\default\production\Servo-temp-teclado-disp.xsym
+    Errors:      build\default\production\Servo-temp-teclado-disp.err
+    Ext Symbols: build\default\production\Servo-temp-teclado-disp.esym
+    INHX8:       build\default\production\Servo-temp-teclado-disp.hex
+    Symbols:     build\default\production\Servo-temp-teclado-disp.sym
+    List:        build\default\production\Servo-temp-teclado-disp.lst
+    Debug/COFF:  build\default\production\Servo-temp-teclado-disp.cof
+    Project:     Servo-temp-teclado-disp.ccspjt
+    Call Tree:   build\default\production\Servo-temp-teclado-disp.tre
+    Statistics:  build\default\production\Servo-temp-teclado-disp.STA
