@@ -1,0 +1,18 @@
+[PROJECT]
+Target=build\default\production\Mux.hex
+Processor_Text=PIC16F877
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\Mux.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\Mux-Santiago-Martin.c]
+Type=4
+[mru-list]
+1=build\default\production\Mux.c
+[build\default\production\Mux.c]
+Type=4
+[Units]
+Count=1
+1=Mux (main)
