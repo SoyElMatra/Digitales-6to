@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Servo-temp-teclado-disp.c
+SOURCEFILES_QUOTED_IF_SPACED="Servo Gradual.c"
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Servo-temp-teclado-disp.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Servo-temp-teclado-disp.o.d
+OBJECTFILES_QUOTED_IF_SPACED="${OBJECTDIR}/Servo Gradual.o"
+POSSIBLE_DEPFILES="${OBJECTDIR}/Servo Gradual.o.d"
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Servo-temp-teclado-disp.o
+OBJECTFILES=${OBJECTDIR}/Servo\ Gradual.o
 
 # Source Files
-SOURCEFILES=Servo-temp-teclado-disp.c
+SOURCEFILES=Servo Gradual.c
 
 
 
@@ -98,28 +98,28 @@ sourceline.gcccompat=sourceline="\#device ANSI" sourceline="\#device PASS_STRING
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Servo-temp-teclado-disp.o: Servo-temp-teclado-disp.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Servo\ Gradual.o: Servo\ Gradual.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Servo-temp-teclado-disp.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 
-	@mv ${OBJECTDIR}/Servo-temp-teclado-disp.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/Servo-temp-teclado-disp.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}"  "Servo Gradual.c" +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P #__16F873A=1 
+	@mv "${OBJECTDIR}/Servo Gradual".cof "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.cof" 
+	@mv "${OBJECTDIR}/Servo Gradual".hex "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Servo-temp-teclado-disp.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" "Servo Gradual.c" +EXPORT +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
 else
-${OBJECTDIR}/Servo-temp-teclado-disp.o: Servo-temp-teclado-disp.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Servo\ Gradual.o: Servo\ Gradual.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Servo-temp-teclado-disp.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 
-	@mv ${OBJECTDIR}/Servo-temp-teclado-disp.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/Servo-temp-teclado-disp.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}"  "Servo Gradual.c" +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P #__16F873A=1 
+	@mv "${OBJECTDIR}/Servo Gradual".cof "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.cof" 
+	@mv "${OBJECTDIR}/Servo Gradual".hex "dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Servo-temp-teclado-disp.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" "Servo Gradual.c" +EXPORT +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -133,7 +133,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.${OUTPUT_
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Servo-temp-teclado-disp.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/Servo Gradual.o" +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
@@ -143,7 +143,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Servo_temp_teclado_disp.X.${IMAGE_TYPE}.${OUTPUT_
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Servo-temp-teclado-disp.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Servo_temp_teclado_disp.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/Servo Gradual.o" +Y=9 +EA I+="C:\Program Files (x86)\PICC\Devices" I+="C:\Program Files (x86)\PICC\Drivers" +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	

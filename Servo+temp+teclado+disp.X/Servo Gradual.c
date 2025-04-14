@@ -8,7 +8,7 @@
 #include <lcd.c>	//rutina del lcd
 #include <kbd.c>	//rutina del teclado
 
-int temp, tmin, tmax, valor1, contador1 = 125, contador2 = 125;
+int temp, tmin, tmax, diff, diffmax, valor1, contador1 = 97, contador2 = 97;
 int16 qold, q;
 int1 flagrc0;
 float h;
@@ -138,6 +138,7 @@ void cambiar_temp(void) {
         tmax = temp;
         printf(lcd_putc, "\Tmax:%2u", temp);
     }
+    diffmax = tmax - tmin;
     enable_interrupts(INT_TIMER0);
     enable_interrupts(global); //Habilita interrupción general
     return;
@@ -149,8 +150,8 @@ void isr_timer1(void) //Función
 {
     output_high(PIN_C0);
     flagrc0 = 1;
-    set_timer1(15535); //recarga del TMR1
-    set_timer0(225);
+    set_timer1(15600); //recarga del TMR1
+    set_timer0(230);
     enable_interrupts(INT_TIMER0);
 }
 
@@ -169,7 +170,7 @@ void isr_timer0(void) {
     if (flagrc0 == 0) {
         disable_interrupts(INT_TIMER0);
     }
-    set_timer0(225);
+    set_timer0(230);
 } //Se recarga el timer0
 
 void main() {
@@ -201,15 +202,16 @@ void main() {
     printf(lcd_putc, "\Tmax:%3u", temp);
 
     setup_timer_1(T1_INTERNAL | T1_DIV_BY_2);
-    set_timer1(15535); //recarga del TMR1
-    enable_interrupts(INT_TIMER1); //habilita interrupcion timer1
+    set_timer1(15540); //recarga del TMR1
     setup_timer_0(RTCC_INTERNAL | RTCC_DIV_1); //Configuración timer0
+    set_timer0(230); //Carga del timer0
 
-    set_timer0(225); //Carga del timer0
     enable_interrupts(INT_TIMER0); //Habilita interrupción timer0
+    enable_interrupts(INT_TIMER1); //habilita interrupcion timer1
     enable_interrupts(GLOBAL); //Habilita interrupción general
     output_high(PIN_C0);
     flagrc0 = 1;
+    diffmax = tmax - tmin;
 
     while (true) {
         k = kbd_getc();
@@ -224,10 +226,17 @@ void main() {
             lcd_gotoxy(13, 1);
             printf(lcd_putc, "\%3lu", q);
         }
-        if (q > tmin) {
-            contador2 = 125;
-        } else {
-            contador2 = 25;
+        if (q > tmin & q < tmax) {
+            diff = q - tmin;
+            if (contador2 <= 97) {
+                contador2 = (int) (47.0 + (diff * (50.0 / diffmax)));
+            }
+        }
+        if (q < tmin) {
+            contador2 = 47;
+        }
+        if (q > tmax) {
+            contador2 = 97;
         }
         delay_ms(10);
     }
