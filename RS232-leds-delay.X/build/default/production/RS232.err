@@ -1,3 +1,4 @@
-      Memory usage:   ROM=3%      RAM=6% - 6%
-      0 Errors,  0 Warnings.
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\RS232-leds-delay.X\RS232.c:14:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+      Memory usage:   ROM=3%      RAM=6% - 7%
+      0 Errors,  1 Warnings.
 Build Successful.

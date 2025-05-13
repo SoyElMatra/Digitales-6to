@@ -1,7 +1,7 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -15,13 +15,15 @@
 026     @INTERRUPT_AREA
 027-029 recvint
 02A     i
-02B     cont1
-02C     cont2
-02D     cont3
-02E.0   scan
-02F     recv
-030     RDA_isr.@SCRATCH1
-031     RDA_isr.@SCRATCH2
+02B     cont
+02C     cont1
+02D     cont2
+02E     cont3
+02F.0   scan
+030     recv
+031     isr_timer1.@SCRATCH1
+031     RDA_isr.@SCRATCH1
+032     RDA_isr.@SCRATCH2
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -31,8 +33,8 @@
 09C.6   C1OUT
 09C.7   C2OUT
 0FF     @INTERRUPT_AREA
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -66,19 +68,19 @@ FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 00003A  isr_timer1
-000094  RDA_isr
-0000D6  MAIN
-0000D6  @cinit1
-0000ED  @cinit2
+0000AA  RDA_isr
+0000E6  MAIN
+0000E6  @cinit1
+0000FE  @cinit2
 
 Project Directory:
     Z:\6 Electronica\Martin\6to Año\Digitales-6to\RS232-leds-delay.X\
 
 Project Files:
-    RS232.c                                                 [12-may-25 16:27  CRC=C8272968]
+    RS232.c                                                 [13-may-25 15:49  CRC=CB5B97F6]
     C:\Program Files (x86)\PICC\devices\16F876A.h           [12-nov-13 14:35  CRC=7FE1E080]
 
-Source signature=C7EAEA68
+Source signature=CB1F58F6
 
 Units:
     RS232 (main)
