@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\PCA9685.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\PCA9685.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\PCA9685.c]
+Type=4
+[mru-list]
+1=build\default\production\PCA9685.c
+[Units]
+Count=1
+1=PCA9685 (main)
