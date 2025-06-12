@@ -1,4 +1,4 @@
-C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\Motor-Encoder.c:29:1:  Warning#203  Condition always TRUE
-C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\Motor-Encoder.c:31:1:  Error#44  Internal Error - Contact CCS  LABEL SCR=1243
-      1 Errors,  1 Warnings.
-Build Failed.
+C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\Motor-Encoder.c:42:1:  Warning#203  Condition always TRUE
+      Memory usage:   ROM=13%      RAM=7% - 17%
+      0 Errors,  1 Warnings.
+Build Successful.

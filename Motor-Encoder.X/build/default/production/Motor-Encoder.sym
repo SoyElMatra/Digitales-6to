@@ -20,46 +20,65 @@
 028     @INTERRUPT_AREA
 029     @INTERRUPT_AREA
 02A     @INTERRUPT_AREA
-02B     kbd_getc.kbd_call_count
-02C.0   kbd_getc.kbd_down
-02D     kbd_getc.last_key
-02E     kbd_getc.col
-02F     timcont
-030     rpmcont
-031     @PRINTF_U_627.P1
-031     lcd_init.i
-031     @PSTRINGCN7_627.P1
-032     @PRINTF_U_627.P1
-032-035 lcd_init.LCD_INIT_STRING
-032     @PSTRINGCN7_627.@SCRATCH1
-033     @DIV88.P1
-033     @PSTRINGCN7_627.@SCRATCH2
-034     @DIV88.P1
-034     @PSTRINGCN7_627.@SCRATCH3
-035     lcd_putc.c
-035     @PSTRINGCN7_627.@SCRATCH4
-035     @DIV88.@SCRATCH1
-036     lcd_gotoxy.x
-036     @delay_ms1.P1
-036     lcd_init.@SCRATCH1
-037     lcd_gotoxy.y
-038     lcd_gotoxy.address
-039     lcd_gotoxy.@SCRATCH1
-03A     lcd_send_byte.address
-03B     lcd_send_byte.n
-03C     lcd_read_byte.low
-03C     lcd_send_byte.@SCRATCH1
-03D     lcd_read_byte.high
-03D     lcd_send_nibble.n
-03E     lcd_read_byte.@SCRATCH1
-03F     isr_timer1.@SCRATCH1
-040     isr_timer1.@SCRATCH2
-041-042 @MUL1616.P1
-041-042 @DIV1616.P2
-043-044 @DIV1616.P1
-043-044 @MUL1616.P2
-045     @DIV1616.@SCRATCH1
-045     @MUL1616.@SCRATCH1
+02B     @TRIS_C
+02C     kbd_getc.kbd_call_count
+02D.0   kbd_getc.kbd_down
+02D.1   check
+02E     kbd_getc.last_key
+02F     kbd_getc.col
+030-031 rpmcont
+032-033 timcont
+034     @PSTRINGCN7_628.P1
+034-035 @PRINTF_LU_628.P2
+034     lcd_init.i
+034     MAIN.@SCRATCH1
+035-038 lcd_init.LCD_INIT_STRING
+035     @PSTRINGCN7_628.@SCRATCH1
+036     @PSTRINGCN7_628.@SCRATCH2
+036     @PRINTF_LU_628.@SCRATCH1
+037     @PSTRINGCN7_628.@SCRATCH3
+037     @PRINTF_LU_628.@SCRATCH2
+038     @PSTRINGCN7_628.@SCRATCH4
+038     @PRINTF_LU_628.@SCRATCH3
+039     lcd_init.@SCRATCH1
+039     @PRINTF_LU_628.@SCRATCH4
+03A     @PRINTF_LU_628.@SCRATCH5
+03B     @PRINTF_LU_628.@SCRATCH6
+03C     @PRINTF_LU_628.@SCRATCH7
+03D     lcd_putc.c
+03E     lcd_gotoxy.x
+03E     @delay_ms1.P1
+03F     lcd_gotoxy.y
+040     lcd_gotoxy.address
+041     lcd_gotoxy.@SCRATCH1
+042     lcd_send_byte.address
+043     lcd_send_byte.n
+044     lcd_read_byte.low
+044     lcd_send_byte.@SCRATCH1
+045     lcd_read_byte.high
+045     lcd_send_nibble.n
+046     lcd_read_byte.@SCRATCH1
+047-04A @SFTOI.P1
+047-048 @ITOF.P2
+047-04A @MULFF.P3
+047     isr_timer1.@SCRATCH1
+048     isr_timer1.@SCRATCH2
+049     isr_timer1.@SCRATCH3
+04A     isr_timer1.@SCRATCH4
+04B-04E @DIVFF.P1
+04B-04E @MULFF.P2
+04F-052 @DIVFF.P1
+04F     @MULFF.@SCRATCH1
+050     @MULFF.@SCRATCH2
+051     @MULFF.@SCRATCH3
+052     @MULFF.@SCRATCH4
+053     @MULFF.@SCRATCH5
+053     @DIVFF.@SCRATCH1
+054     @DIVFF.@SCRATCH2
+055     @DIVFF.@SCRATCH3
+056     @DIVFF.@SCRATCH4
+057     @DIVFF.@SCRATCH5
+058     @DIVFF.@SCRATCH6
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -104,36 +123,38 @@ F7F     @INTERRUPT_AREA
 FFF     @INTERRUPT_AREA
 
 ROM Allocation:
-000051  isr_timer1
-00005B  @DIV1616
-00008B  @MUL1616
-0000AB  @const667.call
-0000B4  @delay_ms1
-0000C9  lcd_send_nibble
-0000D5  lcd_read_nibble
-0000DB  lcd_send_byte
-0000E1  lcd_read_byte
-00011B  lcd_init
-000159  kbd_init
-00015C  lcd_gotoxy
-00016E  lcd_putc
-00019A  @PSTRINGCN7_627
-0001F3  @DIV88
-000208  @PRINTF_U_627
-00023F  @cinit1
-00023F  MAIN
-000249  @cinit2
+000058  @DIVFF
+000122  isr_timer1
+000126  @ITOF
+000150  @MULFF
+0001F9  @SFTOI
+000227  isr_timer0
+000230  @const674.call
+00023A  @delay_ms1
+00024F  lcd_send_nibble
+00025B  lcd_read_nibble
+000261  lcd_send_byte
+000267  lcd_read_byte
+0002A1  lcd_init
+0002DF  kbd_init
+0002E2  lcd_gotoxy
+0002F4  lcd_putc
+000320  @PSTRINGCN7_628
+000379  @PRINTF_LU_628
+0003DE  MAIN
+0003DE  @cinit1
+0003EB  @cinit2
 
 Project Directory:
     C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\
 
 Project Files:
-    Motor-Encoder.c                                         [10-jun-25 17:14  CRC=B9C4A299]
+    Motor-Encoder.c                                         [12-jun-25 15:05  CRC=FB11BCEF]
     ..\..\..\..\..\Program Files (x86)\PICC\devices\16F876A.h [12-nov-13 14:35  CRC=7FE1E080]
     ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c   [19-sept-13 15:38  CRC=D1A6378A]
     ..\..\..\..\..\Program Files (x86)\PICC\drivers\kbd.c   [23-sept-10 09:09  CRC=8814BCFC]
 
-Source signature=1B76349B
+Source signature=5CC34EF1
 
 Units:
     Motor-Encoder (main)
@@ -152,4 +173,10 @@ Output Files:
     XREF file:   build\default\production\Motor-Encoder.xsym
     Errors:      build\default\production\Motor-Encoder.err
     Ext Symbols: build\default\production\Motor-Encoder.esym
+    INHX8:       build\default\production\Motor-Encoder.hex
     Symbols:     build\default\production\Motor-Encoder.sym
+    List:        build\default\production\Motor-Encoder.lst
+    Debug/COFF:  build\default\production\Motor-Encoder.cof
+    Project:     Motor-Encoder.ccspjt
+    Call Tree:   build\default\production\Motor-Encoder.tre
+    Statistics:  build\default\production\Motor-Encoder.STA
