@@ -42,7 +42,7 @@ void main() {
     while (1) {
         if (check == 1) {
             check = 0;
-            printf(lcd_putc, "\fRevoluciones: \n%lu", rpmcont);
+            printf(lcd_putc, "\fRevoluciones: %lu", rpmcont);
         }
     }
 }

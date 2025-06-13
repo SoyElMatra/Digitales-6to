@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Motor-Encoder.c
+SOURCEFILES_QUOTED_IF_SPACED=Motor-Encoder_CHANGE_RPM.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Motor-Encoder.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Motor-Encoder.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Motor-Encoder.o
+OBJECTFILES=${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o
 
 # Source Files
-SOURCEFILES=Motor-Encoder.c
+SOURCEFILES=Motor-Encoder_CHANGE_RPM.c
 
 
 
@@ -98,28 +98,28 @@ sourceline.gcccompat=sourceline="\#device ANSI" sourceline="\#device PASS_STRING
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Motor-Encoder.o: Motor-Encoder.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o: Motor-Encoder_CHANGE_RPM.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Motor-Encoder.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
-	@mv ${OBJECTDIR}/Motor-Encoder.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/Motor-Encoder.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}"  Motor-Encoder_CHANGE_RPM.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
+	@mv ${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Motor-Encoder.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" Motor-Encoder_CHANGE_RPM.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
 else
-${OBJECTDIR}/Motor-Encoder.o: Motor-Encoder.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o: Motor-Encoder_CHANGE_RPM.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Motor-Encoder.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
-	@mv ${OBJECTDIR}/Motor-Encoder.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/Motor-Encoder.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}"  Motor-Encoder_CHANGE_RPM.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
+	@mv ${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Motor-Encoder.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" Motor-Encoder_CHANGE_RPM.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -133,7 +133,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: $
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Motor-Encoder.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Motor-Encoder.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Motor-Encoder.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
@@ -143,7 +143,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Motor-Encoder.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: $
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Motor-Encoder.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Motor-Encoder.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Motor-Encoder.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Motor-Encoder_CHANGE_RPM.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	

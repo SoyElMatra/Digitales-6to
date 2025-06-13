@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.015, 5967               12-jun-25 15:05
+CCS PCM C Compiler, Version 5.015, 5967               13-jun-25 14:07
 
                Filename:   C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\build\default\production\Motor-Encoder.lst
 
@@ -497,9 +497,9 @@ CCS PCM C Compiler, Version 5.015, 5967               12-jun-25 15:05
 0234:  DATA E9,37
 0235:  DATA EE,32
 0236:  DATA 73,1D
-0237:  DATA 20,05
-0238:  DATA 25,36
-0239:  DATA 75,00
+0237:  DATA A0,12
+0238:  DATA EC,3A
+0239:  DATA 00,00
 *
 0320:  MOVF   0B,W
 0321:  MOVWF  35
@@ -1714,14 +1714,14 @@ CCS PCM C Compiler, Version 5.015, 5967               12-jun-25 15:05
 0409:  GOTO   41C
 ....................             check = 0; 
 040A:  BCF    2D.1
-....................             printf(lcd_putc, "\fRevoluciones: \n%lu", rpmcont); 
+....................             printf(lcd_putc, "\fRevoluciones: %lu", rpmcont); 
 040B:  MOVLW  30
 040C:  BSF    03.6
 040D:  MOVWF  0D
 040E:  MOVLW  02
 040F:  MOVWF  0F
 0410:  BCF    03.0
-0411:  MOVLW  10
+0411:  MOVLW  0F
 0412:  BCF    03.6
 0413:  MOVWF  34
 0414:  GOTO   320
