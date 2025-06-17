@@ -22,6 +22,7 @@
                    projectFiles="true">
       <itemPath>Motor-Encoder.c</itemPath>
       <itemPath>Motor-Encoder_CHANGE_RPM.c</itemPath>
+      <itemPath>clean.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -70,6 +71,8 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <item path="Motor-Encoder.c" ex="true" overriding="false">
+        <ccscompiler>
+        </ccscompiler>
       </item>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
@@ -521,6 +524,8 @@
         <property key="preprocessor-macros-linux" value=""/>
         <property key="preprocessor-macros-windows" value=""/>
       </ccscompiler>
+      <item path="clean.c" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

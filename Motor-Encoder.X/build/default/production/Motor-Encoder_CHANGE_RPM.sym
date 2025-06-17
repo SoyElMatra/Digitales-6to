@@ -1,0 +1,206 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+006     kbd
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @TRIS_C
+02C     kbd_getc.kbd_call_count
+02D.0   kbd_getc.kbd_down
+02D.1   check
+02E     kbd_getc.last_key
+02F     kbd_getc.col
+030-031 rpmcont
+032-033 rpmDeseada
+034-035 i
+036-037 timcont
+038-039 cuenta
+03A     c
+03B     @PSTRINGCN7_628.P1
+03B     lcd_init.i
+03B     kbd_getc.kchar
+03B-03C @PRINTF_LU_628.P1
+03B     cambiarDeseada.@SCRATCH1
+03B     @PSTRINGC7_628.@SCRATCH1
+03B     MAIN.@SCRATCH1
+03C-03F lcd_init.LCD_INIT_STRING
+03C     kbd_getc.row
+03C     @PSTRINGC7_628.@SCRATCH2
+03C     @PSTRINGCN7_628.@SCRATCH1
+03D     @MUL88.P1
+03D     kbd_getc.@SCRATCH1
+03D     @PSTRINGC7_628.@SCRATCH3
+03D     @PSTRINGCN7_628.@SCRATCH2
+03D     @PRINTF_LU_628.@SCRATCH1
+03E     @MUL88.P1
+03E     @PSTRINGC7_628.@SCRATCH4
+03E     @PSTRINGCN7_628.@SCRATCH3
+03E     @PRINTF_LU_628.@SCRATCH2
+03F     @PSTRINGCN7_628.@SCRATCH4
+03F     @PRINTF_LU_628.@SCRATCH3
+040     lcd_init.@SCRATCH1
+040     @PRINTF_LU_628.@SCRATCH4
+041     @PRINTF_LU_628.@SCRATCH5
+042     @PRINTF_LU_628.@SCRATCH6
+043     @PRINTF_LU_628.@SCRATCH7
+044     lcd_putc.c
+045     @delay_ms1.P1
+045     lcd_gotoxy.x
+046     lcd_gotoxy.y
+047     lcd_gotoxy.address
+048     lcd_gotoxy.@SCRATCH1
+049     lcd_send_byte.address
+04A     lcd_send_byte.n
+04B     lcd_read_byte.low
+04B     lcd_send_byte.@SCRATCH1
+04C     lcd_send_nibble.n
+04C     lcd_read_byte.high
+04D     lcd_read_byte.@SCRATCH1
+04E-04F @ITOF.P1
+04E-051 @SFTOI.P2
+04E-051 @MULFF.P3
+04E     isr_timer1.@SCRATCH1
+04F     isr_timer1.@SCRATCH2
+050     isr_timer1.@SCRATCH3
+051     isr_timer1.@SCRATCH4
+052-055 @MULFF.P1
+052-055 @DIVFF.P2
+056-059 @DIVFF.P1
+056     @MULFF.@SCRATCH1
+057     @MULFF.@SCRATCH2
+058     @MULFF.@SCRATCH3
+059     @MULFF.@SCRATCH4
+05A     @MULFF.@SCRATCH5
+05A     @DIVFF.@SCRATCH1
+05B     @DIVFF.@SCRATCH2
+05C     @DIVFF.@SCRATCH3
+05D     @DIVFF.@SCRATCH4
+05E     @DIVFF.@SCRATCH5
+05F     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000058  KEYS.call
+00005C  KEYS.data
+000068  @const664.call
+000071  @const666.call
+000073  @DIVFF
+00013D  isr_timer1
+000141  @ITOF
+00016B  @MULFF
+000214  @SFTOI
+000242  isr_timer0
+00024B  @const682.call
+000258  @const687.call
+00025A  @const688.call
+00025C  kbd_init
+00025F  @delay_ms1
+000274  lcd_send_nibble
+000280  lcd_read_nibble
+000286  lcd_send_byte
+00028C  lcd_read_byte
+0002C6  lcd_init
+000304  lcd_gotoxy
+000316  lcd_putc
+000342  @PSTRINGCN7_628
+000399  @PRINTF_LU_628
+0003FC  kbd_getc
+00044C  @MUL88
+000484  cambiarDeseada
+000489  @PSTRINGC7_628
+000545  MAIN
+000545  @cinit1
+000557  @cinit2
+
+Project Directory:
+    C:\Users\Electronica\Documents\Digitales-6to\Motor-Encoder.X\
+
+Project Files:
+    Motor-Encoder_CHANGE_RPM.c                              [17-jun-25 17:50  CRC=AFD309F1]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F876A.h [12-nov-13 14:35  CRC=7FE1E080]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c   [19-sept-13 15:38  CRC=D1A6378A]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\kbd.c   [23-sept-10 09:09  CRC=8814BCFC]
+
+Source signature=11849BF3
+
+Units:
+    Motor-Encoder_CHANGE_RPM (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F876A 1
+
+Output Files:
+    XREF file:   build\default\production\Motor-Encoder_CHANGE_RPM.xsym
+    Errors:      build\default\production\Motor-Encoder_CHANGE_RPM.err
+    Ext Symbols: build\default\production\Motor-Encoder_CHANGE_RPM.esym
+    INHX8:       build\default\production\Motor-Encoder_CHANGE_RPM.hex
+    Symbols:     build\default\production\Motor-Encoder_CHANGE_RPM.sym
+    List:        build\default\production\Motor-Encoder_CHANGE_RPM.lst
+    Debug/COFF:  build\default\production\Motor-Encoder_CHANGE_RPM.cof
+    Project:     Motor-Encoder_CHANGE_RPM.ccspjt
+    Call Tree:   build\default\production\Motor-Encoder_CHANGE_RPM.tre
+    Statistics:  build\default\production\Motor-Encoder_CHANGE_RPM.STA

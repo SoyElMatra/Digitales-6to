@@ -9,13 +9,13 @@
 #include <lcd.c>
 #include <kbd.c>
 
-int rpmcont, rpmDeseada, i;
+int16 rpmcont, rpmDeseada = 30, i;
+int16 timcont, cuenta = 0;
 int1 check = 1;
-int16 timcont;
 char c;
 
 void cambiarDeseada() {
-    printf("Ingrese\nRPM(   )");
+    printf(lcd_putc, "\fIngrese\nRPM(   )");
     lcd_gotoxy(5, 2);
     for (i = 0; i < 3; i++) {
         c = kbd_getc();
@@ -38,7 +38,7 @@ void cambiarDeseada() {
 #INT_TIMER1
 
 void isr_timer1() {
-    rpmcont = ((timcont * 600.0) / 360) / 2.0;
+    rpmcont = ((timcont * 600.0) / 180) / 2.0;
     timcont = 0;
     check = 1;
     set_timer1(15535);
@@ -52,33 +52,47 @@ void isr_timer0() {
 }
 
 void main() {
-    setup_timer_2(T2_DIV_BY_16,255,1);
+    port_b_pullups(TRUE);
+
+    setup_timer_2(T2_DIV_BY_16, 255, 1);
     setup_timer_1(T1_INTERNAL | T1_DIV_BY_4);
     setup_timer_0(T0_EXT_L_TO_H | T0_DIV_1);
-    
+
     enable_interrupts(INT_TIMER0);
     enable_interrupts(INT_TIMER1);
     enable_interrupts(GLOBAL);
-    
+
     set_timer1(15535);
     set_timer0(255);
-    
-    lcd_init();
+
     kbd_init();
-    
-    setup_ccp2(CCP_PWM);
+    lcd_init();
+
+    /*rpmDeseada = read_eeprom(0x00);
+    if (rpmDeseada == 0xFF) {
+        cambiarDeseada();
+    }*/
+
+    setup_ccp1(CCP_PWM);
     set_pwm1_duty(cuenta);
-    
-    rpmDeseada = read_eeprom(0x00);
     while (1) {
         if (check == 1) {
             check = 0;
-            printf(lcd_putc, "\fRevs: %lu\nDeseada: ", rpmcont);
+            printf(lcd_putc, "\fRevs: %lu\nDeseada: %lu: ", rpmcont, rpmDeseada);
         }
-        if(rpmcont < rpmDeseada){
+        if (rpmcont < rpmDeseada && cuenta < 1023) {
             cuenta++;
-            setup_pwm1_duty(cuenta);
-        }else if(rpmcont > )
+        } else if (rpmcont > rpmDeseada && cuenta > 0) {
+            cuenta--;
         }
+        set_pwm1_duty(cuenta);
+        c = kbd_getc();
+        while(c == "\0" && rpmcont == rpmDeseada){
+            c = kbd_getc();
+        }
+        if (c == "#") {
+            cambiarDeseada();
+        }
+        delay_ms(50);
     }
 }
