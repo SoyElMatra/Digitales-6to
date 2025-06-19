@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\PRUEBA_19.6\ADCmaster-slave10bits\ADCslave10bits.X\ADCslave10bits.c:15:1:  Warning#208  Function not void and does not return a value  SSP_isr
+C:\Users\User\Desktop\PRUEBA_19.6\ADCmaster-slave10bits\ADCslave10bits.X\ADCslave10bits.c:8:7:  Warning#202  Variable never used:   q
+C:\Users\User\Desktop\PRUEBA_19.6\ADCmaster-slave10bits\ADCslave10bits.X\ADCslave10bits.c:9:5:  Warning#202  Variable never used:   q_l
+C:\Users\User\Desktop\PRUEBA_19.6\ADCmaster-slave10bits\ADCslave10bits.X\ADCslave10bits.c:10:5:  Warning#202  Variable never used:   q_h
+      Memory usage:   ROM=2%      RAM=5% - 5%
+      0 Errors,  4 Warnings.
+Build Successful.

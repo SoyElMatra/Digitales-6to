@@ -1,0 +1,552 @@
+CCS PCM C Compiler, Version 5.015, 5967               08-abr-25 15:25
+
+               Filename:   Z:\6 Electronica\Marafioti\DIGITALES 6TO\servo.X\build\default\production\Servo_1.lst
+
+               ROM used:   368 words (9%)
+                           Largest free fragment is 2048
+               RAM used:   22 (12%) at main() level
+                           25 (13%) worst case
+               Stack used: 2 locations (1 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   09F
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  25
+0008:  MOVF   7F,W
+0009:  MOVWF  24
+000A:  MOVF   0A,W
+000B:  MOVWF  2B
+000C:  CLRF   0A
+000D:  SWAPF  24,F
+000E:  MOVF   04,W
+000F:  MOVWF  26
+0010:  MOVF   20,W
+0011:  MOVWF  27
+0012:  MOVF   21,W
+0013:  MOVWF  28
+0014:  MOVF   22,W
+0015:  MOVWF  29
+0016:  MOVF   23,W
+0017:  MOVWF  2A
+0018:  BCF    03.7
+0019:  BCF    03.5
+001A:  MOVLW  8C
+001B:  MOVWF  04
+001C:  BTFSS  00.0
+001D:  GOTO   020
+001E:  BTFSC  0C.0
+001F:  GOTO   035
+0020:  BTFSS  0B.5
+0021:  GOTO   024
+0022:  BTFSC  0B.2
+0023:  GOTO   037
+0024:  MOVF   26,W
+0025:  MOVWF  04
+0026:  MOVF   27,W
+0027:  MOVWF  20
+0028:  MOVF   28,W
+0029:  MOVWF  21
+002A:  MOVF   29,W
+002B:  MOVWF  22
+002C:  MOVF   2A,W
+002D:  MOVWF  23
+002E:  MOVF   2B,W
+002F:  MOVWF  0A
+0030:  SWAPF  25,W
+0031:  MOVWF  03
+0032:  SWAPF  7F,F
+0033:  SWAPF  7F,W
+0034:  RETFIE
+0035:  BCF    0A.3
+0036:  GOTO   070
+0037:  BCF    0A.3
+0038:  GOTO   039
+.................... #include <16f873A.h> 
+.................... //////////// Standard Header file for the PIC16F873A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F873A 
+....................  
+.................... #list 
+....................  
+.................... #fuses HS,nowdt,noprotect,nolvp 
+.................... #use delay(clock=20000000) 
+*
+008C:  MOVLW  34
+008D:  MOVWF  04
+008E:  MOVF   00,W
+008F:  BTFSC  03.2
+0090:  GOTO   09E
+0091:  MOVLW  06
+0092:  MOVWF  21
+0093:  CLRF   20
+0094:  DECFSZ 20,F
+0095:  GOTO   094
+0096:  DECFSZ 21,F
+0097:  GOTO   093
+0098:  MOVLW  7B
+0099:  MOVWF  20
+009A:  DECFSZ 20,F
+009B:  GOTO   09A
+009C:  DECFSZ 00,F
+009D:  GOTO   091
+009E:  RETURN
+.................... #use standard_io(b)  
+....................  
+.................... int contador=131, contador1=131, contador2=25, contador3=25, contador4=100, contador5=100;  
+.................... int1 flagrb0, flagrb3, flagrc2; 
+....................  
+.................... #int_TIMER0 
+.................... void TIMER0_isr(void) { 
+....................     if(flagrb0==1) 
+*
+0039:  BTFSS  32.0
+003A:  GOTO   047
+....................     {     
+....................         contador=contador-1; 
+003B:  MOVLW  01
+003C:  SUBWF  2C,F
+....................         if(contador==0)  
+003D:  MOVF   2C,F
+003E:  BTFSS  03.2
+003F:  GOTO   047
+....................         { 
+....................             output_low(PIN_B0); 
+0040:  BSF    03.5
+0041:  BCF    06.0
+0042:  BCF    03.5
+0043:  BCF    06.0
+....................             flagrb0=0; 
+0044:  BCF    32.0
+....................             contador=contador1; 
+0045:  MOVF   2D,W
+0046:  MOVWF  2C
+....................         } 
+....................     } 
+....................     if(flagrb3==1) 
+0047:  BTFSS  32.1
+0048:  GOTO   055
+....................     {     
+....................         contador2=contador2-1; 
+0049:  MOVLW  01
+004A:  SUBWF  2E,F
+....................         if(contador2==0)  
+004B:  MOVF   2E,F
+004C:  BTFSS  03.2
+004D:  GOTO   055
+....................         { 
+....................             output_low(PIN_B3); 
+004E:  BSF    03.5
+004F:  BCF    06.3
+0050:  BCF    03.5
+0051:  BCF    06.3
+....................             flagrb3=0; 
+0052:  BCF    32.1
+....................             contador2=contador3; 
+0053:  MOVF   2F,W
+0054:  MOVWF  2E
+....................         } 
+....................     } 
+....................     if(flagrc2==1) 
+0055:  BTFSS  32.2
+0056:  GOTO   065
+....................     {     
+....................         contador4=contador4-1; 
+0057:  MOVLW  01
+0058:  SUBWF  30,F
+....................         if(contador4==0)  
+0059:  MOVF   30,F
+005A:  BTFSS  03.2
+005B:  GOTO   065
+....................         { 
+....................             output_low(PIN_C2); 
+005C:  BCF    33.2
+005D:  MOVF   33,W
+005E:  BSF    03.5
+005F:  MOVWF  07
+0060:  BCF    03.5
+0061:  BCF    07.2
+....................             flagrc2=0; 
+0062:  BCF    32.2
+....................             contador4=contador5; 
+0063:  MOVF   31,W
+0064:  MOVWF  30
+....................         } 
+....................     } 
+....................     if(flagrb0==0 && flagrb3==0 && flagrc2==0) 
+0065:  BTFSC  32.0
+0066:  GOTO   06B
+0067:  BTFSC  32.1
+0068:  GOTO   06B
+0069:  BTFSS  32.2
+....................     { 
+....................         disable_interrupts(INT_TIMER0); 
+006A:  BCF    0B.5
+....................     }     
+....................     set_timer0(225);  
+006B:  MOVLW  E1
+006C:  MOVWF  01
+.................... } // Se recarga el timer0 
+....................  
+006D:  BCF    0B.2
+006E:  BCF    0A.3
+006F:  GOTO   024
+.................... #int_TIMER1 // Interrupción Timer1 
+.................... void temp1s(void) // Función 
+.................... {  
+....................     output_high(PIN_B0);  
+0070:  BSF    03.5
+0071:  BCF    06.0
+0072:  BCF    03.5
+0073:  BSF    06.0
+....................     output_high(PIN_B3); 
+0074:  BSF    03.5
+0075:  BCF    06.3
+0076:  BCF    03.5
+0077:  BSF    06.3
+....................     output_high(PIN_C2); 
+0078:  BCF    33.2
+0079:  MOVF   33,W
+007A:  BSF    03.5
+007B:  MOVWF  07
+007C:  BCF    03.5
+007D:  BSF    07.2
+....................     flagrb0=1; 
+007E:  BSF    32.0
+....................     flagrb3=1; 
+007F:  BSF    32.1
+....................     flagrc2=1; 
+0080:  BSF    32.2
+....................     set_timer1(15536); // recarga del TMR1 
+0081:  CLRF   0E
+0082:  MOVLW  3C
+0083:  MOVWF  0F
+0084:  MOVLW  B0
+0085:  MOVWF  0E
+....................     set_timer0(225); 
+0086:  MOVLW  E1
+0087:  MOVWF  01
+....................     enable_interrupts(INT_TIMER0);  
+0088:  BSF    0B.5
+0089:  BCF    0C.0
+008A:  BCF    0A.3
+008B:  GOTO   024
+.................... } 
+....................  
+.................... main() { 
+*
+009F:  MOVF   03,W
+00A0:  ANDLW  1F
+00A1:  MOVWF  03
+00A2:  MOVLW  83
+00A3:  MOVWF  2C
+00A4:  MOVWF  2D
+00A5:  MOVLW  19
+00A6:  MOVWF  2E
+00A7:  MOVWF  2F
+00A8:  MOVLW  64
+00A9:  MOVWF  30
+00AA:  MOVWF  31
+00AB:  MOVLW  FF
+00AC:  MOVWF  33
+00AD:  BSF    03.5
+00AE:  BSF    1F.0
+00AF:  BSF    1F.1
+00B0:  BSF    1F.2
+00B1:  BCF    1F.3
+00B2:  MOVLW  07
+00B3:  MOVWF  1C
+....................     // port_b_pullups(TRUE);  
+....................     setup_timer_1(T1_INTERNAL | T1_DIV_BY_2); 
+00B4:  MOVLW  95
+00B5:  BCF    03.5
+00B6:  MOVWF  10
+....................     set_timer1(15536); // recarga del TMR1 
+00B7:  CLRF   0E
+00B8:  MOVLW  3C
+00B9:  MOVWF  0F
+00BA:  MOVLW  B0
+00BB:  MOVWF  0E
+....................     enable_interrupts(INT_TIMER1); // habilita interrupcion timer1 
+00BC:  BSF    03.5
+00BD:  BSF    0C.0
+....................     setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); // Configuración timer0 
+00BE:  MOVF   01,W
+00BF:  ANDLW  C7
+00C0:  IORLW  08
+00C1:  MOVWF  01
+....................  
+....................     set_timer0(225); // Carga del timer0 
+00C2:  MOVLW  E1
+00C3:  BCF    03.5
+00C4:  MOVWF  01
+....................     enable_interrupts(INT_TIMER0); // Habilita interrupción timer0 
+00C5:  BSF    0B.5
+....................     enable_interrupts(global); // Habilita interrupción general 
+00C6:  MOVLW  C0
+00C7:  IORWF  0B,F
+....................  
+....................     // contador=25; 
+....................     // contador2=25; 
+....................     output_high(PIN_B0); 
+00C8:  BSF    03.5
+00C9:  BCF    06.0
+00CA:  BCF    03.5
+00CB:  BSF    06.0
+....................     output_high(PIN_B3); 
+00CC:  BSF    03.5
+00CD:  BCF    06.3
+00CE:  BCF    03.5
+00CF:  BSF    06.3
+....................     flagrb0=1; 
+00D0:  BSF    32.0
+....................     flagrb3=1; 
+00D1:  BSF    32.1
+....................     // port_b_pullups(TRUE); // Pull-up para RB1 
+....................  
+....................     while(1) { 
+....................         if(input(PIN_B1)==0)  
+00D2:  BSF    03.5
+00D3:  BSF    06.1
+00D4:  BCF    03.5
+00D5:  BTFSC  06.1
+00D6:  GOTO   0EA
+....................         { 
+....................             delay_ms(10); 
+00D7:  MOVLW  0A
+00D8:  MOVWF  34
+00D9:  CALL   08C
+....................             if(input(PIN_B1)==0)  
+00DA:  BSF    03.5
+00DB:  BSF    06.1
+00DC:  BCF    03.5
+00DD:  BTFSC  06.1
+00DE:  GOTO   0EA
+....................             { 
+....................                 while(input(PIN_B1)==0);     
+00DF:  BSF    03.5
+00E0:  BSF    06.1
+00E1:  BCF    03.5
+00E2:  BTFSS  06.1
+00E3:  GOTO   0DF
+....................                 if(contador1<131) 
+00E4:  MOVF   2D,W
+00E5:  SUBLW  82
+00E6:  BTFSS  03.0
+00E7:  GOTO   0EA
+....................                     contador1=contador1+1; 
+00E8:  MOVLW  01
+00E9:  ADDWF  2D,F
+....................             } 
+....................         } 
+....................  
+....................         if(input(PIN_B2)==0)  
+00EA:  BSF    03.5
+00EB:  BSF    06.2
+00EC:  BCF    03.5
+00ED:  BTFSC  06.2
+00EE:  GOTO   102
+....................         { 
+....................             delay_ms(10); 
+00EF:  MOVLW  0A
+00F0:  MOVWF  34
+00F1:  CALL   08C
+....................             if(input(PIN_B2)==0)  
+00F2:  BSF    03.5
+00F3:  BSF    06.2
+00F4:  BCF    03.5
+00F5:  BTFSC  06.2
+00F6:  GOTO   102
+....................             { 
+....................                 while(!input(PIN_B2));     
+00F7:  BSF    03.5
+00F8:  BSF    06.2
+00F9:  BCF    03.5
+00FA:  BTFSS  06.2
+00FB:  GOTO   0F7
+....................                 if(contador1>25) 
+00FC:  MOVF   2D,W
+00FD:  SUBLW  19
+00FE:  BTFSC  03.0
+00FF:  GOTO   102
+....................                     contador1=contador1-1; 
+0100:  MOVLW  01
+0101:  SUBWF  2D,F
+....................             } 
+....................         } 
+....................  
+....................         if(input(PIN_B4)==0)  
+0102:  BSF    03.5
+0103:  BSF    06.4
+0104:  BCF    03.5
+0105:  BTFSC  06.4
+0106:  GOTO   11A
+....................         { 
+....................             delay_ms(10); 
+0107:  MOVLW  0A
+0108:  MOVWF  34
+0109:  CALL   08C
+....................             if(input(PIN_B4)==0)  
+010A:  BSF    03.5
+010B:  BSF    06.4
+010C:  BCF    03.5
+010D:  BTFSC  06.4
+010E:  GOTO   11A
+....................             { 
+....................                 while(!input(PIN_B4));     
+010F:  BSF    03.5
+0110:  BSF    06.4
+0111:  BCF    03.5
+0112:  BTFSS  06.4
+0113:  GOTO   10F
+....................                 if(contador3<131) 
+0114:  MOVF   2F,W
+0115:  SUBLW  82
+0116:  BTFSS  03.0
+0117:  GOTO   11A
+....................                     contador3=contador3+1; 
+0118:  MOVLW  01
+0119:  ADDWF  2F,F
+....................             } 
+....................         } 
+....................  
+....................         if(input(PIN_B5)==0)  
+011A:  BSF    03.5
+011B:  BSF    06.5
+011C:  BCF    03.5
+011D:  BTFSC  06.5
+011E:  GOTO   132
+....................         { 
+....................             delay_ms(10); 
+011F:  MOVLW  0A
+0120:  MOVWF  34
+0121:  CALL   08C
+....................             if(input(PIN_B5)==0)  
+0122:  BSF    03.5
+0123:  BSF    06.5
+0124:  BCF    03.5
+0125:  BTFSC  06.5
+0126:  GOTO   132
+....................             { 
+....................                 while(!input(PIN_B5));     
+0127:  BSF    03.5
+0128:  BSF    06.5
+0129:  BCF    03.5
+012A:  BTFSS  06.5
+012B:  GOTO   127
+....................                 if(contador3>25) 
+012C:  MOVF   2F,W
+012D:  SUBLW  19
+012E:  BTFSC  03.0
+012F:  GOTO   132
+....................                     contador3=contador3-1; 
+0130:  MOVLW  01
+0131:  SUBWF  2F,F
+....................             } 
+....................         } 
+....................          
+....................         if(input(PIN_C0)==0)  
+0132:  BSF    33.0
+0133:  MOVF   33,W
+0134:  BSF    03.5
+0135:  MOVWF  07
+0136:  BCF    03.5
+0137:  BTFSC  07.0
+0138:  GOTO   150
+....................         { 
+....................             delay_ms(10); 
+0139:  MOVLW  0A
+013A:  MOVWF  34
+013B:  CALL   08C
+....................             if(input(PIN_C0)==0)  
+013C:  BSF    33.0
+013D:  MOVF   33,W
+013E:  BSF    03.5
+013F:  MOVWF  07
+0140:  BCF    03.5
+0141:  BTFSC  07.0
+0142:  GOTO   150
+....................             { 
+....................                 while(input(PIN_C0)==0);     
+0143:  BSF    33.0
+0144:  MOVF   33,W
+0145:  BSF    03.5
+0146:  MOVWF  07
+0147:  BCF    03.5
+0148:  BTFSS  07.0
+0149:  GOTO   143
+....................                 if(contador5<131) 
+014A:  MOVF   31,W
+014B:  SUBLW  82
+014C:  BTFSS  03.0
+014D:  GOTO   150
+....................                 { 
+....................                     contador5=contador5+1; 
+014E:  MOVLW  01
+014F:  ADDWF  31,F
+....................                 }     
+....................             } 
+....................         } 
+....................         if(input(PIN_C1)==0)  
+0150:  BSF    33.1
+0151:  MOVF   33,W
+0152:  BSF    03.5
+0153:  MOVWF  07
+0154:  BCF    03.5
+0155:  BTFSC  07.1
+0156:  GOTO   16E
+....................         { 
+....................             delay_ms(10); 
+0157:  MOVLW  0A
+0158:  MOVWF  34
+0159:  CALL   08C
+....................             if(input(PIN_C1)==0)  
+015A:  BSF    33.1
+015B:  MOVF   33,W
+015C:  BSF    03.5
+015D:  MOVWF  07
+015E:  BCF    03.5
+015F:  BTFSC  07.1
+0160:  GOTO   16E
+....................             { 
+....................                 while(input(PIN_C1)==0);     
+0161:  BSF    33.1
+0162:  MOVF   33,W
+0163:  BSF    03.5
+0164:  MOVWF  07
+0165:  BCF    03.5
+0166:  BTFSS  07.1
+0167:  GOTO   161
+....................                 if(contador5<131) 
+0168:  MOVF   31,W
+0169:  SUBLW  82
+016A:  BTFSS  03.0
+016B:  GOTO   16E
+....................                 { 
+....................                     contador5=contador5-1; 
+016C:  MOVLW  01
+016D:  SUBWF  31,F
+....................                 }     
+....................             } 
+....................         } 
+016E:  GOTO   0D2
+....................          
+....................     }     
+.................... } 
+016F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

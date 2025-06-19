@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\PCA_FUNCION.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\PCA_FUNCION.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\PCA_FUNCION.c]
+Type=4
+[mru-list]
+1=build\default\production\PCA_FUNCION.c
+[Units]
+Count=1
+1=PCA_FUNCION (main)

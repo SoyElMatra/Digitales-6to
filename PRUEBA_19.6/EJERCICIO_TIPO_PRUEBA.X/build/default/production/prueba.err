@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\PRUEBA_19.6\EJERCICIO_TIPO_PRUEBA.X\prueba.c:105:1:  Warning#203  Condition always TRUE
+C:\Users\User\Desktop\PRUEBA_19.6\EJERCICIO_TIPO_PRUEBA.X\prueba.c:28:5:  Warning#202  Variable never used:   temp
+C:\Users\User\Desktop\PRUEBA_19.6\EJERCICIO_TIPO_PRUEBA.X\prueba.c:33:7:  Warning#202  Variable never used:   rpm_ideal
+      Memory usage:   ROM=12%      RAM=18% - 25%
+      0 Errors,  3 Warnings.
+Build Successful.

@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\pruebaservo.hex
+Processor_Text=PIC18F2550
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=build\default\production\pruebaservo.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\pruebaservo.c]
+Type=4
+[mru-list]
+1=build\default\production\pruebaservo.c
+[Units]
+Count=1
+1=pruebaservo (main)

@@ -1,0 +1,4 @@
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\ADCmaster-slave10bits\ADCmaster10bits.X\ADCmaster10bits.c:9:5:  Warning#202  Variable never used:   valor
+      Memory usage:   ROM=4%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

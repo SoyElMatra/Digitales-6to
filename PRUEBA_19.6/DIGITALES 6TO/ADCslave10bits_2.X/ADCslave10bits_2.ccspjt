@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\ADCslave10bits_2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\ADCslave10bits_2.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\ADCslave10bits_2.c]
+Type=4
+[mru-list]
+1=build\default\production\ADCslave10bits_2.c
+[Units]
+Count=1
+1=ADCslave10bits_2 (main)

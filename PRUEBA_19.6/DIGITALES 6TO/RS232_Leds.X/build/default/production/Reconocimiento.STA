@@ -1,0 +1,50 @@
+
+ROM used:   445/4096 (11%)
+            445/4096 (11%) including unused fragments
+
+            0.3 Average locations per line
+            1.8 Average locations per statement
+
+RAM used:   56/191 (29%) at main() level
+            60/191 (31%) worst case
+
+Stack used: 2 worst case (1 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  261   159  65  Reconocimiento.c
+  620     0   0  C:\Program Files (x86)\PICC\devices\16f873a.h
+  456    84  35  C:\Program Files (x86)\PICC\drivers\LCD.c
+----- -----
+ 1337   243 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     13   3    2   131  3.5  inicbuff
+0     38   9    1   354  5.1  serial_isr
+0     47  11    0   404  3.8  isr_int_tmr1
+0    288  65    1  3515  8.0  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              243
+    Comments                241
+    Volume (V)              5211
+    Difficulty (D)          20.8
+    Effort to implement (E) 108521
+    Time to implement (T)   1 hours, 40 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   31
+    Maintainability (MI)    40
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-0003A    55  0  
+0003B-007FF   386  1603  
+00800-00FFF     0  2048  
+
+
+

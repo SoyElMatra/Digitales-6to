@@ -1,0 +1,53 @@
+
+ROM used:   435/8192 (5%)
+            435/8192 (5%) including unused fragments
+
+            0.6 Average locations per line
+            9.5 Average locations per statement
+
+RAM used:   73/368 (20%) at main() level
+            88/368 (24%) worst case
+
+Stack used: 3 worst case (2 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  110    46 100  PCA_PROCESO.c
+  620     0   0  C:\Program Files (x86)\PICC\devices\16F876A.h
+----- -----
+  730    46 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     23   5    1             @delay_ms1
+0     74  17    1             @I2C_WRITE_1
+0     14   3    3   131  3.5  inicbuff
+0     38   9    2   325  5.1  serial_isr
+0     79  18    9   338  3.6  envio_de_pwm
+0    158  36    2   843  6.9  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              46
+    Comments                129
+    Volume (V)              2170
+    Difficulty (D)          19.0
+    Effort to implement (E) 41220
+    Time to implement (T)   38 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   7
+    Maintainability (MI)    128
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00030    45  0  
+00031-007FF   386  1613  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

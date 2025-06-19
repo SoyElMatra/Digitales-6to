@@ -1,0 +1,16 @@
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:26:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:31:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:36:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:41:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:46:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:51:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:56:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:61:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:66:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:71:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:76:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:11:5:  Warning#202  Variable never used:   q_l
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\VUMETRO_MARAFIOTI_1abirl.X\VUMETRO_MARAFIOTI.c:12:5:  Warning#202  Variable never used:   q_h
+      Memory usage:   ROM=16%      RAM=6% - 6%
+      0 Errors,  13 Warnings.
+Build Successful.

@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\ADCslave10bits.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\ADCslave10bits.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;Z:\6 Electronica\Marafioti\Program Files (x86)\PICC\Devices\;Z:\6 Electronica\Marafioti\Program Files (x86)\PICC\Drivers\
+[build\default\production\ADCslave10bits.c]
+Type=4
+[mru-list]
+1=build\default\production\ADCslave10bits.c
+[Units]
+Count=1
+1=ADCslave10bits (main)

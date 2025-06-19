@@ -1,0 +1,181 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     xbuff
+02C-04B cbuff
+04C     rcvchar
+04D.0   flagcomando
+04D.1   flag
+04E     temp
+04F     contador
+050     flag1
+051-052 pwm
+053-054 rpm_ideal
+055-056 rpm_ideal_eprom
+057-058 rpm
+059     @TRIS_C
+05A-05B MAIN.centenas
+05C-05D MAIN.decenas
+05E-05F MAIN.unidades
+060-061 MAIN.total
+062     inicbuff.i
+062     @PSTRINGCN7_630.P1
+062-063 @MUL1616.P2
+062     lcd_init.i
+062-063 @PRINTF_LU_630.P1
+062     MAIN.@SCRATCH1
+063-066 lcd_init.LCD_INIT_STRING
+063     inicbuff.@SCRATCH1
+063     MAIN.@SCRATCH2
+063     @PSTRINGCN7_630.@SCRATCH1
+064     @MUL88.P1
+064-065 @MUL1616.P2
+064-065 @DIV1616.P3
+064     inicbuff.@SCRATCH2
+064     @PSTRINGCN7_630.@SCRATCH2
+064     @PRINTF_LU_630.@SCRATCH1
+065     @MUL88.P1
+065     @PSTRINGCN7_630.@SCRATCH3
+065     @PRINTF_LU_630.@SCRATCH2
+066-067 @DIV1616.P1
+066     @MUL1616.@SCRATCH1
+066     @PSTRINGCN7_630.@SCRATCH4
+066     @PRINTF_LU_630.@SCRATCH3
+067     lcd_init.@SCRATCH1
+067     @PRINTF_LU_630.@SCRATCH4
+068     @DIV1616.@SCRATCH1
+068     @PRINTF_LU_630.@SCRATCH5
+069     @PRINTF_LU_630.@SCRATCH6
+06A     @PRINTF_LU_630.@SCRATCH7
+06B     lcd_putc.c
+06C     @delay_ms1.P1
+06C     lcd_gotoxy.x
+06D     lcd_gotoxy.y
+06E     lcd_gotoxy.address
+06F     lcd_gotoxy.@SCRATCH1
+070     lcd_send_byte.address
+071     lcd_send_byte.n
+072     lcd_read_byte.low
+072     lcd_send_byte.@SCRATCH1
+073     lcd_read_byte.high
+073     lcd_send_nibble.n
+074     lcd_read_byte.@SCRATCH1
+075     serial_isr.@SCRATCH1
+076     serial_isr.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00005A  serial_isr
+000082  TIMER1
+000090  @const673.call
+00009D  inicbuff
+0000AB  @delay_ms1
+0000C0  lcd_send_nibble
+0000CC  lcd_read_nibble
+0000D2  lcd_send_byte
+0000D8  lcd_read_byte
+00011A  lcd_init
+000158  @MUL1616
+00016F  @DIV1616
+000196  lcd_gotoxy
+0001A8  lcd_putc
+0001D4  @PSTRINGCN7_630
+00022B  @PRINTF_LU_630
+00028E  @MUL88
+0002B3  @cinit1
+0002B3  MAIN
+0002CE  @cinit2
+
+Project Directory:
+    C:\Users\User\Desktop\PRUEBA_19.6\EJERCICIO_TIPO_PRUEBA.X\
+
+Project Files:
+    prueba.c                                                [18-jun.-25 22:26  CRC=CF78FE99]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F876A.h [12-nov.-13 14:35  CRC=7FE1E080]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c   [19-sep.-13 15:38  CRC=D1A6378A]
+
+Source signature=F2A74E2D
+
+Units:
+    prueba (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F876A 1
+
+Output Files:
+    XREF file:   build\default\production\prueba.xsym
+    Errors:      build\default\production\prueba.err
+    Ext Symbols: build\default\production\prueba.esym
+    INHX8:       build\default\production\prueba.hex
+    Symbols:     build\default\production\prueba.sym
+    List:        build\default\production\prueba.lst
+    Debug/COFF:  build\default\production\prueba.cof
+    Project:     prueba.ccspjt
+    Call Tree:   build\default\production\prueba.tre
+    Statistics:  build\default\production\prueba.STA

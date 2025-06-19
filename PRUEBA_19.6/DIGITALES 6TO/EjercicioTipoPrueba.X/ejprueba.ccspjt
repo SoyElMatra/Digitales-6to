@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\ejprueba.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\ejprueba.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\ejprueba.c]
+Type=4
+[mru-list]
+1=build\default\production\ejprueba.c
+[Units]
+Count=1
+1=ejprueba (main)

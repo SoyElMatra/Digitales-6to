@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\control.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\control.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\control.c]
+Type=4
+[mru-list]
+1=build\default\production\control.c
+[Units]
+Count=1
+1=control (main)

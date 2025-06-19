@@ -1,0 +1,92 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028-029 cont_st
+02A-033 pwm_st
+034     cont
+035     cambio
+036     MAIN.cond
+037     servo_3_write.angle3
+037     servo_2_write.angle2
+037     servo_1_write.angle1
+037     MAIN.@SCRATCH1
+038-039 map_int.x
+03A-03B map_int.eMin
+03C-03D map_int.eMax
+03E-03F map_int.sMin
+040-041 map_int.sMax
+042     map_int.@SCRATCH1
+043     map_int.@SCRATCH2
+044     map_int.@SCRATCH3
+045     map_int.@SCRATCH4
+046-047 @DIV1616.P1
+046-047 @MUL1616.P2
+048-049 @DIV1616.P1
+048-049 @MUL1616.P2
+04A     @MUL1616.@SCRATCH1
+04A     @DIV1616.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000035  timer_0
+000079  tmr1
+00008F  servo_init
+00009B  map_int
+0000B9  @MUL1616
+0000E6  @DIV1616
+00011A  servo_3_write
+00012C  servo_1_write
+00013E  servo_2_write
+000150  MAIN
+000150  @cinit1
+000159  @cinit2
+
+Project Directory:
+    C:\Users\User\Desktop\ELECTRÓNICA\FERIA 2025\Prueba_con_servos.X\
+
+Project Files:
+    Prueba1.c                                               [10-mar.-25 20:15  CRC=636DE471]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f628A.h [12-nov.-13 14:34  CRC=44569924]
+    servo_st.c                                              [07-mar.-25 23:15  CRC=E5C53F4E]
+
+Source signature=734EFC31
+
+Units:
+    Prueba1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F628A 1
+
+Output Files:
+    XREF file:   build\default\production\Prueba1.xsym
+    Errors:      build\default\production\Prueba1.err
+    Ext Symbols: build\default\production\Prueba1.esym
+    INHX8:       build\default\production\Prueba1.hex
+    Symbols:     build\default\production\Prueba1.sym
+    List:        build\default\production\Prueba1.lst
+    Debug/COFF:  build\default\production\Prueba1.cof
+    Project:     Prueba1.ccspjt
+    Call Tree:   build\default\production\Prueba1.tre
+    Statistics:  build\default\production\Prueba1.STA

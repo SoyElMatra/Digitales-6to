@@ -1,0 +1,7 @@
+ÀÄRS232_Leds
+   ÃÄMAIN  0/288  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄinicbuff  0/13  Ram=2
+   ³  ÀÄinicbuff  0/13  Ram=2
+   ÃÄserial_isr  0/38  Ram=1
+   ÀÄisr_int_tmr1  0/47  Ram=0

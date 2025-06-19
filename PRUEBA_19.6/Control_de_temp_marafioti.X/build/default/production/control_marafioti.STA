@@ -1,0 +1,86 @@
+
+ROM used:   3824/8192 (47%)
+            4507/8192 (55%) including unused fragments
+
+            2.7 Average locations per line
+            12.8 Average locations per statement
+
+RAM used:   39/368 (11%) at main() level
+            73/368 (20%) worst case
+
+Stack used: 8 worst case (4 in main + 4 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  228   175  59  control_marafioti.c
+  620     0   0  C:\Program Files (x86)\PICC\devices\16F876a.h
+  456    84  28  C:\Program Files (x86)\PICC\drivers\lcd.c
+  135    40  13  C:\Program Files (x86)\PICC\drivers\kbd.c
+----- -----
+ 1439   299 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1    1             @delay_ms1
+ Inline         3   596  5.9  lcd_read_byte
+ Inline         0    59  4.2  lcd_read_nibble
+ Inline         1   179  3.3  lcd_send_nibble
+ Inline         3   460  4.7  lcd_send_byte
+0    191   5    6   814  7.2  lcd_init
+0    109   3    4   208  6.3  lcd_gotoxy
+0    317   8    1   354  4.7  lcd_putc
+0     16   0    0             @const640
+0      3   0    0     3  0.0  kbd_init
+0    136   4    3  4540 10.2  kbd_getc
+ Inline         2             @MUL88
+1   1667  44    4  4982 10.3  cambiar_temp
+0      5   0    0             @const665
+ Inline         4             @PSTRINGC7_627
+0      9   0    0             @const667
+0      5   0    0             @const671
+0      9   0    0             @const672
+0     29   1    2             @ITOF
+0    117   3   13             @MULFF
+0    202   5   14             @DIVFF
+0     31   1    4             @SFTOI
+0      9   0    0             @const686
+0     99   3    5             @PSTRINGCN7_627
+0     99   3    9             @PRINTF_LU_627
+0     16   0    0             @const691
+0      5   0    0             @const692
+ Inline         3             @DIV88
+0    109   3    2             @PRINTF_U_627
+0      5   0    0             @const699
+0      5   0    0             @const700
+0      5   0    0             @const701
+0     95   2    4   285  4.3  TIMER0_isr
+2    411  11    4  1494  8.2  MAIN
+0     10   0    0             @const708
+0      5   0    0             @const709
+0      5   0    0             @const710
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               12
+    Statements              299
+    Comments                244
+    Volume (V)              19325
+    Difficulty (D)          66.1
+    Effort to implement (E) 1278163
+    Time to implement (T)   19 hours, 43 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   38
+    Maintainability (MI)    112
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-0004E    75  0  
+0004F-007FF  1667  302  
+00800-00FFF  1667  381  
+01000-017FF   411  1637  
+01800-01FFF     0  2048  
+
+
+

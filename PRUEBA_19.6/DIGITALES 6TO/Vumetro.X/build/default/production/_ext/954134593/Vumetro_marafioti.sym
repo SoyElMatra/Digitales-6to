@@ -1,0 +1,64 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     @TRIS_C
+025-026 main.j
+027     main.q_l
+028     main.q_h
+029     main.i
+02A     @delay_ms1.P1
+02A     main.@SCRATCH1
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  main
+000024  @cinit2
+
+Project Directory:
+    Z:\6 Electronica\Marafioti\DIGITALES 6TO\Vumetro.X\
+
+Project Files:
+    C:\Users\Electronica\Desktop\Vumetro_marafioti.c        [27-mar-25 14:45  CRC=69072306]
+    C:\Program Files (x86)\PICC\devices\16F873a.h           [12-nov-13 14:35  CRC=4CB28E1D]
+
+Source signature=026C3F40
+
+Units:
+    C:\Users\Electronica\Desktop\Vumetro_marafioti (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F873A 1
+
+Output Files:
+    XREF file:   build\default\production\_ext\954134593\Vumetro_marafioti.xsym
+    Errors:      build\default\production\_ext\954134593\Vumetro_marafioti.err
+    Ext Symbols: build\default\production\_ext\954134593\Vumetro_marafioti.esym
+    INHX8:       build\default\production\_ext\954134593\Vumetro_marafioti.hex
+    Symbols:     build\default\production\_ext\954134593\Vumetro_marafioti.sym
+    List:        build\default\production\_ext\954134593\Vumetro_marafioti.lst
+    Debug/COFF:  build\default\production\_ext\954134593\Vumetro_marafioti.cof
+    Project:     Vumetro_marafioti.ccspjt
+    Call Tree:   build\default\production\_ext\954134593\Vumetro_marafioti.tre
+    Statistics:  build\default\production\_ext\954134593\Vumetro_marafioti.STA

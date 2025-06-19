@@ -1,0 +1,66 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.i
+006     @delay_ms1.P1
+006     main.@SCRATCH1
+007     @delay_us1.P1
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+00002A  @delay_us1
+000044  main
+000044  @cinit1
+000054  @cinit2
+
+Project Directory:
+    Z:\6 Electronica\Marafioti\DIGITALES 6TO\EjTipoPrueba_NUEVOPIC.X\
+
+Project Files:
+    pruebaservo.c                                           [14-abr-25 16:02  CRC=242DF10B]
+    C:\Program Files (x86)\PICC\devices\18f2550.h           [12-nov-13 14:35  CRC=13DBFC6E]
+
+Source signature=4BE5E9E7
+
+Units:
+    pruebaservo (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F2550 1
+
+Output Files:
+    XREF file:   build\default\production\pruebaservo.xsym
+    Errors:      build\default\production\pruebaservo.err
+    Ext Symbols: build\default\production\pruebaservo.esym
+    INHX32:      build\default\production\pruebaservo.hex
+    Symbols:     build\default\production\pruebaservo.sym
+    List:        build\default\production\pruebaservo.lst
+    Debug/COFF:  build\default\production\pruebaservo.cof
+    Project:     pruebaservo.ccspjt
+    Call Tree:   build\default\production\pruebaservo.tre
+    Statistics:  build\default\production\pruebaservo.STA

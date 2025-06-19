@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\Evaluacion-Martin.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\Evaluacion-Martin.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\Evaluacion-Martin.c]
+Type=4
+[mru-list]
+1=build\default\production\Evaluacion-Martin.c
+[Units]
+Count=1
+1=Evaluacion-Martin (main)

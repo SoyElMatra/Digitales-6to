@@ -1,0 +1,46 @@
+
+ROM used:   657/4096 (16%)
+            657/4096 (16%) including unused fragments
+
+            0.9 Average locations per line
+            8.0 Average locations per statement
+
+RAM used:   12/191 (6%) at main() level
+            12/191 (6%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  120    82 100  C:\Users\Electronica\Desktop\Vumetro_marafioti.c
+  620     0   0  C:\Program Files (x86)\PICC\devices\16F873a.h
+----- -----
+  740    82 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   3    1             @delay_ms1
+0    633  96    6  2630  6.5  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              82
+    Comments                116
+    Volume (V)              2636
+    Difficulty (D)          6.4
+    Effort to implement (E) 16921
+    Time to implement (T)   16 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   19
+    Maintainability (MI)    13
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   653  1391  
+00800-00FFF     0  2048  
+
+
+

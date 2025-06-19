@@ -1,0 +1,105 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+007     kbd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     @TRIS_C
+025     MAIN.k
+026     lcd_init.i
+026     kbd_getc.kchar
+026     @PSTRINGC7_635.@SCRATCH1
+027-02A lcd_init.LCD_INIT_STRING
+027     kbd_getc.row
+027     @PSTRINGC7_635.@SCRATCH2
+028     @MUL88.P1
+028     kbd_getc.@SCRATCH1
+028     @PSTRINGC7_635.@SCRATCH3
+029     lcd_putc.c
+029     @MUL88.P1
+029     @PSTRINGC7_635.@SCRATCH4
+02A     lcd_gotoxy.x
+02B     lcd_gotoxy.y
+02B     @delay_ms1.P1
+02B     lcd_init.@SCRATCH1
+02C     lcd_gotoxy.address
+02D     lcd_gotoxy.@SCRATCH1
+02E     lcd_send_byte.address
+02F     lcd_send_byte.n
+030     lcd_read_byte.low
+030     lcd_send_byte.@SCRATCH1
+031     lcd_read_byte.high
+031     lcd_send_nibble.n
+032     lcd_read_nibble.n
+032     lcd_read_byte.@SCRATCH1
+033     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const651.call
+000017  @delay_ms1
+00002C  lcd_send_nibble
+000057  lcd_read_nibble
+000088  lcd_send_byte
+000090  lcd_read_byte
+0000E4  lcd_init
+00012A  kbd_init
+00012D  lcd_gotoxy
+00013F  lcd_putc
+00016B  @PSTRINGC7_635
+0001C3  kbd_getc
+000216  @MUL88
+000251  @cinit1
+000251  MAIN
+00025B  @cinit2
+
+Project Directory:
+    Z:\6 Electronica\Marafioti\DIGITALES 6TO\Teclado_y_display.X\
+
+Project Files:
+    1.c                                                     [10-mar-25 16:17  CRC=3FB56F95]
+    C:\Program Files (x86)\PICC\devices\16F876.h            [12-nov-13 14:35  CRC=5FA20FD2]
+    kbd1.c                                                  [10-mar-25 15:56  CRC=8814BCFC]
+    C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sept-13 15:38  CRC=D1A6378A]
+
+Source signature=CAB8AB77
+
+Units:
+    1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F876
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F876 1
+
+Output Files:
+    XREF file:   build\default\production\1.xsym
+    Errors:      build\default\production\1.err
+    Ext Symbols: build\default\production\1.esym
+    INHX8:       build\default\production\1.hex
+    Symbols:     build\default\production\1.sym
+    List:        build\default\production\1.lst
+    Debug/COFF:  build\default\production\1.cof
+    Project:     1.ccspjt
+    Call Tree:   build\default\production\1.tre
+    Statistics:  build\default\production\1.STA

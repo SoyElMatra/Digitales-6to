@@ -1,0 +1,49 @@
+
+ROM used:   284/4096 (7%)
+            284/4096 (7%) including unused fragments
+
+            0.4 Average locations per line
+            3.7 Average locations per statement
+
+RAM used:   19/191 (10%) at main() level
+            22/191 (12%) worst case
+
+Stack used: 2 worst case (1 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  105    76 100  Servo.c
+  620     0   0  C:\Program Files (x86)\PICC\devices\16f873A.h
+----- -----
+  725    76 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     19   7    1             @delay_ms1
+0     43  15    3   445  3.8  TIMER0_isr
+0     21   7    0   138  1.7  temp1s
+0    144  51    1  1378  6.4  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              76
+    Comments                126
+    Volume (V)              2364
+    Difficulty (D)          11.7
+    Effort to implement (E) 27711
+    Time to implement (T)   26 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   17
+    Maintainability (MI)    54
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00038    53  0  
+00039-007FF   227  1764  
+00800-00FFF     0  2048  
+
+
+

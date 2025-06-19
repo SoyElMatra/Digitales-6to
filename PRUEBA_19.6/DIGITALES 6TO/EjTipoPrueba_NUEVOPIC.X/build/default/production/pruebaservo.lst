@@ -1,0 +1,157 @@
+CCS PCH C Compiler, Version 5.015, 5967               14-abr-25 16:13
+
+               Filename:   Z:\6 Electronica\Marafioti\DIGITALES 6TO\EjTipoPrueba_NUEVOPIC.X\build\default\production\pruebaservo.lst
+
+               ROM used:   176 bytes (1%)
+                           Largest free fragment is 32592
+               RAM used:   6 (0%) at main() level
+                           7 (0%) worst case
+               Stack used: 1 locations
+               Stack size: 31
+
+*
+0000:  GOTO   0044
+.................... #include <18f2550.h> 
+.................... //////////// Standard Header file for the PIC18F2550 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F2550 
+....................  
+.................... #list 
+....................  
+.................... #device adc=10 
+.................... #fuses HS,NOWDT,NOPROTECT,NOLVP,CPUDIV1 
+.................... #use delay(clock=20M)         
+0004:  CLRF   FEA
+0006:  MOVLW  06
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BZ    0028
+000E:  MOVLW  06
+0010:  MOVWF  01
+0012:  CLRF   00
+0014:  DECFSZ 00,F
+0016:  BRA    0014
+0018:  DECFSZ 01,F
+001A:  BRA    0012
+001C:  MOVLW  7B
+001E:  MOVWF  00
+0020:  DECFSZ 00,F
+0022:  BRA    0020
+0024:  DECFSZ FEF,F
+0026:  BRA    000E
+0028:  RETURN 0
+002A:  MOVLW  03
+002C:  SUBWF  07,F
+002E:  BNC   0042
+0030:  CLRF   FEA
+0032:  MOVLW  07
+0034:  MOVWF  FE9
+0036:  MOVF   FEF,W
+0038:  BZ    0042
+003A:  BRA    003E
+003C:  BRA    003E
+003E:  DECFSZ FEF,F
+0040:  BRA    003C
+0042:  RETURN 0
+.................... #use standard_io(a) 
+.................... #use standard_io(b) 
+.................... #use standard_io(c) 
+....................  
+.................... #define REP 30 
+....................  
+.................... void main() 
+0044:  CLRF   FF8
+0046:  BCF    FD0.7
+0048:  MOVF   FC1,W
+004A:  ANDLW  C0
+004C:  IORLW  0F
+004E:  MOVWF  FC1
+0050:  MOVLW  07
+0052:  MOVWF  FB4
+.................... { 
+....................     int i; 
+....................     port_b_pullups(0XFF); 
+0054:  BCF    FF1.7
+....................     while(1) 
+....................     { 
+....................         for(i=0;i<REP;i++) 
+0056:  CLRF   05
+0058:  MOVF   05,W
+005A:  SUBLW  1D
+005C:  BNC   0076
+....................         { 
+....................             output_high(PIN_C0); 
+005E:  BCF    F94.0
+0060:  BSF    F8B.0
+....................             delay_ms(2); 
+0062:  MOVLW  02
+0064:  MOVWF  06
+0066:  RCALL  0004
+....................             output_low(PIN_C0); 
+0068:  BCF    F94.0
+006A:  BCF    F8B.0
+....................             delay_ms(18); 
+006C:  MOVLW  12
+006E:  MOVWF  06
+0070:  RCALL  0004
+0072:  INCF   05,F
+0074:  BRA    0058
+....................         } 
+....................         
+....................         for(i=0;i<REP;i++) 
+0076:  CLRF   05
+0078:  MOVF   05,W
+007A:  SUBLW  1D
+007C:  BNC   00AC
+....................         { 
+....................             output_high(PIN_C0); 
+007E:  BCF    F94.0
+0080:  BSF    F8B.0
+....................             delay_us(500); 
+0082:  MOVLW  02
+0084:  MOVWF  06
+0086:  MOVLW  F9
+0088:  MOVWF  07
+008A:  RCALL  002A
+008C:  DECFSZ 06,F
+008E:  BRA    0086
+....................             output_low(PIN_C0); 
+0090:  BCF    F94.0
+0092:  BCF    F8B.0
+....................             delay_us(19500); 
+0094:  MOVLW  13
+0096:  MOVWF  06
+0098:  RCALL  0004
+009A:  MOVLW  02
+009C:  MOVWF  06
+009E:  MOVLW  F9
+00A0:  MOVWF  07
+00A2:  RCALL  002A
+00A4:  DECFSZ 06,F
+00A6:  BRA    009E
+00A8:  INCF   05,F
+00AA:  BRA    0078
+....................         } 
+00AC:  BRA    0056
+....................         
+....................          
+....................     } 
+.................... } 
+00AE:  SLEEP 
+
+Configuration Fuses:
+   Word  1: CC27   PLL12 CPUDIV1 USBDIV HS FCMEN IESO
+   Word  2: 1E3E   PUT BROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

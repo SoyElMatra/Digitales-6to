@@ -1,0 +1,49 @@
+
+ROM used:   127/8192 (2%)
+            127/8192 (2%) including unused fragments
+
+            0.2 Average locations per line
+            7.9 Average locations per statement
+
+RAM used:   19/368 (5%) at main() level
+            19/368 (5%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   43    16 100  ADCslave10bits.c
+  671     0   0  C:\Program Files (x86)\PICC\Devices\16F877a.h
+----- -----
+  714    16 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     41  32    0   250  5.0  SSP_isr
+0     37  29    0    50  1.3  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              16
+    Comments                119
+    Volume (V)              353
+    Difficulty (D)          6.2
+    Effort to implement (E) 2173
+    Time to implement (T)   2 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   5
+    Maintainability (MI)    81
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00030    45  0  
+00031-007FF    78  1921  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

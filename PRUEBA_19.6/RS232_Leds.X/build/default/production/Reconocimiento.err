@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\PRUEBA_19.6\RS232_Leds.X\Reconocimiento.c:111:1:  Warning#203  Condition always TRUE
+C:\Users\User\Desktop\PRUEBA_19.6\RS232_Leds.X\Reconocimiento.c:22:5:  Warning#202  Variable never used:   flag1
+      Memory usage:   ROM=10%      RAM=30% - 32%
+      0 Errors,  2 Warnings.
+Build Successful.

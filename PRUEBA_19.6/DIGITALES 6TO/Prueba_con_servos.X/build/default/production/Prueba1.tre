@@ -1,0 +1,22 @@
+ÀÄPrueba_con_servos
+   ÃÄMAIN  0/68  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄservo_init  0/12  Ram=0
+   ³  ÃÄservo_3_write  0/18  Ram=1
+   ³  ³  ÀÄmap_int  0/127  Ram=14
+   ³  ³     ÃÄ@MUL1616  (Inline)  Ram=5
+   ³  ³     ÀÄ@DIV1616  (Inline)  Ram=5
+   ³  ÃÄservo_3_write  0/18  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄservo_1_write  0/18  Ram=1
+   ³  ³  ÀÄmap_int  0/127  Ram=14
+   ³  ³     ÀÄ*
+   ³  ÃÄservo_2_write  0/18  Ram=1
+   ³  ³  ÀÄmap_int  0/127  Ram=14
+   ³  ³     ÀÄ*
+   ³  ÃÄservo_1_write  0/18  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÀÄservo_2_write  0/18  Ram=1
+   ³     ÀÄ*
+   ÃÄtimer_0  0/68  Ram=0
+   ÀÄtmr1  0/22  Ram=0

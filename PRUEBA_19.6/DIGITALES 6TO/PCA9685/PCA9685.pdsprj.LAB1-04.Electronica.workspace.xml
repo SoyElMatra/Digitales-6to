@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<WORKSPACE>
+ <FRAME activewindow="0">
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff8900000009000000cd040000c7020000</PLACEMENT>
+  <WINDOW type="default" module="ISIS">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="129" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+    <world y1="-12700000" x1="-19050000" y2="12700000" x2="19050000"/>
+    <centre x="-2794000" y="4572000"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
+ </FRAME>
+ <MODULE name="ARES">
+  <editor metric="0" gridmajor="0" mode="00000000" zoom="10" scale="10" flipped="0" gridminor="0" gridmode="32" snapidx="3" snap="0" xcursor="0" orgmode="0" snaprange="0">
+   <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+   <centre x="0" y="0"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="ISIS">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="129" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <world y1="-12700000" x1="-19050000" y2="12700000" x2="19050000"/>
+   <centre x="-2794000" y="4572000"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="VSMDEBUG">
+  <PWI>
+   <POPUP w="800" x="213" flags="00000002" y="146" h="200" pid="0" iid="-1">
+    <PROPERTIES>
+     <ITEM name="Message Column Width">663</ITEM>
+     <ITEM name="ShowGrid">No</ITEM>
+     <ITEM name="Source Column Width">100</ITEM>
+     <ITEM name="Time Column Width">120</ITEM>
+     <ITEM name="Version">100</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="350" x="233" flags="00000032" y="166" h="200" pid="1" iid="-1">
+    <PROPERTIES>
+     <ITEM name="Address Column Width">83</ITEM>
+     <ITEM name="AutoResize">No</ITEM>
+     <ITEM name="Gridlines">Yes</ITEM>
+     <ITEM name="Item 0">"cbuff","0x002A",00000002,00000004,42,54,-1,8E300000,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"cbuff[0]","0x002A",00000002,00000004,42,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 10">"cbuff[6]","0x0030",00000002,00000004,48,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 11">"cbuff[0]","0x002A",00000002,00000004,42,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 12">"cbuff[1]","0x002B",00000002,00000004,43,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 13">"cbuff[2]","0x002C",00000002,00000004,44,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 14">"cbuff[3]","0x002D",00000002,00000004,45,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 15">"cbuff[4]","0x002E",00000002,00000004,46,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 16">"cbuff[5]","0x002F",00000002,00000004,47,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 17">"cbuff[6]","0x0030",00000002,00000004,48,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 18">"cbuff[8]","0x0032",00000002,00000004,50,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 19">"cbuff[9]","0x0033",00000002,00000004,51,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 2">"cbuff[1]","0x002B",00000002,00000004,43,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 20">"cbuff[10]","0x0034",00000002,00000004,52,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 21">"cbuff[11]","0x0035",00000002,00000004,53,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 3">"cbuff[2]","0x002C",00000002,00000004,44,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 4">"cbuff[0]","0x002A",00000002,00000004,42,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 5">"cbuff[1]","0x002B",00000002,00000004,43,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 6">"cbuff[2]","0x002C",00000002,00000004,44,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 7">"cbuff[3]","0x002D",00000002,00000004,45,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 8">"cbuff[4]","0x002E",00000002,00000004,46,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 9">"cbuff[5]","0x002F",00000002,00000004,47,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Name Column Width">83</ITEM>
+     <ITEM name="ShowAddresses">Yes</ITEM>
+     <ITEM name="ShowPreviousValues">No</ITEM>
+     <ITEM name="ShowTypes">No</ITEM>
+     <ITEM name="ShowWatchPoint">Yes</ITEM>
+     <ITEM name="TriggerMode">0</ITEM>
+     <ITEM name="Value Column Width">83</ITEM>
+     <ITEM name="Version">100</ITEM>
+     <ITEM name="Watch Expression Column Width">83</ITEM>
+     <ITEM name="nItems">22</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="450" x="253" flags="00000022" y="186" h="250" pid="0" iid="5">
+    <PROPERTIES>
+     <ITEM name="ComboBox1000">S</ITEM>
+     <ITEM name="ComboBox1001">Sr</ITEM>
+     <ITEM name="ComboBox1002">P</ITEM>
+     <ITEM name="ComboBox1003">A</ITEM>
+     <ITEM name="ComboBox1004">N</ITEM>
+     <ITEM name="ComboBox1005">S</ITEM>
+     <ITEM name="ComboBox1006">Sr</ITEM>
+     <ITEM name="ComboBox1007">P</ITEM>
+     <ITEM name="ComboBox1008">A</ITEM>
+     <ITEM name="ComboBox1009">N</ITEM>
+     <ITEM name="HSplitter1Pos">100</ITEM>
+     <ITEM name="VSplitter1Pos">238</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="695" x="273" flags="00000000" y="206" h="453" pid="0" iid="11">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="695" x="297" flags="00000000" y="226" h="453" pid="0" iid="6">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="313" flags="00000008" y="246" h="8" pid="1" iid="1">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="52" x="333" flags="00000008" y="266" h="11" pid="3" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="353" flags="0000000a" y="286" h="32" pid="4" iid="2">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="8" x="373" flags="0000000a" y="306" h="32" pid="5" iid="2">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="16" x="393" flags="0000000a" y="326" h="32" pid="6" iid="2">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="14" x="413" flags="00000008" y="346" h="8" pid="7" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="8" x="433" flags="80000002" y="366" h="8" pid="8" iid="2">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="600" x="114" flags="0000800b" y="175" h="400" pid="1" iid="2">
+    <PROPERTIES/>
+   </POPUP>
+   <POPUP w="300" x="825" flags="0000000b" y="170" h="300" pid="2" iid="2">
+    <PROPERTIES>
+     <ITEM name="Address Column Width">94</ITEM>
+     <ITEM name="AutoResize">No</ITEM>
+     <ITEM name="Gridlines">Yes</ITEM>
+     <ITEM name="Name Column Width">94</ITEM>
+     <ITEM name="ShowAddresses">Yes</ITEM>
+     <ITEM name="ShowGlobals">Yes</ITEM>
+     <ITEM name="ShowPreviousValues">No</ITEM>
+     <ITEM name="ShowTypes">No</ITEM>
+     <ITEM name="ShowWatchPoint">No</ITEM>
+     <ITEM name="TriggerMode">0</ITEM>
+     <ITEM name="Value Column Width">94</ITEM>
+     <ITEM name="Version">100</ITEM>
+     <ITEM name="nItems">0</ITEM>
+    </PROPERTIES>
+   </POPUP>
+  </PWI>
+  <BREAKPOINT LINE="66" ENABLED="FALSE" FILE="PCA9685.X/PCA_PROCESO.c" ADDRESS="4294967295" PROJECT="2"/>
+ </MODULE>
+</WORKSPACE>

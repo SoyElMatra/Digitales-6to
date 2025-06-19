@@ -1,0 +1,29 @@
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:28:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:38:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:38:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:43:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:43:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:43:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:59:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:59:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:72:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:82:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:82:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:87:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:87:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:87:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:103:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:103:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:213:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@DIVFF)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@SFTOI)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:227:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_LU_627)
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\Control_de_temp_marafioti.X\control_marafioti.c:17:7:  Warning#202  Variable never used:   cont
+      Memory usage:   ROM=47%      RAM=11% - 20%
+      0 Errors,  26 Warnings.
+Build Successful.

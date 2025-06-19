@@ -1,0 +1,46 @@
+
+ROM used:   176/32768 (1%)
+            176/32768 (1%) including unused fragments
+
+            0.2 Average locations per line
+            11.7 Average locations per statement
+
+RAM used:   6/2048 (0%) at main() level
+            7/2048 (0%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   36    15 100  pruebaservo.c
+  775     0   0  C:\Program Files (x86)\PICC\devices\18f2550.h
+----- -----
+  811    15 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38  11    1             @delay_ms1
+0     26   7    1             @delay_us1
+0    108  31    2   380  3.8  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              15
+    Comments                144
+    Volume (V)              388
+    Difficulty (D)          3.4
+    Effort to implement (E) 1335
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    83
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   172  32592  
+
+
+

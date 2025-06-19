@@ -1,0 +1,4 @@
+Z:\6 Electronica\Marafioti\DIGITALES 6TO\RS232_Leds.X\Reconocimiento.c:22:5:  Warning#202  Variable never used:   flag1
+      Memory usage:   ROM=11%      RAM=29% - 31%
+      0 Errors,  1 Warnings.
+Build Successful.

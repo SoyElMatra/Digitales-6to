@@ -1,0 +1,18 @@
+ÀÄPRUEBA_19
+   ÃÄMAIN  0/175  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄinicbuff  0/14  Ram=3
+   ³  ÃÄ@delay_ms1  0/23  Ram=1
+   ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ÃÄenvio_de_pwm  0/81  Ram=9
+   ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+   ³  ÀÄinicbuff  0/14  Ram=3
+   ÀÄserial_isr  0/38  Ram=2

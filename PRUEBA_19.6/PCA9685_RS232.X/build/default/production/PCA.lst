@@ -1,0 +1,636 @@
+CCS PCM C Compiler, Version 5.015, 5967               17-jun.-25 23:07
+
+               Filename:   C:\Users\User\Desktop\PRUEBA_19.6\PCA9685_RS232.X\build\default\production\PCA.lst
+
+               ROM used:   493 words (6%)
+                           Largest free fragment is 2048
+               RAM used:   74 (20%) at main() level
+                           87 (24%) worst case
+               Stack used: 3 locations (2 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  01
+0001:  MOVWF  0A
+0002:  GOTO   13E
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  MOVLW  8C
+0018:  MOVWF  04
+0019:  BTFSS  00.5
+001A:  GOTO   01D
+001B:  BTFSC  0C.5
+001C:  GOTO   02E
+001D:  MOVF   22,W
+001E:  MOVWF  04
+001F:  MOVF   23,W
+0020:  MOVWF  77
+0021:  MOVF   24,W
+0022:  MOVWF  78
+0023:  MOVF   25,W
+0024:  MOVWF  79
+0025:  MOVF   26,W
+0026:  MOVWF  7A
+0027:  MOVF   20,W
+0028:  MOVWF  0A
+0029:  SWAPF  21,W
+002A:  MOVWF  03
+002B:  SWAPF  7F,F
+002C:  SWAPF  7F,W
+002D:  RETFIE
+002E:  BCF    0A.3
+002F:  BCF    0A.4
+0030:  GOTO   031
+.................... #include <16F876A.h> 
+.................... //////////// Standard Header file for the PIC16F876A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F876A 
+*
+00C6:  CLRF   77
+00C7:  CLRF   78
+00C8:  MOVF   65,W
+00C9:  BCF    03.0
+00CA:  BTFSC  66.0
+00CB:  ADDWF  77,F
+00CC:  RRF    77,F
+00CD:  RRF    78,F
+00CE:  BTFSC  66.1
+00CF:  ADDWF  77,F
+00D0:  RRF    77,F
+00D1:  RRF    78,F
+00D2:  BTFSC  66.2
+00D3:  ADDWF  77,F
+00D4:  RRF    77,F
+00D5:  RRF    78,F
+00D6:  BTFSC  66.3
+00D7:  ADDWF  77,F
+00D8:  RRF    77,F
+00D9:  RRF    78,F
+00DA:  BTFSC  66.4
+00DB:  ADDWF  77,F
+00DC:  RRF    77,F
+00DD:  RRF    78,F
+00DE:  BTFSC  66.5
+00DF:  ADDWF  77,F
+00E0:  RRF    77,F
+00E1:  RRF    78,F
+00E2:  BTFSC  66.6
+00E3:  ADDWF  77,F
+00E4:  RRF    77,F
+00E5:  RRF    78,F
+00E6:  BTFSC  66.7
+00E7:  ADDWF  77,F
+00E8:  RRF    77,F
+00E9:  RRF    78,F
+00EA:  BCF    0A.3
+00EB:  BCF    0A.4
+00EC:  GOTO   1C3 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #FUSES XT, NOWDT, NOLVP 
+.................... #use delay(clock=4000000) 
+*
+0065:  MOVLW  66
+0066:  MOVWF  04
+0067:  BCF    03.7
+0068:  MOVF   00,W
+0069:  BTFSC  03.2
+006A:  GOTO   079
+006B:  MOVLW  01
+006C:  MOVWF  78
+006D:  CLRF   77
+006E:  DECFSZ 77,F
+006F:  GOTO   06E
+0070:  DECFSZ 78,F
+0071:  GOTO   06D
+0072:  MOVLW  4A
+0073:  MOVWF  77
+0074:  DECFSZ 77,F
+0075:  GOTO   074
+0076:  GOTO   077
+0077:  DECFSZ 00,F
+0078:  GOTO   06B
+0079:  BCF    0A.3
+007A:  BCF    0A.4
+007B:  GOTO   163 (RETURN)
+.................... #use rs232(baud=9600, xmit=pin_c6, rcv=pin_c7) 
+.................... #use I2C(MASTER, SDA=PIN_C4, SCL=PIN_C3, FAST=100000) 
+007C:  MOVLW  08
+007D:  MOVWF  78
+007E:  NOP
+007F:  BCF    07.3
+0080:  BCF    27.3
+0081:  MOVF   27,W
+0082:  BSF    03.5
+0083:  MOVWF  07
+0084:  NOP
+0085:  BCF    03.5
+0086:  RLF    6F,F
+0087:  BCF    07.4
+0088:  BTFSS  03.0
+0089:  GOTO   090
+008A:  BSF    27.4
+008B:  MOVF   27,W
+008C:  BSF    03.5
+008D:  MOVWF  07
+008E:  GOTO   094
+008F:  BCF    03.5
+0090:  BCF    27.4
+0091:  MOVF   27,W
+0092:  BSF    03.5
+0093:  MOVWF  07
+0094:  NOP
+0095:  BCF    03.5
+0096:  BSF    27.3
+0097:  MOVF   27,W
+0098:  BSF    03.5
+0099:  MOVWF  07
+009A:  BCF    03.5
+009B:  BTFSS  07.3
+009C:  GOTO   09B
+009D:  DECFSZ 78,F
+009E:  GOTO   07E
+009F:  NOP
+00A0:  BCF    07.3
+00A1:  BCF    27.3
+00A2:  MOVF   27,W
+00A3:  BSF    03.5
+00A4:  MOVWF  07
+00A5:  NOP
+00A6:  BCF    03.5
+00A7:  BSF    27.4
+00A8:  MOVF   27,W
+00A9:  BSF    03.5
+00AA:  MOVWF  07
+00AB:  NOP
+00AC:  NOP
+00AD:  BCF    03.5
+00AE:  BSF    27.3
+00AF:  MOVF   27,W
+00B0:  BSF    03.5
+00B1:  MOVWF  07
+00B2:  BCF    03.5
+00B3:  BTFSS  07.3
+00B4:  GOTO   0B3
+00B5:  CLRF   78
+00B6:  NOP
+00B7:  BTFSC  07.4
+00B8:  BSF    78.0
+00B9:  BCF    07.3
+00BA:  BCF    27.3
+00BB:  MOVF   27,W
+00BC:  BSF    03.5
+00BD:  MOVWF  07
+00BE:  BCF    03.5
+00BF:  BCF    07.4
+00C0:  BCF    27.4
+00C1:  MOVF   27,W
+00C2:  BSF    03.5
+00C3:  MOVWF  07
+00C4:  BCF    03.5
+00C5:  RETURN
+.................... #use standard_io(A) 
+.................... #use standard_io(B) 
+....................  
+.................... int i, paquetes=0; 
+.................... int const lenbuff = 54;             // Longitud del buffer 
+....................  
+.................... // VARIABLES EN RAM 
+.................... int xbuff = 0x00;                   // Índice: siguiente char en cbuff 
+.................... char cbuff[lenbuff];               // Buffer circular 
+.................... char rcvchar = 0x00;               // Último caracter recibido 
+.................... int1 flagcomando = 0;              // Flag para indicar comando disponible  
+.................... int1 flag; 
+....................  
+.................... // Declaración de Funciones 
+.................... void inicbuff(void);               // Borra buffer  
+.................... int  addcbuff(char c); 
+.................... void procesa_comando(void);        // Procesa comando 
+....................  
+.................... void inicbuff(void)  
+.................... { 
+....................    int i; 
+....................    for (i = 0; i < lenbuff; i++)  
+*
+0057:  CLRF   65
+0058:  MOVF   65,W
+0059:  SUBLW  35
+005A:  BTFSS  03.0
+005B:  GOTO   063
+....................    { 
+....................       cbuff[i] = 0x00; 
+005C:  MOVLW  2B
+005D:  ADDWF  65,W
+005E:  MOVWF  04
+005F:  BCF    03.7
+0060:  CLRF   00
+0061:  INCF   65,F
+0062:  GOTO   058
+....................    } 
+....................    xbuff = 0x00; 
+0063:  CLRF   2A
+0064:  RETURN
+.................... } 
+....................  
+.................... #int_rda 
+.................... void serial_isr()  
+.................... { 
+....................    rcvchar = 0x00; 
+*
+0031:  CLRF   61
+....................    rcvchar = getc(); 
+0032:  BTFSS  0C.5
+0033:  GOTO   032
+0034:  MOVF   1A,W
+0035:  MOVWF  61
+....................  
+....................    if (rcvchar == '*' && flag == 0)  
+0036:  MOVF   61,W
+0037:  SUBLW  2A
+0038:  BTFSS  03.2
+0039:  GOTO   03E
+003A:  BTFSC  62.1
+003B:  GOTO   03E
+....................    { 
+....................       flag = 1; 
+003C:  BSF    62.1
+....................       return; 
+003D:  GOTO   053
+....................    } 
+....................  
+....................    if (flag == 1 && rcvchar != '*')  
+003E:  BTFSS  62.1
+003F:  GOTO   04B
+0040:  MOVF   61,W
+0041:  SUBLW  2A
+0042:  BTFSC  03.2
+0043:  GOTO   04B
+....................    { 
+....................       cbuff[xbuff++] = rcvchar; 
+0044:  MOVF   2A,W
+0045:  INCF   2A,F
+0046:  ADDLW  2B
+0047:  MOVWF  04
+0048:  BCF    03.7
+0049:  MOVF   61,W
+004A:  MOVWF  00
+....................    } 
+....................  
+....................    if (flag == 1 && rcvchar == '*')  
+004B:  BTFSS  62.1
+004C:  GOTO   053
+004D:  MOVF   61,W
+004E:  SUBLW  2A
+004F:  BTFSS  03.2
+0050:  GOTO   053
+....................    { 
+....................       flagcomando = 1; 
+0051:  BSF    62.0
+....................       flag = 0; 
+0052:  BCF    62.1
+....................    } 
+0053:  BCF    0C.5
+0054:  BCF    0A.3
+0055:  BCF    0A.4
+0056:  GOTO   01D
+.................... } 
+....................  
+.................... void envio_de_pwm(int canal, int16 off) 
+*
+00ED:  RLF    66,W
+00EE:  MOVWF  77
+00EF:  RLF    77,F
+00F0:  MOVLW  FC
+00F1:  ANDWF  77,F
+00F2:  MOVF   77,W
+00F3:  ADDLW  06
+00F4:  MOVWF  69
+00F5:  CLRF   6A
+00F6:  MOVF   68,W
+00F7:  CLRF   6C
+00F8:  MOVWF  6B
+00F9:  MOVF   67,W
+00FA:  CLRF   6E
+00FB:  MOVWF  6D
+.................... { 
+....................    int16 adress= 0x06 + 4*canal; 
+....................    int16 off_alto= make8(off, 1); 
+....................    int16 off_bajo= make8(off, 0); 
+....................     
+....................    i2c_start(); 
+00FC:  BSF    27.4
+00FD:  MOVF   27,W
+00FE:  BSF    03.5
+00FF:  MOVWF  07
+0100:  NOP
+0101:  BCF    03.5
+0102:  BSF    27.3
+0103:  MOVF   27,W
+0104:  BSF    03.5
+0105:  MOVWF  07
+0106:  NOP
+0107:  BCF    03.5
+0108:  BCF    07.4
+0109:  BCF    27.4
+010A:  MOVF   27,W
+010B:  BSF    03.5
+010C:  MOVWF  07
+010D:  NOP
+010E:  BCF    03.5
+010F:  BCF    07.3
+0110:  BCF    27.3
+0111:  MOVF   27,W
+0112:  BSF    03.5
+0113:  MOVWF  07
+....................    i2c_write(0x80);            // Dirección del PCA 
+0114:  MOVLW  80
+0115:  BCF    03.5
+0116:  MOVWF  6F
+0117:  CALL   07C
+....................    i2c_write(adress);            // Dirección del LED 1 
+0118:  MOVF   69,W
+0119:  MOVWF  6F
+011A:  CALL   07C
+....................    i2c_write(0x00);            // led1_on_L 
+011B:  CLRF   6F
+011C:  CALL   07C
+....................    i2c_write(0x00);            // led1_on_H 
+011D:  CLRF   6F
+011E:  CALL   07C
+....................    i2c_write(off_bajo);             // led1_off_L (?996 µs) 
+011F:  MOVF   6D,W
+0120:  MOVWF  6F
+0121:  CALL   07C
+....................    i2c_write(off_alto);            // led1_off_H 
+0122:  MOVF   6B,W
+0123:  MOVWF  6F
+0124:  CALL   07C
+....................    i2c_stop(); 
+0125:  BCF    27.4
+0126:  MOVF   27,W
+0127:  BSF    03.5
+0128:  MOVWF  07
+0129:  NOP
+012A:  BCF    03.5
+012B:  BSF    27.3
+012C:  MOVF   27,W
+012D:  BSF    03.5
+012E:  MOVWF  07
+012F:  BCF    03.5
+0130:  BTFSS  07.3
+0131:  GOTO   130
+0132:  NOP
+0133:  GOTO   134
+0134:  NOP
+0135:  BSF    27.4
+0136:  MOVF   27,W
+0137:  BSF    03.5
+0138:  MOVWF  07
+0139:  NOP
+013A:  BCF    03.5
+013B:  BCF    0A.3
+013C:  BCF    0A.4
+013D:  GOTO   1E5 (RETURN)
+.................... } 
+....................  
+.................... void main()  
+013E:  MOVF   03,W
+013F:  ANDLW  1F
+0140:  MOVWF  03
+0141:  MOVLW  19
+0142:  BSF    03.5
+0143:  MOVWF  19
+0144:  MOVLW  A6
+0145:  MOVWF  18
+0146:  MOVLW  90
+0147:  BCF    03.5
+0148:  MOVWF  18
+0149:  MOVLW  FF
+014A:  MOVWF  27
+014B:  CLRF   29
+014C:  CLRF   2A
+014D:  CLRF   61
+014E:  BCF    62.0
+014F:  BSF    03.5
+0150:  BSF    1F.0
+0151:  BSF    1F.1
+0152:  BSF    1F.2
+0153:  BCF    1F.3
+0154:  MOVLW  07
+0155:  MOVWF  1C
+0156:  BCF    03.7
+.................... { 
+....................     inicbuff(); 
+0157:  BCF    03.5
+0158:  CALL   057
+....................     enable_interrupts(INT_RDA); 
+0159:  BSF    03.5
+015A:  BSF    0C.5
+....................     enable_interrupts(GLOBAL); 
+015B:  MOVLW  C0
+015C:  BCF    03.5
+015D:  IORWF  0B,F
+....................     delay_ms(1000); 
+015E:  MOVLW  04
+015F:  MOVWF  65
+0160:  MOVLW  FA
+0161:  MOVWF  66
+0162:  GOTO   065
+0163:  DECFSZ 65,F
+0164:  GOTO   160
+....................      
+....................     i2c_start(); 
+0165:  BSF    27.4
+0166:  MOVF   27,W
+0167:  BSF    03.5
+0168:  MOVWF  07
+0169:  NOP
+016A:  BCF    03.5
+016B:  BSF    27.3
+016C:  MOVF   27,W
+016D:  BSF    03.5
+016E:  MOVWF  07
+016F:  NOP
+0170:  BCF    03.5
+0171:  BCF    07.4
+0172:  BCF    27.4
+0173:  MOVF   27,W
+0174:  BSF    03.5
+0175:  MOVWF  07
+0176:  NOP
+0177:  BCF    03.5
+0178:  BCF    07.3
+0179:  BCF    27.3
+017A:  MOVF   27,W
+017B:  BSF    03.5
+017C:  MOVWF  07
+....................     i2c_write(0x80); 
+017D:  MOVLW  80
+017E:  BCF    03.5
+017F:  MOVWF  6F
+0180:  CALL   07C
+....................     i2c_write(0x00); 
+0181:  CLRF   6F
+0182:  CALL   07C
+....................     i2c_write(0x30); 
+0183:  MOVLW  30
+0184:  MOVWF  6F
+0185:  CALL   07C
+....................     i2c_stop(); 
+0186:  BCF    27.4
+0187:  MOVF   27,W
+0188:  BSF    03.5
+0189:  MOVWF  07
+018A:  NOP
+018B:  BCF    03.5
+018C:  BSF    27.3
+018D:  MOVF   27,W
+018E:  BSF    03.5
+018F:  MOVWF  07
+0190:  BCF    03.5
+0191:  BTFSS  07.3
+0192:  GOTO   191
+0193:  NOP
+0194:  GOTO   195
+0195:  NOP
+0196:  BSF    27.4
+0197:  MOVF   27,W
+0198:  BSF    03.5
+0199:  MOVWF  07
+019A:  NOP
+....................     
+....................       while (1)  
+....................       { 
+....................          if (flagcomando == 1)  
+019B:  BCF    03.5
+019C:  BTFSS  62.0
+019D:  GOTO   1EB
+....................          { 
+....................              for(i=0; i<54; i+=3) 
+019E:  CLRF   28
+019F:  MOVF   28,W
+01A0:  SUBLW  35
+01A1:  BTFSS  03.0
+01A2:  GOTO   1BD
+....................              { 
+....................                 if(cbuff[i]!= 0x00 || cbuff[i+1]!= 0x00 || cbuff[i+2]!= 0x00)  
+01A3:  MOVLW  2B
+01A4:  ADDWF  28,W
+01A5:  MOVWF  04
+01A6:  BCF    03.7
+01A7:  MOVF   00,F
+01A8:  BTFSS  03.2
+01A9:  GOTO   1B9
+01AA:  MOVLW  01
+01AB:  ADDWF  28,W
+01AC:  ADDLW  2B
+01AD:  MOVWF  04
+01AE:  BCF    03.7
+01AF:  MOVF   00,F
+01B0:  BTFSS  03.2
+01B1:  GOTO   1B9
+01B2:  MOVLW  02
+01B3:  ADDWF  28,W
+01B4:  ADDLW  2B
+01B5:  MOVWF  04
+01B6:  BCF    03.7
+01B7:  MOVF   00,F
+01B8:  BTFSS  03.2
+....................                 { 
+....................                     paquetes++;  
+01B9:  INCF   29,F
+....................                 }  
+01BA:  MOVLW  03
+01BB:  ADDWF  28,F
+01BC:  GOTO   19F
+....................              } 
+....................              for(i=0; i<(paquetes*3); i+=3) 
+01BD:  CLRF   28
+01BE:  MOVF   29,W
+01BF:  MOVWF  65
+01C0:  MOVLW  03
+01C1:  MOVWF  66
+01C2:  GOTO   0C6
+01C3:  MOVF   78,W
+01C4:  SUBWF  28,W
+01C5:  BTFSC  03.0
+01C6:  GOTO   1E8
+....................              { 
+....................                  int16 off_funcion = make16(cbuff[i+1], cbuff[i+2]); 
+01C7:  MOVLW  01
+01C8:  ADDWF  28,W
+01C9:  ADDLW  2B
+01CA:  MOVWF  04
+01CB:  BCF    03.7
+01CC:  MOVF   00,W
+01CD:  MOVWF  65
+01CE:  MOVLW  02
+01CF:  ADDWF  28,W
+01D0:  ADDLW  2B
+01D1:  MOVWF  04
+01D2:  BCF    03.7
+01D3:  MOVF   00,W
+01D4:  MOVWF  66
+01D5:  MOVF   65,W
+01D6:  MOVWF  64
+01D7:  MOVF   66,W
+01D8:  MOVWF  63
+....................                  envio_de_pwm(cbuff[i], off_funcion); 
+01D9:  MOVLW  2B
+01DA:  ADDWF  28,W
+01DB:  MOVWF  04
+01DC:  BCF    03.7
+01DD:  MOVF   00,W
+01DE:  MOVWF  65
+01DF:  MOVWF  66
+01E0:  MOVF   64,W
+01E1:  MOVWF  68
+01E2:  MOVF   63,W
+01E3:  MOVWF  67
+01E4:  GOTO   0ED
+01E5:  MOVLW  03
+01E6:  ADDWF  28,F
+01E7:  GOTO   1BE
+....................              } 
+....................              paquetes=0; 
+01E8:  CLRF   29
+....................              flagcomando = 0; 
+01E9:  BCF    62.0
+....................              inicbuff(); 
+01EA:  CALL   057
+....................          } 
+01EB:  GOTO   19C
+....................        } 
+.................... } 
+....................  
+01EC:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

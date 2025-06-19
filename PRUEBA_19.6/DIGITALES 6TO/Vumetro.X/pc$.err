@@ -1,0 +1,16 @@
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:37:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:42:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:47:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:52:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:57:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:62:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:67:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:72:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:77:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:82:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:87:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:11:5:  Warning#202  Variable never used:   q_l
+C:\Users\Electronica\Desktop\Vumetro_marafioti.c:12:5:  Warning#202  Variable never used:   q_h
+      Memory usage:   ROM=23%      RAM=9% - 18%
+      0 Errors,  13 Warnings.
+Build Successful.

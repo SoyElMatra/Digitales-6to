@@ -1,0 +1,11 @@
+ÀÄPRUEBA_19
+   ÀÄMAIN  0/79  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄenvio_I2C  0/115  Ram=0
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ÀÄ@delay_ms1  0/23  Ram=1

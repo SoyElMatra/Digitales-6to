@@ -1,0 +1,127 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     lcd
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 q
+022-025 p
+026-027 @PRINTF_LU_627.P1
+026-027 @ITOF.P2
+026     lcd_init.i
+026     @PSTRINGCN7_627.P1
+026-029 @MULFF.P2
+026-029 @SFTOI.P3
+026     MAIN.@SCRATCH1
+027-02A lcd_init.LCD_INIT_STRING
+027     MAIN.@SCRATCH2
+027     @PSTRINGCN7_627.@SCRATCH1
+028     MAIN.@SCRATCH3
+028     @PSTRINGCN7_627.@SCRATCH2
+028     @PRINTF_LU_627.@SCRATCH1
+029     MAIN.@SCRATCH4
+029     @PSTRINGCN7_627.@SCRATCH3
+029     @PRINTF_LU_627.@SCRATCH2
+02A-02D @MULFF.P1
+02A-02D @DIVFF.P2
+02A     @PSTRINGCN7_627.@SCRATCH4
+02A     @PRINTF_LU_627.@SCRATCH3
+02B     lcd_init.@SCRATCH1
+02B     @PRINTF_LU_627.@SCRATCH4
+02C     @PRINTF_LU_627.@SCRATCH5
+02D     @PRINTF_LU_627.@SCRATCH6
+02E-031 @DIVFF.P1
+02E     @MULFF.@SCRATCH1
+02E     @PRINTF_LU_627.@SCRATCH7
+02F     lcd_putc.c
+02F     @MULFF.@SCRATCH2
+030     lcd_gotoxy.x
+030     @delay_ms1.P1
+030     @MULFF.@SCRATCH3
+031     lcd_gotoxy.y
+031     @MULFF.@SCRATCH4
+032     lcd_gotoxy.address
+032     @MULFF.@SCRATCH5
+032     @DIVFF.@SCRATCH1
+033     lcd_gotoxy.@SCRATCH1
+033     @DIVFF.@SCRATCH2
+034     lcd_send_byte.address
+034     @DIVFF.@SCRATCH3
+035     lcd_send_byte.n
+035     @DIVFF.@SCRATCH4
+036     lcd_read_byte.low
+036     lcd_send_byte.@SCRATCH1
+036     @DIVFF.@SCRATCH5
+037     lcd_send_nibble.n
+037     lcd_read_byte.high
+037     @DIVFF.@SCRATCH6
+038     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const654.call
+00000D  @delay_ms1
+000022  lcd_send_nibble
+00002E  lcd_read_nibble
+000034  lcd_send_byte
+00003A  lcd_read_byte
+000074  lcd_init
+0000B2  @ITOF
+0000D1  @MULFF
+000148  @DIVFF
+000214  @SFTOI
+000235  lcd_gotoxy
+000247  lcd_putc
+000273  @PSTRINGCN7_627
+0002CC  @PRINTF_LU_627
+000331  @cinit1
+000331  MAIN
+00033B  @cinit2
+
+Project Directory:
+    Z:\6 Electronica\Marafioti\DIGITALES 6TO\lm35.X\
+
+Project Files:
+    lm35marafioti.c                                         [11-mar-25 16:37  CRC=3AC36EAE]
+    C:\Program Files (x86)\PICC\devices\16f876a.h           [12-nov-13 14:35  CRC=7FE1E080]
+    C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sept-13 15:38  CRC=D1A6378A]
+
+Source signature=5DF1BE42
+
+Units:
+    lm35marafioti (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F876A 1
+
+Output Files:
+    XREF file:   build\default\production\lm35marafioti.xsym
+    Errors:      build\default\production\lm35marafioti.err
+    Ext Symbols: build\default\production\lm35marafioti.esym
+    INHX8:       build\default\production\lm35marafioti.hex
+    Symbols:     build\default\production\lm35marafioti.sym
+    List:        build\default\production\lm35marafioti.lst
+    Debug/COFF:  build\default\production\lm35marafioti.cof
+    Project:     lm35marafioti.ccspjt
+    Call Tree:   build\default\production\lm35marafioti.tre
+    Statistics:  build\default\production\lm35marafioti.STA

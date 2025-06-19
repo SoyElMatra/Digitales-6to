@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\Recibir cadena y envío al display.hex
+Processor_Text=PIC16F873A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\Recibir cadena y envío al display.c
+[build\default\production\Recibir cadena y envío al display.c]
+Type=4
+[mru-list]
+1=build\default\production\Recibir cadena y envío al display.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[Units]
+Count=1
+1=Recibir cadena y envío al display (main)

@@ -1,0 +1,6 @@
+Z:\Profesores\Ciganotto\Curso PIC\Mplab x en c\servo.X\Servo.c:26:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\Profesores\Ciganotto\Curso PIC\Mplab x en c\servo.X\Servo.c:63:1:  Warning#203  Condition always TRUE
+Z:\Profesores\Ciganotto\Curso PIC\Mplab x en c\servo.X\Servo.c:45:1:  Warning#208  Function not void and does not return a value  MAIN
+      Memory usage:   ROM=7%      RAM=10% - 12%
+      0 Errors,  3 Warnings.
+Build Successful.

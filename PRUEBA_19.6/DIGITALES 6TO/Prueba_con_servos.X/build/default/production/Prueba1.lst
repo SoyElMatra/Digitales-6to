@@ -1,0 +1,681 @@
+CCS PCM C Compiler, Version 5.015, 5967               10-mar.-25 20:15
+
+               Filename:   C:\Users\User\Desktop\ELECTRÓNICA\FERIA 2025\Prueba_con_servos.X\build\default\production\Prueba1.lst
+
+               ROM used:   404 words (20%)
+                           Largest free fragment is 1644
+               RAM used:   28 (12%) at main() level
+                           48 (21%) worst case
+               Stack used: 3 locations (2 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  01
+0001:  MOVWF  0A
+0002:  GOTO   150
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   7F,W
+0009:  MOVWF  20
+000A:  MOVF   0A,W
+000B:  MOVWF  27
+000C:  CLRF   0A
+000D:  SWAPF  20,F
+000E:  MOVF   04,W
+000F:  MOVWF  22
+0010:  MOVF   77,W
+0011:  MOVWF  23
+0012:  MOVF   78,W
+0013:  MOVWF  24
+0014:  MOVF   79,W
+0015:  MOVWF  25
+0016:  MOVF   7A,W
+0017:  MOVWF  26
+0018:  BCF    03.7
+0019:  BCF    03.5
+001A:  MOVLW  8C
+001B:  MOVWF  04
+001C:  BTFSS  00.0
+001D:  GOTO   020
+001E:  BTFSC  0C.0
+001F:  GOTO   079
+0020:  BTFSS  0B.5
+0021:  GOTO   024
+0022:  BTFSC  0B.2
+0023:  GOTO   035
+0024:  MOVF   22,W
+0025:  MOVWF  04
+0026:  MOVF   23,W
+0027:  MOVWF  77
+0028:  MOVF   24,W
+0029:  MOVWF  78
+002A:  MOVF   25,W
+002B:  MOVWF  79
+002C:  MOVF   26,W
+002D:  MOVWF  7A
+002E:  MOVF   27,W
+002F:  MOVWF  0A
+0030:  SWAPF  21,W
+0031:  MOVWF  03
+0032:  SWAPF  7F,F
+0033:  SWAPF  7F,W
+0034:  RETFIE
+.................... #include <16f628A.h> 
+.................... //////////// Standard Header file for the PIC16F628A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F628A 
+*
+00B9:  MOVLW  10
+00BA:  MOVWF  4A
+00BB:  CLRF   77
+00BC:  CLRF   7A
+00BD:  RRF    47,F
+00BE:  RRF    46,F
+00BF:  BTFSS  03.0
+00C0:  GOTO   0C7
+00C1:  MOVF   48,W
+00C2:  ADDWF  77,F
+00C3:  BTFSC  03.0
+00C4:  INCF   7A,F
+00C5:  MOVF   49,W
+00C6:  ADDWF  7A,F
+00C7:  RRF    7A,F
+00C8:  RRF    77,F
+00C9:  RRF    79,F
+00CA:  RRF    78,F
+00CB:  DECFSZ 4A,F
+00CC:  GOTO   0BD
+*
+00E6:  CLRF   78
+00E7:  CLRF   79
+00E8:  CLRF   77
+00E9:  CLRF   7A
+00EA:  MOVF   49,W
+00EB:  BTFSS  03.2
+00EC:  GOTO   0F0
+00ED:  MOVF   48,W
+00EE:  BTFSC  03.2
+00EF:  GOTO   10A
+00F0:  MOVLW  10
+00F1:  MOVWF  4A
+00F2:  BCF    03.0
+00F3:  RLF    46,F
+00F4:  RLF    47,F
+00F5:  RLF    77,F
+00F6:  RLF    7A,F
+00F7:  MOVF   49,W
+00F8:  SUBWF  7A,W
+00F9:  BTFSS  03.2
+00FA:  GOTO   0FD
+00FB:  MOVF   48,W
+00FC:  SUBWF  77,W
+00FD:  BTFSS  03.0
+00FE:  GOTO   106
+00FF:  MOVF   48,W
+0100:  SUBWF  77,F
+0101:  BTFSS  03.0
+0102:  DECF   7A,F
+0103:  MOVF   49,W
+0104:  SUBWF  7A,F
+0105:  BSF    03.0
+0106:  RLF    78,F
+0107:  RLF    79,F
+0108:  DECFSZ 4A,F
+0109:  GOTO   0F2
+....................  
+.................... #list 
+....................  
+.................... #fuses HS,NOWDT,NOLVP 
+.................... #use delay(clock=20M) 
+....................  
+.................... #use standard_io(B)  
+.................... #use standard_io(A) 
+....................  
+.................... #define use_servo_1   
+.................... #define use_servo_2 
+.................... #define use_servo_3 
+.................... #define servo_1 PIN_B0  
+.................... #define servo_2 PIN_B7 
+.................... #define servo_3 PIN_B6 
+....................  
+.................... #include <servo_st.c> 
+.................... /* 
+....................   
+.................... #define use_servo_1                                   // Habilita el servo 1 
+.................... #define use_servo_2                                   // Habilita el servo 2 
+.................... #define use_servo_3                                   // Habilita el servo 3 
+....................  
+.................... #define servo_1 PIN_B0                                // Asigna el pin de control del servo 1 al pin B0 
+.................... #define servo_2 PIN_B1                                // Asigna el pin de control del servo 2 al pin B1 
+.................... #define servo_3 PIN_B2                                // Asigna el pin de control del servo 3 al pin B2 
+....................  
+.................... #include <servo_st.c>                                 // Libreria para controlar servomotores 
+....................   
+....................  servo_init() 
+....................   
+....................  servo_1_write(ANGULO); 
+....................  */ 
+....................  
+....................  
+....................  
+.................... /* #include <servo_st.c> 
+.................... * 
+.................... * Creada por: Ing. Abiezer Hernandez O. 
+.................... * Fecha de creacion: 26/05/2020 
+.................... * Electronica y Circuitos 
+.................... * 
+.................... */ 
+....................  
+.................... #define v_min 11 
+.................... #define v_max 48 
+....................  
+.................... int16 cont_st = 0; 
+.................... int8 pwm_st[10]; 
+....................  
+.................... #INT_TIMER0 
+.................... void timer_0() 
+.................... { 
+....................    cont_st = cont_st + 1; 
+*
+0035:  MOVLW  01
+0036:  ADDWF  28,F
+0037:  BTFSC  03.0
+0038:  INCF   29,F
+....................    if(cont_st > 385) 
+0039:  MOVF   29,W
+003A:  SUBLW  00
+003B:  BTFSC  03.0
+003C:  GOTO   046
+003D:  XORLW  FF
+003E:  BTFSS  03.2
+003F:  GOTO   044
+0040:  MOVF   28,W
+0041:  SUBLW  81
+0042:  BTFSC  03.0
+0043:  GOTO   046
+....................    { 
+....................       cont_st = 0; 
+0044:  CLRF   29
+0045:  CLRF   28
+....................    } 
+....................    #ifdef use_servo_1 
+....................    if(cont_st < pwm_st[0]){output_high(servo_1);} else{output_low(servo_1);} 
+0046:  MOVF   29,F
+0047:  BTFSS  03.2
+0048:  GOTO   052
+0049:  MOVF   2A,W
+004A:  SUBWF  28,W
+004B:  BTFSC  03.0
+004C:  GOTO   052
+004D:  BSF    03.5
+004E:  BCF    06.0
+004F:  BCF    03.5
+0050:  BSF    06.0
+0051:  GOTO   056
+0052:  BSF    03.5
+0053:  BCF    06.0
+0054:  BCF    03.5
+0055:  BCF    06.0
+....................    #endif 
+....................     
+....................    #ifdef use_servo_2 
+....................    if(cont_st < pwm_st[1]){output_high(servo_2);} else{output_low(servo_2);} 
+0056:  MOVF   29,F
+0057:  BTFSS  03.2
+0058:  GOTO   062
+0059:  MOVF   2B,W
+005A:  SUBWF  28,W
+005B:  BTFSC  03.0
+005C:  GOTO   062
+005D:  BSF    03.5
+005E:  BCF    06.7
+005F:  BCF    03.5
+0060:  BSF    06.7
+0061:  GOTO   066
+0062:  BSF    03.5
+0063:  BCF    06.7
+0064:  BCF    03.5
+0065:  BCF    06.7
+....................    #endif 
+....................     
+....................    #ifdef use_servo_3 
+....................    if(cont_st < pwm_st[2]){output_high(servo_3);} else{output_low(servo_3);} 
+0066:  MOVF   29,F
+0067:  BTFSS  03.2
+0068:  GOTO   072
+0069:  MOVF   2C,W
+006A:  SUBWF  28,W
+006B:  BTFSC  03.0
+006C:  GOTO   072
+006D:  BSF    03.5
+006E:  BCF    06.6
+006F:  BCF    03.5
+0070:  BSF    06.6
+0071:  GOTO   076
+0072:  BSF    03.5
+0073:  BCF    06.6
+0074:  BCF    03.5
+0075:  BCF    06.6
+....................    #endif 
+....................     
+....................    #ifdef use_servo_4 
+....................    if(cont_st < pwm_st[3]){output_high(servo_4);} else{output_low(servo_4);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_5 
+....................    if(cont_st < pwm_st[4]){output_high(servo_5);} else{output_low(servo_5);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_6 
+....................    if(cont_st < pwm_st[5]){output_high(servo_6);} else{output_low(servo_6);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_7 
+....................    if(cont_st < pwm_st[6]){output_high(servo_7);} else{output_low(servo_7);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_8 
+....................    if(cont_st < pwm_st[7]){output_high(servo_8);} else{output_low(servo_8);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_9 
+....................    if(cont_st < pwm_st[8]){output_high(servo_9);} else{output_low(servo_9);} 
+....................    #endif 
+....................     
+....................    #ifdef use_servo_10 
+....................    if(cont_st < pwm_st[9]){output_high(servo_10);} else{output_low(servo_10);} 
+....................    #endif 
+0076:  BCF    0B.2
+0077:  BCF    0A.3
+0078:  GOTO   024
+.................... } 
+....................  
+.................... void servo_init() 
+.................... { 
+....................    setup_timer_0(RTCC_INTERNAL | RTCC_DIV_1); 
+*
+008F:  BSF    03.5
+0090:  MOVF   01,W
+0091:  ANDLW  C7
+0092:  IORLW  08
+0093:  MOVWF  01
+....................    enable_interrupts(INT_TIMER0); 
+0094:  BCF    03.5
+0095:  BSF    0B.5
+....................    enable_interrupts(GLOBAL); 
+0096:  MOVLW  C0
+0097:  IORWF  0B,F
+....................    set_timer0(230); 
+0098:  MOVLW  E6
+0099:  MOVWF  01
+009A:  GOTO   15B (RETURN)
+.................... } 
+....................  
+.................... long map_int(int16 x, int16 eMin, int16 eMax, int16 sMin, int16 sMax) 
+.................... { 
+....................    return(x -eMin)*(sMax-sMin)/(eMax-eMin)+sMin; 
+009B:  MOVF   3A,W
+009C:  SUBWF  38,W
+009D:  MOVWF  42
+009E:  MOVF   39,W
+009F:  MOVWF  43
+00A0:  MOVF   3B,W
+00A1:  BTFSS  03.0
+00A2:  INCFSZ 3B,W
+00A3:  SUBWF  43,F
+00A4:  MOVF   3E,W
+00A5:  SUBWF  40,W
+00A6:  MOVWF  77
+00A7:  MOVF   41,W
+00A8:  MOVWF  7A
+00A9:  MOVF   3F,W
+00AA:  BTFSS  03.0
+00AB:  INCFSZ 3F,W
+00AC:  SUBWF  7A,F
+00AD:  MOVF   77,W
+00AE:  MOVWF  44
+00AF:  MOVF   7A,W
+00B0:  MOVWF  45
+00B1:  MOVF   43,W
+00B2:  MOVWF  47
+00B3:  MOVF   42,W
+00B4:  MOVWF  46
+00B5:  MOVF   45,W
+00B6:  MOVWF  49
+00B7:  MOVF   44,W
+00B8:  MOVWF  48
+*
+00CD:  MOVF   79,W
+00CE:  MOVWF  43
+00CF:  MOVF   78,W
+00D0:  MOVWF  42
+00D1:  MOVF   3A,W
+00D2:  SUBWF  3C,W
+00D3:  MOVWF  77
+00D4:  MOVF   3D,W
+00D5:  MOVWF  7A
+00D6:  MOVF   3B,W
+00D7:  BTFSS  03.0
+00D8:  INCFSZ 3B,W
+00D9:  SUBWF  7A,F
+00DA:  MOVF   77,W
+00DB:  MOVWF  44
+00DC:  MOVF   7A,W
+00DD:  MOVWF  45
+00DE:  MOVF   43,W
+00DF:  MOVWF  47
+00E0:  MOVF   42,W
+00E1:  MOVWF  46
+00E2:  MOVF   45,W
+00E3:  MOVWF  49
+00E4:  MOVF   44,W
+00E5:  MOVWF  48
+*
+010A:  MOVF   79,W
+010B:  MOVWF  43
+010C:  MOVF   78,W
+010D:  MOVWF  42
+010E:  MOVF   3E,W
+010F:  ADDWF  78,W
+0110:  MOVWF  78
+0111:  MOVF   79,W
+0112:  MOVWF  7A
+0113:  MOVF   3F,W
+0114:  BTFSC  03.0
+0115:  INCFSZ 3F,W
+0116:  ADDWF  7A,F
+0117:  MOVF   7A,W
+0118:  MOVWF  79
+0119:  RETURN
+.................... } 
+....................  
+.................... #ifdef use_servo_1 
+.................... void servo_1_write(int angle1) 
+.................... { 
+....................    pwm_st[0] = map_int(angle1, 0, 180, v_min, v_max); 
+*
+012C:  CLRF   39
+012D:  MOVF   37,W
+012E:  MOVWF  38
+012F:  CLRF   3B
+0130:  CLRF   3A
+0131:  CLRF   3D
+0132:  MOVLW  B4
+0133:  MOVWF  3C
+0134:  CLRF   3F
+0135:  MOVLW  0B
+0136:  MOVWF  3E
+0137:  CLRF   41
+0138:  MOVLW  30
+0139:  MOVWF  40
+013A:  CALL   09B
+013B:  MOVF   78,W
+013C:  MOVWF  2A
+013D:  RETURN
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_2 
+.................... void servo_2_write(int angle2) 
+.................... { 
+....................    pwm_st[1] = map_int(angle2, 0, 180, v_min, v_max); 
+013E:  CLRF   39
+013F:  MOVF   37,W
+0140:  MOVWF  38
+0141:  CLRF   3B
+0142:  CLRF   3A
+0143:  CLRF   3D
+0144:  MOVLW  B4
+0145:  MOVWF  3C
+0146:  CLRF   3F
+0147:  MOVLW  0B
+0148:  MOVWF  3E
+0149:  CLRF   41
+014A:  MOVLW  30
+014B:  MOVWF  40
+014C:  CALL   09B
+014D:  MOVF   78,W
+014E:  MOVWF  2B
+014F:  RETURN
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_3 
+.................... void servo_3_write(int angle3) 
+.................... { 
+....................    pwm_st[2] = map_int(angle3, 0, 180, v_min, v_max); 
+*
+011A:  CLRF   39
+011B:  MOVF   37,W
+011C:  MOVWF  38
+011D:  CLRF   3B
+011E:  CLRF   3A
+011F:  CLRF   3D
+0120:  MOVLW  B4
+0121:  MOVWF  3C
+0122:  CLRF   3F
+0123:  MOVLW  0B
+0124:  MOVWF  3E
+0125:  CLRF   41
+0126:  MOVLW  30
+0127:  MOVWF  40
+0128:  CALL   09B
+0129:  MOVF   78,W
+012A:  MOVWF  2C
+012B:  RETURN
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_4 
+.................... void servo_4_write(int angle4) 
+.................... { 
+....................    pwm_st[3] = map_int(angle4, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_5 
+.................... void servo_5_write(int angle5) 
+.................... { 
+....................    pwm_st[4] = map_int(angle5, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_6 
+.................... void servo_6_write(int angle6) 
+.................... { 
+....................    pwm_st[5] = map_int(angle6, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_7 
+.................... void servo_7_write(int angle7) 
+.................... { 
+....................    pwm_st[6] = map_int(angle7, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_8 
+.................... void servo_8_write(int angle8) 
+.................... { 
+....................    pwm_st[7] = map_int(angle8, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_9 
+.................... void servo_9_write(int angle9) 
+.................... { 
+....................    pwm_st[8] = map_int(angle9, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+.................... #ifdef use_servo_10 
+.................... void servo_10_write(int angle10) 
+.................... { 
+....................    pwm_st[9] = map_int(angle10, 0, 180, v_min, v_max); 
+.................... } 
+.................... #endif 
+....................  
+....................  
+.................... int cont=0; 
+.................... int cambio=0; 
+....................  
+.................... #INT_TIMER1 
+.................... void tmr1(void) 
+.................... { 
+....................     if(cont<50)  
+*
+0079:  MOVF   34,W
+007A:  SUBLW  31
+007B:  BTFSS  03.0
+007C:  GOTO   07F
+....................     { 
+....................         cont++; 
+007D:  INCF   34,F
+....................     } 
+007E:  GOTO   087
+....................     else 
+....................     { 
+....................         cambio=!cambio; 
+007F:  MOVF   35,F
+0080:  BTFSC  03.2
+0081:  GOTO   084
+0082:  MOVLW  00
+0083:  GOTO   085
+0084:  MOVLW  01
+0085:  MOVWF  35
+....................         cont=0; 
+0086:  CLRF   34
+....................     } 
+....................     set_timer1(62411); 
+0087:  CLRF   0E
+0088:  MOVLW  F3
+0089:  MOVWF  0F
+008A:  MOVLW  CB
+008B:  MOVWF  0E
+008C:  BCF    0C.0
+008D:  BCF    0A.3
+008E:  GOTO   024
+.................... } 
+....................  
+.................... void main() 
+*
+0150:  MOVF   03,W
+0151:  ANDLW  1F
+0152:  MOVWF  03
+0153:  CLRF   29
+0154:  CLRF   28
+0155:  CLRF   34
+0156:  CLRF   35
+0157:  MOVLW  07
+0158:  MOVWF  1F
+0159:  BCF    03.7
+.................... { 
+....................     servo_init(); 
+015A:  GOTO   08F
+....................     int cond=1; 
+015B:  MOVLW  01
+015C:  MOVWF  36
+....................      
+....................     setup_timer_1(T1_INTERNAL|T1_DIV_BY_8); 
+015D:  MOVLW  B5
+015E:  MOVWF  10
+....................     enable_interrupts(GLOBAL); 
+015F:  MOVLW  C0
+0160:  IORWF  0B,F
+....................     enable_interrupts(INT_TIMER1); 
+0161:  BSF    03.5
+0162:  BSF    0C.0
+....................     set_timer1(62411); 
+0163:  BCF    03.5
+0164:  CLRF   0E
+0165:  MOVLW  F3
+0166:  MOVWF  0F
+0167:  MOVLW  CB
+0168:  MOVWF  0E
+....................      
+....................     while(1) 
+....................     {   
+....................         if(input(PIN_A0)==0) 
+0169:  BSF    03.5
+016A:  BSF    05.0
+016B:  BCF    03.5
+016C:  BTFSC  05.0
+016D:  GOTO   184
+....................         { 
+....................             while(input(PIN_A0)==0) 
+016E:  BSF    03.5
+016F:  BSF    05.0
+0170:  BCF    03.5
+0171:  BTFSC  05.0
+0172:  GOTO   17D
+....................             { 
+....................                 if(cambio == 0) 
+0173:  MOVF   35,F
+0174:  BTFSS  03.2
+0175:  GOTO   17A
+....................                 { 
+....................                     servo_3_write(90);  
+0176:  MOVLW  5A
+0177:  MOVWF  37
+0178:  CALL   11A
+....................                 } 
+0179:  GOTO   17C
+....................                 else 
+....................                 { 
+....................                     servo_3_write(0);  
+017A:  CLRF   37
+017B:  CALL   11A
+....................                 } 
+017C:  GOTO   16E
+....................             } 
+....................             cond = !cond;      
+017D:  MOVF   36,F
+017E:  BTFSC  03.2
+017F:  GOTO   182
+0180:  MOVLW  00
+0181:  GOTO   183
+0182:  MOVLW  01
+0183:  MOVWF  36
+....................         } 
+....................         if(cond==0) 
+0184:  MOVF   36,F
+0185:  BTFSS  03.2
+0186:  GOTO   18D
+....................         { 
+....................             servo_1_write(0);     
+0187:  CLRF   37
+0188:  CALL   12C
+....................             servo_2_write(180); 
+0189:  MOVLW  B4
+018A:  MOVWF  37
+018B:  CALL   13E
+....................         } 
+018C:  GOTO   192
+....................         else 
+....................         { 
+....................             servo_1_write(180); 
+018D:  MOVLW  B4
+018E:  MOVWF  37
+018F:  CALL   12C
+....................             servo_2_write(0); 
+0190:  CLRF   37
+0191:  CALL   13E
+....................         } 
+0192:  GOTO   169
+....................     } 
+.................... } 
+0193:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F62   NOWDT PUT HS MCLR BROWNOUT NOLVP NOCPD NOPROTECT

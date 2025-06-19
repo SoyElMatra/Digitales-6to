@@ -1,0 +1,10 @@
+ÀÄPRUEBA_19
+   ÃÄMAIN  0/205  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄinicbuff  0/13  Ram=2
+   ³  ÃÄresultado_proceso  0/38  Ram=1
+   ³  ÃÄresultado_proceso  0/38  Ram=1
+   ³  ÃÄresultado_proceso  0/38  Ram=1
+   ³  ÀÄinicbuff  0/13  Ram=2
+   ÃÄserial_isr  0/38  Ram=1
+   ÀÄisr_int_tmr1  0/47  Ram=0
