@@ -16,29 +16,36 @@
 #include<lcd.c>
 
 #define TRIG PIN_C0
-#define ECHO PIN_C1
 
 int16 duration, distance;
+int1 flag = 1;
 
+#INT_EXT
+void isr_ext() {
+    duration = get_timer1();
+    distance = (duration / 58);
+    flag = 1;
+    disable_interrupts(INT_EXT_H2L);
+}
 
 void sr04dist() {
     output_high(TRIG);
     delay_us(10);
     output_low(TRIG);
-    while (!input(ECHO));
     set_timer1(0);
-    while (input(ECHO));
-    duration = get_timer1();
-    distance = (duration / 58);
+    enable_interrupts(INT_EXT_H2L);
 }
 
 void main() {
-    enable_interrupts(INT_TIMER1);
+    enable_interrupts(GLOBAL);
     setup_timer_1(T1_INTERNAL | T1_DIV_BY_1);
     set_timer1(0);
     lcd_init();
     while (1) {
-        sr04dist();
+        if (flag == 1) {
+            flag = 0;
+            sr04dist();
+        }
         printf(lcd_putc, "\fDistancia: %lu", distance);
         delay_ms(100);
     }
