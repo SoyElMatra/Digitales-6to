@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""26-jun-25""
-D G "__TIME__" 0 0 ""17:43:56""
+D G "__DATE__" 0 0 ""27-jun-25""
+D G "__TIME__" 0 0 ""14:29:08""
 D G "__16F876A" 0 0 "1" "Standard Header file for the PIC16F876 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `53 
@@ -771,13 +771,15 @@ V L "on" 2 443 "int8" `630
 F G "lcd_cursor_on" 2 444 "void(int8 on)" `629 
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-D G "TRIG" 0 18 "PIN_C0"
+D G "TRIG" 0 18 "PIN_A0"
 V G "duration" 0 20 "int16" `631 
-V G "distance" 0 20 "int16" `632 
-V G "flag" 0 21 "int1" `633 
-F G "isr_ext" 0 24 "void()" `634 
-F G "sr04dist" 0 31 "void()" `638 
-F G "MAIN" 0 39 "void()" `639 
+V G "oldDuration" 0 20 "int16" `632 
+V G "distance" 0 20 "int16" `633 
+V G "flag" 0 21 "int1" `634 
+V G "check" 0 21 "int1" `635 
+F G "isr_ext" 0 25 "void()" `636 
+F G "sr04dist" 0 35 "void()" `640 
+F G "MAIN" 0 42 "void()" `641 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

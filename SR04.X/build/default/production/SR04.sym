@@ -1,7 +1,7 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -19,43 +19,49 @@
 02A     @INTERRUPT_AREA
 02B     @TRIS_C
 02C-02D duration
-02E-02F distance
-030.0   flag
-031-032 @PRINTF_LU_619.P1
-031     lcd_init.i
-031     @PSTRINGCN7_619.P1
-031     MAIN.@SCRATCH1
-032-035 lcd_init.LCD_INIT_STRING
-032     @PSTRINGCN7_619.@SCRATCH1
-033     @PSTRINGCN7_619.@SCRATCH2
-033     @PRINTF_LU_619.@SCRATCH1
-034     @PSTRINGCN7_619.@SCRATCH3
-034     @PRINTF_LU_619.@SCRATCH2
-035     @PSTRINGCN7_619.@SCRATCH4
-035     @PRINTF_LU_619.@SCRATCH3
-036     lcd_init.@SCRATCH1
-036     @PRINTF_LU_619.@SCRATCH4
-037     @PRINTF_LU_619.@SCRATCH5
-038     @PRINTF_LU_619.@SCRATCH6
-039     @PRINTF_LU_619.@SCRATCH7
-03A     lcd_putc.c
-03B     lcd_gotoxy.x
-03B     @delay_ms1.P1
-03C     lcd_gotoxy.y
-03D     lcd_gotoxy.address
-03E     lcd_gotoxy.@SCRATCH1
-03F     lcd_send_byte.address
-040     lcd_send_byte.n
-041     lcd_read_byte.low
-041     lcd_send_byte.@SCRATCH1
-042     lcd_send_nibble.n
-042     lcd_read_byte.high
-043     lcd_read_nibble.n
-043     lcd_read_byte.@SCRATCH1
-044     lcd_read_nibble.@SCRATCH1
-045-046 @DIV1616.P1
+02E-02F oldDuration
+030-031 distance
+032.0   flag
+032.1   check
+033-034 @PRINTF_LU_619.P1
+033     lcd_init.i
+033     @PSTRINGCN7_619.P1
+033     MAIN.@SCRATCH1
+034-037 lcd_init.LCD_INIT_STRING
+034     MAIN.@SCRATCH2
+034     @PSTRINGCN7_619.@SCRATCH1
+035     MAIN.@SCRATCH3
+035     @PSTRINGCN7_619.@SCRATCH2
+035     @PRINTF_LU_619.@SCRATCH1
+036     @PSTRINGCN7_619.@SCRATCH3
+036     @PRINTF_LU_619.@SCRATCH2
+037     @PSTRINGCN7_619.@SCRATCH4
+037     @PRINTF_LU_619.@SCRATCH3
+038     lcd_init.@SCRATCH1
+038     @PRINTF_LU_619.@SCRATCH4
+039     @PRINTF_LU_619.@SCRATCH5
+03A     @PRINTF_LU_619.@SCRATCH6
+03B     @PRINTF_LU_619.@SCRATCH7
+03C     lcd_putc.c
+03D     @delay_ms1.P1
+03D     lcd_gotoxy.x
+03E     lcd_gotoxy.y
+03F     lcd_gotoxy.address
+040     lcd_gotoxy.@SCRATCH1
+041     lcd_send_byte.address
+042     lcd_send_byte.n
+043     lcd_read_byte.low
+043     lcd_send_byte.@SCRATCH1
+044     lcd_send_nibble.n
+044     lcd_read_byte.high
+045     lcd_read_nibble.n
+045     lcd_read_byte.@SCRATCH1
+046     lcd_read_nibble.@SCRATCH1
 047-048 @DIV1616.P1
-049     @DIV1616.@SCRATCH1
+047     isr_ext.@SCRATCH1
+048     isr_ext.@SCRATCH2
+049-04A @DIV1616.P1
+04B     @DIV1616.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -63,8 +69,8 @@
 07A     @SCRATCH
 07F     @INTERRUPT_AREA
 0FF     @INTERRUPT_AREA
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -98,32 +104,32 @@ FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 00004F  isr_ext
-000062  @DIV1616
-000090  @const642.call
-000098  @delay_ms1
-0000AD  lcd_send_nibble
-0000D8  lcd_read_nibble
-000109  lcd_send_byte
-000111  lcd_read_byte
-000165  lcd_init
-0001AB  sr04dist
-0001C7  lcd_gotoxy
-0001D9  lcd_putc
-000205  @PSTRINGCN7_619
-00025E  @PRINTF_LU_619
-0002C3  @cinit1
-0002C3  MAIN
-0002CE  @cinit2
+00006F  @DIV1616
+0000A1  @const644.call
+0000A9  @delay_ms1
+0000BE  lcd_send_nibble
+0000E9  lcd_read_nibble
+00011A  lcd_send_byte
+000122  lcd_read_byte
+000176  lcd_init
+0001BC  sr04dist
+0001D0  lcd_gotoxy
+0001E2  lcd_putc
+00020E  @PSTRINGCN7_619
+000267  @PRINTF_LU_619
+0002CC  @cinit1
+0002CC  MAIN
+0002D8  @cinit2
 
 Project Directory:
     C:\Users\Electronica\Documents\Digitales-6to\SR04.X\
 
 Project Files:
-    SR04.c                                                  [26-jun-25 17:43  CRC=914EE684]
+    SR04.c                                                  [27-jun-25 14:29  CRC=E9DDE094]
     ..\..\..\..\..\Program Files (x86)\PICC\devices\16F876.h [12-nov-13 14:35  CRC=5FA20FD2]
     ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c   [19-sept-13 15:38  CRC=D1A6378A]
 
-Source signature=943D656A
+Source signature=ECCC5F7A
 
 Units:
     SR04 (main)

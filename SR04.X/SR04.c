@@ -15,17 +15,21 @@
 #define LCD_DATA7       PIN_B7
 #include<lcd.c>
 
-#define TRIG PIN_C0
+#define TRIG PIN_A0
 
-int16 duration, distance;
-int1 flag = 1;
+int16 duration, oldDuration, distance;
+int1 flag = 1, check = 1;
 
 #INT_EXT
+
 void isr_ext() {
     duration = get_timer1();
-    distance = (duration / 58);
+    if (oldDuration != duration) {
+        check = 1;
+        oldDuration = duration;
+    }
+    distance = (duration / 58) - 5;
     flag = 1;
-    disable_interrupts(INT_EXT_H2L);
 }
 
 void sr04dist() {
@@ -33,20 +37,21 @@ void sr04dist() {
     delay_us(10);
     output_low(TRIG);
     set_timer1(0);
-    enable_interrupts(INT_EXT_H2L);
 }
 
 void main() {
     enable_interrupts(GLOBAL);
+    enable_interrupts(INT_EXT_H2L);
     setup_timer_1(T1_INTERNAL | T1_DIV_BY_1);
-    set_timer1(0);
     lcd_init();
     while (1) {
-        if (flag == 1) {
+        if (flag == 1 || get_timer1() > 25289) {
             flag = 0;
             sr04dist();
         }
-        printf(lcd_putc, "\fDistancia: %lu", distance);
-        delay_ms(100);
+        if (check == 1) {
+            check = 0;
+            printf(lcd_putc, "\fDistancia: %lu", distance);
+        }
     }
 }
