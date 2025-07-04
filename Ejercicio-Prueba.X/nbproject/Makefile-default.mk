@@ -102,11 +102,11 @@ ${OBJECTDIR}/Ejercicio.o: Ejercicio.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Ejercicio.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
+	${MP_CC}  out="${OBJECTDIR}"  Ejercicio.c +FM +DF +CC  #__16F876A=1 
 	@mv ${OBJECTDIR}/Ejercicio.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.cof" 
 	@mv ${OBJECTDIR}/Ejercicio.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Ejercicio.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" Ejercicio.c +EXPORT +FM +DF +CC  #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -115,11 +115,11 @@ ${OBJECTDIR}/Ejercicio.o: Ejercicio.c  nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  Ejercicio.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 
+	${MP_CC}  out="${OBJECTDIR}"  Ejercicio.c +FM +DF +CC  #__16F876A=1 
 	@mv ${OBJECTDIR}/Ejercicio.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.cof" 
 	@mv ${OBJECTDIR}/Ejercicio.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" Ejercicio.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" Ejercicio.c +EXPORT +FM +DF +CC  #__16F876A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -133,7 +133,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Ejercicio-Prueba.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Ejercicio.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Ejercicio-Prueba.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Ejercicio.o 
 	
 endif 
 	
@@ -143,7 +143,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Ejercicio-Prueba.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Ejercicio-Prueba.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Ejercicio.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Ejercicio-Prueba.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/Ejercicio.o 
 	
 endif 
 	

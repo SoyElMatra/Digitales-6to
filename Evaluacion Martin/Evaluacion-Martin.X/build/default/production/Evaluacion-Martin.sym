@@ -1,8 +1,8 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-006     lcd
 006     lcdlat
 006     kbd
+006     lcd
 015     CCP_1
 015     CCP_1_LOW
 016     CCP_1_HIGH
@@ -33,25 +33,22 @@
 035-036 rpm_ideal_eprom
 037-038 rpm
 039-03A off_funcion
-03B     kbd_getc.kchar
-03B-03C @PRINTF_LU_632.P1
 03B     lcd_init.i
-03B     @PSTRINGCN7_632.P1
+03B-03C @PRINTF_LU_632.P1
 03B     envio_de_pwm.canal
-03B-03C @MUL1616.P1
+03B     @PSTRINGCN7_632.P1
+03B     kbd_getc.kchar
 03B     cambiar_rpm.@SCRATCH1
 03B     @PSTRINGC7_632.@SCRATCH1
 03B     MAIN.@SCRATCH1
+03C     kbd_getc.row
 03C-03F lcd_init.LCD_INIT_STRING
 03C-03D envio_de_pwm.off
-03C     kbd_getc.row
 03C     cambiar_rpm.@SCRATCH2
 03C     @PSTRINGC7_632.@SCRATCH2
 03C     MAIN.@SCRATCH2
 03C     @PSTRINGCN7_632.@SCRATCH1
 03D     @MUL88.P1
-03D-03E @DIV1616.P2
-03D-03E @MUL1616.P3
 03D     kbd_getc.@SCRATCH1
 03D     @PSTRINGC7_632.@SCRATCH3
 03D     @PSTRINGCN7_632.@SCRATCH2
@@ -61,14 +58,11 @@
 03E     @PSTRINGC7_632.@SCRATCH4
 03E     @PSTRINGCN7_632.@SCRATCH3
 03E     @PRINTF_LU_632.@SCRATCH2
-03F-040 @DIV1616.P1
-03F     @MUL1616.@SCRATCH1
 03F     @PSTRINGCN7_632.@SCRATCH4
 03F     @PRINTF_LU_632.@SCRATCH3
 040-041 envio_de_pwm.off_alto
 040     lcd_init.@SCRATCH1
 040     @PRINTF_LU_632.@SCRATCH4
-041     @DIV1616.@SCRATCH1
 041     @PRINTF_LU_632.@SCRATCH5
 042-043 envio_de_pwm.off_bajo
 042     @PRINTF_LU_632.@SCRATCH6
@@ -84,8 +78,8 @@
 04A     lcd_send_byte.n
 04B     lcd_read_byte.low
 04B     lcd_send_byte.@SCRATCH1
-04C     lcd_read_byte.high
 04C     lcd_send_nibble.n
+04C     lcd_read_byte.high
 04D     lcd_read_byte.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
@@ -136,7 +130,7 @@ ROM Allocation:
 000061  TIMER1
 00006E  @const676.call
 000073  @const678.call
-000078  @const693.call
+000078  @const687.call
 000085  @delay_ms1
 00009A  lcd_send_nibble
 0000A6  lcd_read_nibble
@@ -150,26 +144,24 @@ ROM Allocation:
 0001C1  @MUL88
 0001E6  kbd_getc
 00024B  cambiar_rpm
-00031E  @MUL1616
-000335  @DIV1616
-00035C  @PSTRINGCN7_632
-0003B3  @PRINTF_LU_632
-000416  @I2C_WRITE_1
-000460  envio_de_pwm
-00051E  @cinit1
-00051E  MAIN
-00052C  @cinit2
+000328  @PSTRINGCN7_632
+00037F  @PRINTF_LU_632
+0003E2  @I2C_WRITE_1
+00042C  envio_de_pwm
+0004EC  @cinit1
+0004EC  MAIN
+0004FD  @cinit2
 
 Project Directory:
     C:\Users\Electronica\Documents\Digitales-6to\Evaluacion Martin\Evaluacion-Martin.X\
 
 Project Files:
-    Evaluacion-Martin.c                                     [19-jun-25 14:39  CRC=2759EA6A]
+    Evaluacion-Martin.c                                     [04-jul-25 15:01  CRC=86E54A88]
     ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F876A.h [12-nov-13 14:35  CRC=7FE1E080]
     ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c [19-sept-13 15:38  CRC=D1A6378A]
     ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\kbd.c [23-sept-10 09:09  CRC=8814BCFC]
 
-Source signature=890B7C6C
+Source signature=E896DC8A
 
 Units:
     Evaluacion-Martin (main)

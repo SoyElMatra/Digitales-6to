@@ -21,14 +21,14 @@ int1 flag = 0;
 int16 rpm_ideal;
 int16 rpm_ideal_eprom;
 int16 rpm;
-int16 off_funcion;
+int16 off_funcion = 4;
 
 #INT_TIMER1 
 
 void TIMER1(void) {
     contador = get_timer0();
     flag = 1;
-    set_timer1(53036);
+    set_timer1(23500);
     set_timer0(0);
 }
 
@@ -106,16 +106,17 @@ void cambiar_rpm(void) {
     temp += (k - 48);
     rpm_ideal = temp;
     write_eeprom(0x00, rpm_ideal);
+    rpm_ideal_eprom = read_eeprom(0x00);
     delay_ms(800);
     printf(lcd_putc, "\f");
     enable_interrupts(INT_TIMER1);
 }
 
 void main(void) {
-    setup_timer_1(T1_INTERNAL | T1_DIV_BY_8);
+    setup_timer_1(T1_INTERNAL | T1_DIV_BY_4);
     setup_timer_0(T0_EXT_L_TO_H | T0_DIV_1);
     set_timer0(0);
-    set_timer1(53036);
+    set_timer1(23500);
     enable_interrupts(INT_TIMER1);
     enable_interrupts(GLOBAL);
 
@@ -123,33 +124,45 @@ void main(void) {
     kbd_init();
 
     PORT_B_pullups(TRUE);
-    
+
     rpm_ideal_eprom = read_eeprom(0x00);
-    if(rpm_ideal_eprom == 0xFF){
+    if (rpm_ideal_eprom == 0xFF) {
         cambiar_rpm();
     }
 
     while (1) {
         if (flag == 1) {
-            rpm = (600 * contador) / 360;
-            rpm_ideal_eprom = read_eeprom(0x00);
+            rpm = contador;
             printf(lcd_putc, "\f");
             printf(lcd_putc, "RPM REAL = %lu\nRPM = %lu", rpm, rpm_ideal_eprom);
             flag = 0;
         }
 
-        if (rpm_ideal_eprom > rpm) {
-            off_funcion++;
-            envio_de_pwm(0, off_funcion);
-        } else if (rpm_ideal_eprom < rpm) {
-            off_funcion--;
-            envio_de_pwm(0, off_funcion);
-        }
+        if (rpm_ideal_eprom > rpm && off_funcion <= 4095) {
+            if ((rpm_ideal_eprom - rpm) > 20 && off_funcion <= 3095) {
+                off_funcion += 10;
+            } else if ((rpm_ideal_eprom - rpm) > 5 && off_funcion <= 4085) {
+                off_funcion += 10;
+            } else {
+                off_funcion++;
+            }
+        } else
+
+               if (rpm_ideal_eprom < rpm && off_funcion >= 0) {
+                if ((rpm - rpm_ideal_eprom) > 20 && off_funcion > 100) {
+                    off_funcion -= 100;
+                } else if ((rpm - rpm_ideal_eprom) > 5 && off_funcion > 10) {
+                    off_funcion -= 10;
+                } else {
+                    off_funcion--;
+                }
+            }
+        envio_de_pwm(0, off_funcion);
 
         k = kbd_getc();
         if (k == '#') {
             cambiar_rpm();
         }
-        
+
     }
 }

@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""19-jun-25""
-D G "__TIME__" 0 0 ""14:39:08""
+D G "__DATE__" 0 0 ""04-jul-25""
+D G "__TIME__" 0 0 ""15:01:52""
 D G "__16F876A" 0 0 "1" "Standard Header file for the PIC16F876A device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
@@ -836,7 +836,7 @@ C L "envio_de_pwm" 0 40 1 "FUNCTION"
 C L "envio_de_pwm" 0 40 1 "FUNCTION"
 C L "envio_de_pwm" 0 40 1 "FUNCTION"
 F G "cambiar_rpm" 0 63 "void()" `675 
-F G "MAIN" 0 114 "void()" `683 
+F G "MAIN" 0 115 "void()" `683 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
