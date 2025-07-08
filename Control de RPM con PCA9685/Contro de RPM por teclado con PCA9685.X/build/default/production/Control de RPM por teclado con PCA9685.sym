@@ -1,0 +1,210 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     kbd
+006     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @TRIS_C
+02D     kbd_getc.kbd_call_count
+02E.0   kbd_getc.kbd_down
+02E.1   flagmedida
+02F     kbd_getc.last_key
+030     kbd_getc.col
+031-032 contador
+033-034 ancho
+035     valor
+036     rpm
+037     k
+038     pca9685_set_pwm.channel
+038     kbd_getc.kchar
+038     pca9685_write_byte.reg
+038     lcd_init.i
+038     cambiar_veloc.@SCRATCH1
+038     @PSTRINGC7_635.@SCRATCH1
+038     MAIN.@SCRATCH1
+039     pca9685_write_byte.data
+039     kbd_getc.row
+039-03C lcd_init.LCD_INIT_STRING
+039-03A pca9685_set_pwm.on
+039     cambiar_veloc.@SCRATCH2
+039     @PSTRINGC7_635.@SCRATCH2
+03A     @MUL88.P1
+03A     kbd_getc.@SCRATCH1
+03A     @PSTRINGC7_635.@SCRATCH3
+03B     @MUL88.P1
+03B-03C pca9685_set_pwm.off
+03B     @PSTRINGC7_635.@SCRATCH4
+03D     pca9685_set_pwm.base_reg
+03D     lcd_init.@SCRATCH1
+03E     pca9685_set_pwm.@SCRATCH1
+03F     pca9685_set_pwm.@SCRATCH2
+040     @I2C_WRITE_1.P1
+045-046 @MUL1616.P1
+045     @PSTRINGCN7_635.P2
+045     @PRINTF_U_635.P3
+045-046 @PRINTF_LU_635.P4
+045     TIMER1_isr.@SCRATCH1
+046     @PRINTF_U_635.P1
+046     TIMER1_isr.@SCRATCH2
+046     @PSTRINGCN7_635.@SCRATCH1
+047-048 @MUL1616.P1
+047-048 @DIV1616.P2
+047     @DIV88.P3
+047     @PRINTF_LU_635.@SCRATCH1
+047     @PSTRINGCN7_635.@SCRATCH2
+048     @DIV88.P1
+048     @PRINTF_LU_635.@SCRATCH2
+048     @PSTRINGCN7_635.@SCRATCH3
+049-04A @DIV1616.P1
+049     @MUL1616.@SCRATCH1
+049     @PRINTF_LU_635.@SCRATCH3
+049     @PSTRINGCN7_635.@SCRATCH4
+049     @DIV88.@SCRATCH1
+04A     @PRINTF_LU_635.@SCRATCH4
+04B     @DIV1616.@SCRATCH1
+04B     @PRINTF_LU_635.@SCRATCH5
+04C     @PRINTF_LU_635.@SCRATCH6
+04D     @PRINTF_LU_635.@SCRATCH7
+04E     lcd_putc.c
+04F     @delay_ms1.P1
+04F     lcd_gotoxy.x
+050     lcd_gotoxy.y
+051     lcd_gotoxy.address
+052     lcd_gotoxy.@SCRATCH1
+053     lcd_send_byte.address
+054     lcd_send_byte.n
+055     lcd_read_byte.low
+055     lcd_send_byte.@SCRATCH1
+056     lcd_read_byte.high
+056     lcd_send_nibble.n
+057     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000051  KEYS.call
+000055  KEYS.data
+000061  @const670.call
+000066  @const672.call
+00006E  lcd_send_byte
+000074  lcd_read_byte
+000089  lcd_read_nibble
+0000CB  lcd_gotoxy
+0000DD  @delay_ms1
+0000F2  lcd_putc
+00011E  @PSTRINGCN7_635
+000175  @DIV88
+00018A  TIMER1_isr
+000195  @MUL1616
+0001B5  @DIV1616
+0001E6  @PRINTF_LU_635
+000256  @PRINTF_U_635
+00029E  @const683.call
+0002A4  @const688.call
+0002A8  lcd_init
+0002E4  lcd_send_nibble
+000312  kbd_init
+000315  @I2C_WRITE_1
+00035F  pca9685_write_byte
+000398  pca9685_init
+0003BA  pca9685_set_pwm
+000410  kbd_getc
+000498  @cinit1
+000498  MAIN
+0004B1  @cinit2
+000521  cambiar_veloc
+00058D  @PSTRINGC7_635
+0006BC  @MUL88
+
+Project Directory:
+    Z:\Profesores\Ciganotto\Curso PIC\Mplab x en c\Medidor de RPM\Control de RPM con PCA9685\Contro de RPM por teclado con PCA9685.X\
+
+Project Files:
+    Control de RPM por teclado con PCA9685.c                [19-jun.-25 13:11  CRC=87156230]
+    C:\Program Files (x86)\PICC\devices\16F876A.h           [12-nov.-13 14:35  CRC=7FE1E080]
+    C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sep.-13 15:38  CRC=D1A6378A]
+    C:\Program Files (x86)\PICC\drivers\kbd.c               [23-sep.-10 09:09  CRC=8814BCFC]
+
+Source signature=E8C6F432
+
+Units:
+    Control de RPM por teclado con PCA9685 (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F876A 1
+
+Output Files:
+    XREF file:   build\default\production\Control de RPM por teclado con PCA9685.xsym
+    Errors:      build\default\production\Control de RPM por teclado con PCA9685.err
+    Ext Symbols: build\default\production\Control de RPM por teclado con PCA9685.esym
+    INHX8:       build\default\production\Control de RPM por teclado con PCA9685.hex
+    Symbols:     build\default\production\Control de RPM por teclado con PCA9685.sym
+    List:        build\default\production\Control de RPM por teclado con PCA9685.lst
+    Debug/COFF:  build\default\production\Control de RPM por teclado con PCA9685.cof
+    Project:     Control de RPM por teclado con PCA9685.ccspjt
+    Call Tree:   build\default\production\Control de RPM por teclado con PCA9685.tre
+    Statistics:  build\default\production\Control de RPM por teclado con PCA9685.STA
