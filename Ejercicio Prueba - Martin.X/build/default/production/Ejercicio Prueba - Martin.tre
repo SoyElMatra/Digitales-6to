@@ -1,0 +1,33 @@
+ÀÄEjercicio Prueba - Martin
+   ÀÄMAIN  0/102  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄpca9685_init  0/26  Ram=2
+      ³  ÃÄpca9685_write_byte  0/57  Ram=3
+      ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄpca9685_write_byte  0/57  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄpca9685_write_byte  0/57  Ram=3
+      ³     ÀÄ*
+      ÃÄpca9685_init  0/26  Ram=2
+      ³  ÀÄ*
+      ÃÄpca9685_set_pwm  0/86  Ram=9
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ÃÄpca9685_set_pwm  0/86  Ram=9
+      ³  ÀÄ*
+      ÃÄpca9685_set_pwm  0/86  Ram=9
+      ³  ÀÄ*
+      ÃÄpca9685_set_pwm  0/86  Ram=9
+      ³  ÀÄ*
+      ÃÄpca9685_set_pwm  0/86  Ram=9
+      ³  ÀÄ*
+      ÀÄpca9685_set_pwm  0/86  Ram=9
+         ÀÄ*
