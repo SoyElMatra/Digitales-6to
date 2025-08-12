@@ -1,5 +1,3 @@
-C:\Users\Electronica\Documents\Digitales-6to\4SR04.X\4-Sr04s.c:21:1:  Warning#208  Function not void and does not return a value  RB_isr
-C:\Users\Electronica\Documents\Digitales-6to\4SR04.X\4-Sr04s.c:100:1:  Warning#203  Condition always TRUE
-      Memory usage:   ROM=11%      RAM=10% - 17%
-      0 Errors,  2 Warnings.
+      Memory usage:   ROM=15%      RAM=11% - 18%
+      0 Errors,  0 Warnings.
 Build Successful.

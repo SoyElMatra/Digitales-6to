@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""07-ago-25""
-D G "__TIME__" 0 0 ""14:49:16""
+D G "__DATE__" 0 0 ""12-ago-25""
+D G "__TIME__" 0 0 ""17:11:11""
 D G "__16F876A" 0 0 "1" "Standard Header file for the PIC16F876A device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
@@ -731,7 +731,13 @@ d G "INT_BUSCOL" 1 614 "0x008D08"
 d G "INT_EEPROM" 1 615 "0x008D10"
 d G "INT_TIMER0" 1 616 "0x000B20"
 d G "INT_COMP" 1 617 "0x008D40"
-D G "LCD_DATA_PORT" 0 7 "getenv("SFR:PORTC")"
+D G "LCD_ENABLE_PIN" 0 7 "PIN_C0"
+D G "LCD_RS_PIN" 0 8 "PIN_C1"
+D G "LCD_RW_PIN" 0 9 "PIN_C2"
+D G "LCD_DATA4" 0 10 "PIN_C4"
+D G "LCD_DATA5" 0 11 "PIN_C5"
+D G "LCD_DATA6" 0 12 "PIN_C6"
+D G "LCD_DATA7" 0 13 "PIN_C7"
 D G "__LCD_C__" 2 76 ""
 C L "jump_to_irs" 2 2 2 "FUNCTION"
 C L "jump_to_irs" 2 2 1 "FUNCTION"
@@ -741,75 +747,84 @@ C L "jump_to_irs" 2 2 1 "FUNCTION"
 C L "jump_to_irs" 2 2 1 "FUNCTION"
 C L "jump_to_irs" 2 2 2 "FUNCTION"
 T G "LCD_PIN_MAP" 2 90 "{int1 enable,int1 rs,int1 rw,int1 unused,int4 data}" `608  "this is to improve compatability with previous LCD drivers that accepted"
-D G "lcd_output_enable" 2 109 "(x) lcdlat.enable=x"
-D G "lcd_enable_tris" 2 110 "()   lcdtris.enable=0"
-D G "lcd_output_rs" 2 117 "(x) lcdlat.rs=x"
-D G "lcd_rs_tris" 2 118 "()   lcdtris.rs=0"
-D G "lcd_output_rw" 2 125 "(x) lcdlat.rw=x"
-D G "lcd_rw_tris" 2 126 "()   lcdtris.rw=0"
-V G "lcd" 2 161 "LCD_PIN_MAP" `609 
-V G "lcdlat" 2 161 "LCD_PIN_MAP" `610 
-V G "lcdtris" 2 161 "LCD_PIN_MAP" `611 
+D G "lcd_output_enable" 2 112 "(x) output_bit(LCD_ENABLE_PIN, x)"
+D G "lcd_enable_tris" 2 113 "()  output_drive(LCD_ENABLE_PIN)"
+D G "lcd_output_rs" 2 120 "(x) output_bit(LCD_RS_PIN, x)"
+D G "lcd_rs_tris" 2 121 "()  output_drive(LCD_RS_PIN)"
+D G "lcd_output_rw" 2 128 "(x) output_bit(LCD_RW_PIN, x)"
+D G "lcd_rw_tris" 2 129 "()  output_drive(LCD_RW_PIN)"
 D G "LCD_TYPE" 2 179 "2" "0=5x7, 1=5x10, 2=2 lines"
 D G "LCD_LINE_TWO" 2 183 "0x40" "LCD RAM address for the second line"
 D G "LCD_LINE_LENGTH" 2 187 "20"
-f G "lcd_read_nibble" 2 190 "int8()" `612 
-F G "lcd_read_byte" 2 193 "int8()" `613 
-V L "low" 2 194 "int8" `614 
-V L "high" 2 194 "int8" `615 
-F G "lcd_read_nibble" 2 240 "int8()" `612 
-V L "n" 2 256 "int8" `617 
-F G "lcd_send_nibble" 2 257 "void(int8 n)" `616 
-V L "address" 2 274 "int8" `619 
-V L "n" 2 274 "int8" `620 
-F G "lcd_send_byte" 2 275 "void(int8 address,int8 n)" `618 
-F G "lcd_init" 2 300 "void()" `621 
-V L "i" 2 301 "int8" `622 
-V L "LCD_INIT_STRING" 2 302 "int8[4]" `623 
+f G "lcd_read_nibble" 2 190 "int8()" `609 
+F G "lcd_read_byte" 2 193 "int8()" `610 
+V L "low" 2 194 "int8" `611 
+V L "high" 2 194 "int8" `612 
+F G "lcd_read_nibble" 2 240 "int8()" `609 
+V L "n" 2 242 "int8" `613 
+C L "lcd_read_nibble" 2 2 1 "FUNCTION"
+V L "n" 2 256 "int8" `615 
+F G "lcd_send_nibble" 2 257 "void(int8 n)" `614 
+C L "lcd_send_nibble" 2 2 1 "FUNCTION"
+V L "address" 2 274 "int8" `617 
+V L "n" 2 274 "int8" `618 
+F G "lcd_send_byte" 2 275 "void(int8 address,int8 n)" `616 
+F G "lcd_init" 2 300 "void()" `619 
+V L "i" 2 301 "int8" `620 
+V L "LCD_INIT_STRING" 2 302 "int8[4]" `621 
 C L "lcd_init" 2 2 2 "FUNCTION"
-V L "x" 2 345 "int8" `625 
-V L "y" 2 345 "int8" `626 
-F G "lcd_gotoxy" 2 346 "void(int8 x,int8 y)" `624 
-V L "address" 2 347 "int8" `627 
-V L "c" 2 363 "int8" `629 
-F G "lcd_putc" 2 364 "void(int8 c)" `628 
-V L "x" 2 406 "int8" `631 
-V L "y" 2 406 "int8" `632 
-F G "lcd_getc" 2 407 "int8(int8 x,int8 y)" `630 
-V L "value" 2 408 "int8" `633 
+V L "x" 2 345 "int8" `623 
+V L "y" 2 345 "int8" `624 
+F G "lcd_gotoxy" 2 346 "void(int8 x,int8 y)" `622 
+V L "address" 2 347 "int8" `625 
+V L "c" 2 363 "int8" `627 
+F G "lcd_putc" 2 364 "void(int8 c)" `626 
+V L "x" 2 406 "int8" `629 
+V L "y" 2 406 "int8" `630 
+F G "lcd_getc" 2 407 "int8(int8 x,int8 y)" `628 
+V L "value" 2 408 "int8" `631 
 C L "lcd_getc" 2 2 1 "FUNCTION"
 C L "lcd_set_cgram_char" 2 2 5 "FUNCTION"
-V L "which" 2 424 "int8" `635 
-V L "ptr" 2 424 "*int8" `636 
-F G "lcd_set_cgram_char" 2 425 "void(int8 which,*int8 ptr)" `634 
-V L "i" 2 426 "int8" `637 
+V L "which" 2 424 "int8" `633 
+V L "ptr" 2 424 "*int8" `634 
+F G "lcd_set_cgram_char" 2 425 "void(int8 which,*int8 ptr)" `632 
+V L "i" 2 426 "int8" `635 
 C L "lcd_set_cgram_char" 2 2 1 "FUNCTION"
-V L "on" 2 443 "int8" `639 
-F G "lcd_cursor_on" 2 444 "void(int8 on)" `638 
+V L "on" 2 443 "int8" `637 
+F G "lcd_cursor_on" 2 444 "void(int8 on)" `636 
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
 C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-D G "TRIG1" 0 10 "PIN_B0"
-D G "TRIG2" 0 11 "PIN_B1"
-D G "TRIG3" 0 12 "PIN_B2"
-D G "TRIG4" 0 13 "PIN_B3"
-V G "duration" 0 15 "int16" `640 
-V G "oldDistance1" 0 15 "int16" `641 
-V G "oldDistance2" 0 15 "int16" `642 
-V G "oldDistance3" 0 15 "int16" `643 
-V G "oldDistance4" 0 15 "int16" `644 
-V G "distance1" 0 15 "int16" `645 
-V G "distance2" 0 15 "int16" `646 
-V G "distance3" 0 15 "int16" `647 
-V G "distance4" 0 15 "int16" `648 
-V G "flagdisp" 0 16 "int1" `649 
-V G "check" 0 16 "int1" `650 
-V G "i" 0 17 "int8" `651 
-F G "RB_isr" 0 21 "int8()" `652 
-F G "sr04dist1" 0 57 "void()" `657 
-F G "sr04dist2" 0 66 "void()" `658 
-F G "sr04dist3" 0 75 "void()" `659 
-F G "sr04dist4" 0 84 "void()" `660 
-F G "MAIN" 0 93 "void()" `661 
+D G "TRIG1" 0 16 "PIN_B0"
+D G "TRIG2" 0 17 "PIN_B1"
+D G "TRIG3" 0 18 "PIN_B2"
+D G "TRIG4" 0 19 "PIN_B3"
+D G "ECHO1" 0 21 "5"
+D G "ECHO2" 0 22 "6"
+D G "ECHO3" 0 23 "7"
+D G "ECHO4" 0 24 "8"
+V G "duration" 0 26 "int16" `638 
+V G "oldDistance1" 0 26 "int16" `639 
+V G "oldDistance2" 0 26 "int16" `640 
+V G "oldDistance3" 0 26 "int16" `641 
+V G "oldDistance4" 0 26 "int16" `642 
+V G "distance1" 0 27 "int16" `643 
+V G "distance2" 0 27 "int16" `644 
+V G "distance3" 0 27 "int16" `645 
+V G "distance4" 0 27 "int16" `646 
+V G "flagdisp" 0 28 "int1" `647 
+V G "check" 0 28 "int1" `648 
+V G "i" 0 29 "int8" `649 
+V G "esperandoBajada" 0 30 "int1" `650 
+V G "prevb" 0 31 "int8" `651 
+F G "RB_isr" 0 34 "void()" `652 
+V L "portb" 0 35 "int8" `653 
+V L "changed" 0 36 "int8" `654 
+V L "bitECHO" 0 39 "int8" `655 
+F G "sr04dist1" 0 78 "void()" `661 
+F G "sr04dist2" 0 86 "void()" `662 
+F G "sr04dist3" 0 94 "void()" `663 
+F G "sr04dist4" 0 102 "void()" `664 
+F G "MAIN" 0 110 "void()" `665 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
