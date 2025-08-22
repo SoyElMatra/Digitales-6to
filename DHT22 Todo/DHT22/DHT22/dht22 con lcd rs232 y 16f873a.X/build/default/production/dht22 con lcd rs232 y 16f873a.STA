@@ -1,0 +1,67 @@
+
+ROM used:   1751/4096 (43%)
+            1751/4096 (43%) including unused fragments
+
+            1.4 Average locations per line
+            10.6 Average locations per statement
+
+RAM used:   31/191 (16%) at main() level
+            59/191 (31%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  154    81  49  dht22 con lcd rs232 y 16f873a.c
+  620     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F873A.h
+  456    84  51  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+----- -----
+ 1230   165 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     19   1    1             @delay_ms1
+ Inline         3   596  5.9  lcd_read_byte
+0      6   0    0    59  4.2  lcd_read_nibble
+0     17   1    1   179  3.3  lcd_send_nibble
+0     66   4    3   460  4.7  lcd_send_byte
+0     60   3    6   814  7.2  lcd_init
+0     18   1    4   208  6.3  lcd_gotoxy
+0     44   3    1   354  4.7  lcd_putc
+ Inline         3   356  6.8  leer_datos_dht
+0    241  14   16  1640  7.4  leer_dht22
+0     29   2    2             @ITOF
+0    202  12   14             @DIVFF
+0    238  14    1   644  4.2  MAIN
+0      7   0    0             @const672
+0     87   5    4             @PSTRINGC7_630
+0    117   7   13             @MULFF
+0     31   2    5             @FTOSD
+0     78   4   13             @DIV3232
+0    194  11   11             @PRINTF_L32D_630FPFPF
+0    198  11   11             @PRINTF_L32D_9600_62_63FPFPF
+0      7   0    0             @const690
+0     88   5    5             @PSTRINGCN7_630
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              165
+    Comments                235
+    Volume (V)              8065
+    Difficulty (D)          51.6
+    Effort to implement (E) 416285
+    Time to implement (T)   6 hours, 25 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   17
+    Maintainability (MI)    137
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1747  297  
+00800-00FFF     0  2048  
+
+
+
