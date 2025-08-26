@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""22-ago-25""
-D G "__TIME__" 0 0 ""13:57:56""
+D G "__DATE__" 0 0 ""26-ago-25""
+D G "__TIME__" 0 0 ""16:26:06""
 D G "__16F873A" 0 0 "1" "funciona ok"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
@@ -799,34 +799,33 @@ V G "GlobalErr1" 0 17 "int8" `649
 V G "GlobalErr2" 0 17 "int8" `650 
 V G "GlobalErr3" 0 17 "int8" `651 
 f G "leer_datos_dht" 0 18 "int8()" `652 
-F G "dht_init" 0 20 "void()" `653 
-F G "leer_datos_dht" 0 27 "int8()" `652 
-V L "i" 0 28 "int8" `654 
-V L "result" 0 29 "int8" `655 
-C L "leer_datos_dht" 0 31 2 "FUNCTION"
-C L "leer_datos_dht" 0 31 1 "FUNCTION"
-C L "leer_datos_dht" 0 31 1 "FUNCTION"
-C L "leer_datos_dht" 0 31 1 "FUNCTION"
-F G "leer_dht22" 0 45 "void()" `656  "byte GlobalErr=0;"
-V L "dht22_in" 0 47 "int8" `657 
-V L "i" 0 47 "int8" `658 
-V L "dht22_checksum" 0 47 "int8" `659 
-V L "temperatura" 0 48 "int16" `660 
-V L "humedad" 0 48 "int16" `661 
-V L "temp1" 0 49 "float" `662 
-V L "hum" 0 49 "float" `663 
-C L "leer_dht22" 0 31 1 "FUNCTION"
-C L "leer_dht22" 0 31 1 "FUNCTION"
-C L "leer_dht22" 0 31 1 "FUNCTION"
-C L "leer_dht22" 0 31 1 "FUNCTION"
-C L "leer_dht22" 0 31 1 "FUNCTION"
-C L "leer_dht22" 0 31 2 "FUNCTION"
-F G "MAIN" 0 113 "void()" `669 
-C L "MAIN" 0 31 2 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
+F G "leer_datos_dht" 0 20 "int8()" `652 
+V L "i" 0 21 "int8" `653 
+V L "result" 0 22 "int8" `654 
+C L "leer_datos_dht" 0 24 2 "FUNCTION"
+C L "leer_datos_dht" 0 24 1 "FUNCTION"
+C L "leer_datos_dht" 0 24 1 "FUNCTION"
+C L "leer_datos_dht" 0 24 1 "FUNCTION"
+F G "leer_dht22" 0 38 "void()" `655  "byte GlobalErr=0;"
+V L "dht22_in" 0 40 "int8" `656 
+V L "i" 0 40 "int8" `657 
+V L "dht22_checksum" 0 40 "int8" `658 
+V L "temperatura" 0 41 "int16" `659 
+V L "humedad" 0 41 "int16" `660 
+V L "temp1" 0 42 "float" `661 
+V L "hum" 0 42 "float" `662 
+C L "leer_dht22" 0 24 1 "FUNCTION"
+C L "leer_dht22" 0 24 1 "FUNCTION"
+C L "leer_dht22" 0 24 1 "FUNCTION"
+C L "leer_dht22" 0 24 1 "FUNCTION"
+C L "leer_dht22" 0 24 1 "FUNCTION"
+C L "leer_dht22" 0 24 2 "FUNCTION"
+F G "MAIN" 0 105 "void()" `668 
+C L "MAIN" 0 24 2 "FUNCTION"
+C L "MAIN" 0 24 1 "FUNCTION"
+C L "MAIN" 0 24 1 "FUNCTION"
+C L "MAIN" 0 24 1 "FUNCTION"
+C L "MAIN" 0 24 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

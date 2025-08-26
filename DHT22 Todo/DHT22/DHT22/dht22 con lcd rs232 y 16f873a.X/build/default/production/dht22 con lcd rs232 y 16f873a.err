@@ -1,6 +1,6 @@
-C:\Users\Electronica\Desktop\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:129:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
-C:\Users\Electronica\Desktop\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:129:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
-C:\Users\Electronica\Desktop\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:16:29:  Warning#202  Variable never used:   humid
+C:\Users\Electronica\Documents\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:121:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Documents\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:121:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Documents\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:16:31:  Warning#202  Variable never used:   humid
       Memory usage:   ROM=43%      RAM=16% - 31%
       0 Errors,  3 Warnings.
 Build Successful.
