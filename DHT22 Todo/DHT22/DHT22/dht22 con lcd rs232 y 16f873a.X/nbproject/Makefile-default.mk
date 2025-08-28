@@ -102,11 +102,11 @@ ${OBJECTDIR}/dht22\ con\ lcd\ rs232\ y\ 16f873a.o: dht22\ con\ lcd\ rs232\ y\ 16
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  "dht22 con lcd rs232 y 16f873a.c" +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 
+	${MP_CC}  out="${OBJECTDIR}"  "dht22 con lcd rs232 y 16f873a.c" +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P #__16F873A=1 
 	@mv "${OBJECTDIR}/dht22 con lcd rs232 y 16f873a".cof "dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.cof" 
 	@mv "${OBJECTDIR}/dht22 con lcd rs232 y 16f873a".hex "dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" "dht22 con lcd rs232 y 16f873a.c" +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" "dht22 con lcd rs232 y 16f873a.c" +EXPORT +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -115,11 +115,11 @@ ${OBJECTDIR}/dht22\ con\ lcd\ rs232\ y\ 16f873a.o: dht22\ con\ lcd\ rs232\ y\ 16
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  "dht22 con lcd rs232 y 16f873a.c" +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 
+	${MP_CC}  out="${OBJECTDIR}"  "dht22 con lcd rs232 y 16f873a.c" +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P #__16F873A=1 
 	@mv "${OBJECTDIR}/dht22 con lcd rs232 y 16f873a".cof "dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.cof" 
 	@mv "${OBJECTDIR}/dht22 con lcd rs232 y 16f873a".hex "dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" "dht22 con lcd rs232 y 16f873a.c" +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" "dht22 con lcd rs232 y 16f873a.c" +EXPORT +FM +DF +CC +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P #__16F873A=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -133,7 +133,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.${O
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/dht22 con lcd rs232 y 16f873a.o" +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/dht22 con lcd rs232 y 16f873a.o" +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
@@ -143,7 +143,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.${O
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/dht22 con lcd rs232 y 16f873a.o" +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=dht22_con_lcd_rs232_y_16f873a.X.${IMAGE_TYPE}.hex="${OBJECTDIR}/dht22 con lcd rs232 y 16f873a.o" +Y=9 +EA I+="C:\Program Files (x86)\PICC\Drivers" I+="C:\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
