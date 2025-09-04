@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\DHT22 con teclado.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\DHT22 con teclado.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\DHT22 con teclado.c]
+Type=4
+[mru-list]
+1=build\default\production\DHT22 con teclado.c
+[Units]
+Count=1
+1=DHT22 con teclado (main)

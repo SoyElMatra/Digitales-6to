@@ -1,0 +1,10 @@
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:112:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:112:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:144:1:  Warning#203  Condition always TRUE
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:151:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:151:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:151:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\DHT22 con teclado.c:19:31:  Warning#202  Variable never used:   humid
+      Memory usage:   ROM=23%      RAM=13% - 24%
+      0 Errors,  7 Warnings.
+Build Successful.

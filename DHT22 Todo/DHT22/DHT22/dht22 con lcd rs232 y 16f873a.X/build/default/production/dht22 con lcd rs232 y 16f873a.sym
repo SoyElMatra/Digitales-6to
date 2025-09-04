@@ -1,0 +1,233 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+006     kbd
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     kbd_getc.kbd_call_count
+025.0   kbd_getc.kbd_down
+025.1   signo
+026     kbd_getc.last_key
+027     kbd_getc.col
+028-02C dht22_dat
+02D-030 dhthum
+031-034 dthtemp
+035     GlobalErr1
+036     GlobalErr2
+037     GlobalErr3
+038-039 Tmin
+03A-03B Tmax
+03C-03D Hmin
+03E-03F Hmax
+040     k
+041     flag_init
+042     MAIN.i
+043     leer_teclado.tecla
+043     leer_dht22.i
+043     @PSTRINGCN7_630.P1
+043-046 @FLT.P2
+043-044 @PRINTF_LD_630.P3
+043     lcd_init.i
+043-044 @SITOF.P1
+043-046 @PRINTF_L32D_630FPFPF.P2
+043     MAIN.@SCRATCH1
+044-045 configurar_hum.h1
+044     leer_dht22.dht22_in
+044-047 lcd_init.LCD_INIT_STRING
+044-045 configurar_temp.t1
+044     @PSTRINGCN7_630.@SCRATCH1
+045     leer_dht22.dht22_checksum
+045     @PSTRINGCN7_630.@SCRATCH2
+045     @PRINTF_LD_630.@SCRATCH1
+046-047 configurar_temp.t2
+046-047 leer_dht22.temperatura
+046-047 configurar_hum.h2
+046     @PSTRINGCN7_630.@SCRATCH3
+046     @PRINTF_LD_630.@SCRATCH2
+047-04A @FLT.P1
+047     @PRINTF_L32D_630FPFPF.P2
+047     @PSTRINGCN7_630.@SCRATCH4
+047     @PRINTF_LD_630.@SCRATCH3
+048     leer_valor3d.maxval
+048-049 leer_dht22.humedad
+048     lcd_init.@SCRATCH1
+048     configurar_temp.@SCRATCH1
+048     configurar_hum.@SCRATCH1
+048     @PRINTF_L32D_630FPFPF.@SCRATCH1
+048     @PRINTF_LD_630.@SCRATCH4
+049     leer_valor3d.tipo
+049     @PRINTF_L32D_630FPFPF.@SCRATCH2
+049     @PRINTF_LD_630.@SCRATCH5
+04A-04B leer_valor3d.val
+04A-04D leer_dht22.temp1
+04A     @PRINTF_L32D_630FPFPF.@SCRATCH3
+04A     @PRINTF_LD_630.@SCRATCH6
+04B     @PRINTF_L32D_630FPFPF.@SCRATCH4
+04B     @FLT.@SCRATCH1
+04C     leer_valor3d.d1
+04C     @PRINTF_L32D_630FPFPF.@SCRATCH5
+04C     @FLT.@SCRATCH2
+04D     leer_valor3d.d2
+04D     @PRINTF_L32D_630FPFPF.@SCRATCH6
+04E-051 @DIV3232.P1
+04E-051 @FTOSD.P2
+04E-051 @MULFF.P3
+04E     leer_valor3d.d3
+04E-051 leer_dht22.hum
+04F     get_tecla_segura.t1
+04F     @DIV88.P1
+04F     leer_valor3d.@SCRATCH1
+04F     @PSTRINGC7_630.@SCRATCH1
+050     @DIV88.P1
+050     get_tecla_segura.t2
+050     @PSTRINGC7_630.@SCRATCH2
+051     kbd_getc.kchar
+051     get_tecla_segura.@SCRATCH1
+051     @PSTRINGC7_630.@SCRATCH3
+051     @DIV88.@SCRATCH1
+052-053 @ITOF.P1
+052     lcd_putc.c
+052-055 @DIV3232.P1
+052-055 @MULFF.P2
+052-055 @DIVFF.P3
+052     kbd_getc.row
+052     leer_dht22.@SCRATCH1
+052     @PSTRINGC7_630.@SCRATCH4
+052     @FTOSD.@SCRATCH1
+053     @delay_ms1.P1
+053     lcd_gotoxy.x
+053     leer_datos_dht.i
+053     @MUL88.P1
+053     kbd_getc.@SCRATCH1
+054     @MUL88.P1
+054     leer_datos_dht.result
+054     lcd_gotoxy.y
+055     lcd_gotoxy.address
+055     leer_datos_dht.@SCRATCH1
+056-059 @DIVFF.P1
+056     lcd_gotoxy.@SCRATCH1
+056     @MULFF.@SCRATCH1
+056     @DIV3232.@SCRATCH1
+057     lcd_send_byte.address
+057     @MULFF.@SCRATCH2
+057     @DIV3232.@SCRATCH2
+058     lcd_send_byte.n
+058     @MULFF.@SCRATCH3
+058     @DIV3232.@SCRATCH3
+059     lcd_read_byte.low
+059     lcd_send_byte.@SCRATCH1
+059     @MULFF.@SCRATCH4
+059     @DIV3232.@SCRATCH4
+05A     lcd_read_byte.high
+05A     lcd_send_nibble.n
+05A     @DIVFF.@SCRATCH1
+05A     @MULFF.@SCRATCH5
+05A     @DIV3232.@SCRATCH5
+05B     lcd_read_byte.@SCRATCH1
+05B     @DIVFF.@SCRATCH2
+05C     @DIVFF.@SCRATCH3
+05D     @DIVFF.@SCRATCH4
+05E     @DIVFF.@SCRATCH5
+05F     @DIVFF.@SCRATCH6
+085.2   dht_io
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const698.call
+000019  @const700.call
+00001E  @const701.call
+000023  @const702.call
+000028  @const703.call
+00002D  @const707.call
+000035  @const709.call
+00003D  @const711.call
+000045  @const716.call
+00004E  @const720.call
+000057  @const727.call
+000060  @const740.call
+000068  @const751.call
+000070  @delay_ms1
+000083  lcd_send_nibble
+000094  lcd_read_nibble
+00009A  lcd_send_byte
+0000A0  lcd_read_byte
+0000DC  lcd_init
+000118  kbd_init
+00011A  lcd_gotoxy
+00012C  lcd_putc
+000158  @PSTRINGC7_630
+0001AE  @MUL88
+0001D3  kbd_getc
+000238  get_tecla_segura
+000252  leer_valor3d
+000299  @DIV88
+00035C  configurar_temp
+0003E0  configurar_hum
+000465  @ITOF
+000482  @DIVFF
+00054C  leer_dht22
+00059C  leer_datos_dht
+00063C  @DIV3232
+00068A  @PRINTF_L32D_630FPFPF
+00069E  @MULFF
+000724  @FTOSD
+0007DC  leer_teclado
+000800  @PSTRINGCN7_630
+00085B  @PRINTF_LD_630
+0008D2  @SITOF
+0008F7  @FLT
+000936  @cinit1
+000936  MAIN
+000948  @cinit2
+
+Project Directory:
+    Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\
+
+Project Files:
+    dht22 con lcd rs232 y 16f873a.c                         [29-ago-25 14:07  CRC=6B660DA9]
+    C:\Program Files (x86)\PICC\devices\16F873A.h           [12-nov-13 14:35  CRC=4CB28E1D]
+    C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sept-13 15:38  CRC=D1A6378A]
+    C:\Program Files (x86)\PICC\drivers\kbd.c               [23-sept-10 09:09  CRC=8814BCFC]
+
+Source signature=99E84D48
+
+Units:
+    dht22 con lcd rs232 y 16f873a (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F873A 1
+
+Output Files:
+    XREF file:   build\default\production\dht22 con lcd rs232 y 16f873a.xsym
+    Errors:      build\default\production\dht22 con lcd rs232 y 16f873a.err
+    Ext Symbols: build\default\production\dht22 con lcd rs232 y 16f873a.esym
+    INHX8:       build\default\production\dht22 con lcd rs232 y 16f873a.hex
+    Symbols:     build\default\production\dht22 con lcd rs232 y 16f873a.sym
+    List:        build\default\production\dht22 con lcd rs232 y 16f873a.lst
+    Debug/COFF:  build\default\production\dht22 con lcd rs232 y 16f873a.cof
+    Project:     dht22 con lcd rs232 y 16f873a.ccspjt
+    Call Tree:   build\default\production\dht22 con lcd rs232 y 16f873a.tre
+    Statistics:  build\default\production\dht22 con lcd rs232 y 16f873a.STA

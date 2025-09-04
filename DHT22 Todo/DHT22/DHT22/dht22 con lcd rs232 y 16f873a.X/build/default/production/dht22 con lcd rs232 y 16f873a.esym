@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""28-ago-25""
-D G "__TIME__" 0 0 ""15:05:02""
+D G "__DATE__" 0 0 ""29-ago-25""
+D G "__TIME__" 0 0 ""14:17:12""
 D G "__16F873A" 0 0 "1" "Standard Header file for the PIC16F873A device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
@@ -819,10 +819,10 @@ V G "dthtemp" 0 15 "float" `662
 V G "GlobalErr1" 0 16 "int8" `663 
 V G "GlobalErr2" 0 16 "int8" `664 
 V G "GlobalErr3" 0 16 "int8" `665 
-V G "Tmin" 0 18 "int8" `666 
-V G "Tmax" 0 18 "int8" `667 
-V G "Hmin" 0 19 "int8" `668 
-V G "Hmax" 0 19 "int8" `669 
+V G "Tmin" 0 18 "sint16" `666 
+V G "Tmax" 0 18 "sint16" `667 
+V G "Hmin" 0 19 "sint16" `668 
+V G "Hmax" 0 19 "sint16" `669 
 V G "k" 0 20 "int8" `670 
 V G "flag_init" 0 21 "int8" `671  "================== DHT22 ==================="
 F G "leer_datos_dht" 0 24 "int8()" `672 
@@ -836,34 +836,38 @@ V L "temperatura" 0 37 "int16" `679
 V L "humedad" 0 37 "int16" `680 
 V L "temp1" 0 38 "float" `681 
 V L "hum" 0 38 "float" `682 
+C L "get_tecla_segura" 0 67 1 "FUNCTION"
+F G "get_tecla_segura" 0 68 "int8()" `688 
+V L "t1" 0 69 "int8" `689 
+V L "t2" 0 69 "int8" `690 
+C L "get_tecla_segura" 0 67 1 "FUNCTION"
+C L "get_tecla_segura" 0 67 1 "FUNCTION"
+C L "get_tecla_segura" 0 67 2 "FUNCTION"
 C L "leer_valor3d" 0 67 1 "FUNCTION"
-V L "maxval" 0 68 "int8" `689 
-V L "tipo" 0 68 "int8" `690 
-F G "leer_valor3d" 0 68 "int8(int8 maxval,int8 tipo)" `688 
-V L "val" 0 69 "int8" `691 
-V L "d1" 0 70 "int8" `692 
-V L "d2" 0 70 "int8" `693 
-V L "d3" 0 70 "int8" `694 
+V L "maxval" 0 85 "int8" `692 
+V L "tipo" 0 85 "int8" `693 
+F G "leer_valor3d" 0 85 "sint16(int8 maxval,int8 tipo)" `691 
+V L "val" 0 86 "sint16" `694 
+V L "d1" 0 87 "int8" `695 
+V L "d2" 0 87 "int8" `696 
+V L "d3" 0 87 "int8" `697 
 C L "leer_valor3d" 0 67 1 "FUNCTION"
 C L "leer_valor3d" 0 67 1 "FUNCTION"
 C L "leer_valor3d" 0 67 1 "FUNCTION"
-F G "configurar_temp" 0 104 "void()" `705 
-V L "t1" 0 105 "int8" `706 
-V L "t2" 0 105 "int8" `707 
-F G "configurar_hum" 0 119 "void()" `709 
-V L "h1" 0 120 "int8" `710 
-V L "h2" 0 120 "int8" `711 
+F G "configurar_temp" 0 131 "void()" `713 
+V L "t1" 0 132 "sint16" `714 
+V L "t2" 0 132 "sint16" `715 
+F G "configurar_hum" 0 146 "void()" `717 
+V L "h1" 0 147 "sint16" `718 
+V L "h2" 0 147 "sint16" `719 
 C L "leer_teclado" 0 67 1 "FUNCTION"
-F G "leer_teclado" 0 135 "int8()" `713 
-V L "tecla" 0 136 "int8" `714 
+F G "leer_teclado" 0 162 "int8()" `721 
+V L "tecla" 0 163 "int8" `722 
 C L "MAIN" 0 67 1 "FUNCTION"
-F G "MAIN" 0 144 "void()" `715 
-C L "MAIN" 0 67 1 "FUNCTION"
-C L "MAIN" 0 67 1 "FUNCTION"
-V L "i" 0 173 "int8" `719 
+F G "MAIN" 0 170 "void()" `723 
+V L "i" 0 171 "int8" `724  "declarada una vez"
 C L "MAIN" 0 67 1 "FUNCTION"
 C L "MAIN" 0 67 1 "FUNCTION"
-V L "??65535" 0 187 "float" `743 
 C L "MAIN" 0 67 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0

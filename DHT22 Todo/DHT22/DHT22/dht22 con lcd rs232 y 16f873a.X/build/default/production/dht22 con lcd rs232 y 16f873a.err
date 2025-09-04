@@ -1,13 +1,3 @@
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:109:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:109:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:113:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:113:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:124:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:124:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:128:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:128:1:  Warning#205  Unsigned variable is never less than zero
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:173:15:  Info#300  More info:   First Declaration of i
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:187:15:  Error#31  Identifier is already used in this scope
-Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Todo\DHT22\DHT22\dht22 con lcd rs232 y 16f873a.X\dht22 con lcd rs232 y 16f873a.c:187:27:  Error#76  Expect ;
-      2 Errors,  8 Warnings.
-Build Failed.
+      Memory usage:   ROM=69%      RAM=19% - 34%
+      0 Errors,  0 Warnings.
+Build Successful.
