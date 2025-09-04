@@ -1,8 +1,8 @@
-004-005 @WRITE_PROGRAM_MEMORY8.P1
-004-005 @READ_PROGRAM_MEMORY8.P2
-006     kbd
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
 006     lcdlat
 006     lcd
+006     kbd
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
@@ -46,11 +46,11 @@
 04D     kbd_getc.@SCRATCH1
 04E     @MUL88.P1
 050     lcd_init.@SCRATCH1
-058-05B @PRINTF_L32D_630FPFPF.P1
-058     @PSTRINGCN7_630.P2
 058     leer_dht22.dht22_in
-058     TIMER0_isr.@SCRATCH1
+058     @PSTRINGCN7_630.P1
+058-05B @PRINTF_L32D_630FPFPF.P2
 058     @PSTRINGC7_630.@SCRATCH1
+058     TIMER0_isr.@SCRATCH1
 059     leer_dht22.i
 059     @PSTRINGC7_630.@SCRATCH2
 059     @PSTRINGCN7_630.@SCRATCH1
@@ -73,32 +73,32 @@
 063-066 leer_dht22.hum
 063     @PRINTF_L32D_630FPFPF.@SCRATCH7
 064     @PRINTF_L32D_630FPFPF.@SCRATCH8
-065-068 @FTOSD.P1
-065-068 @DIV3232.P2
+065-068 @DIV3232.P1
+065-068 @MULFF.P2
+065-068 @FTOSD.P3
 065     lcd_putc.c
-065-068 @MULFF.P1
 066     lcd_gotoxy.x
 067     @delay_ms1.P1
-067-06A @DIVFF.P2
+067-068 @ITOF.P2
+067-06A @DIVFF.P3
 067     lcd_gotoxy.y
-067-068 @ITOF.P1
 067     leer_dht22.@SCRATCH1
 068     lcd_gotoxy.address
 068     leer_dht22.@SCRATCH2
-069-06C @MULFF.P1
-069-06C @DIV3232.P2
 069     leer_datos_dht.i
+069-06C @DIV3232.P1
+069-06C @MULFF.P2
 069     lcd_gotoxy.@SCRATCH1
 069     @FTOSD.@SCRATCH1
-06A     leer_datos_dht.result
 06A     lcd_send_byte.address
-06B     lcd_send_byte.n
+06A     leer_datos_dht.result
 06B-06E @DIVFF.P1
+06B     lcd_send_byte.n
 06B     leer_datos_dht.@SCRATCH1
 06C     lcd_read_byte.low
 06C     lcd_send_byte.@SCRATCH1
-06D     lcd_read_byte.high
 06D     lcd_send_nibble.n
+06D     lcd_read_byte.high
 06D     @MULFF.@SCRATCH1
 06D     @DIV3232.@SCRATCH1
 06E     lcd_read_byte.@SCRATCH1
@@ -163,45 +163,47 @@ FFF     @INTERRUPT_AREA
 ROM Allocation:
 00004F  KEYS.call
 000053  KEYS.data
-00005F  @delay_ms1
-000074  @ITOF
-000091  @DIVFF
-00015B  lcd_send_nibble
-000167  lcd_send_byte
-00016D  lcd_read_byte
-000182  lcd_read_nibble
-0001AF  lcd_putc
-0001DE  lcd_gotoxy
-0001FB  @DIV3232
-00024A  @PRINTF_L32D_630FPFPF
-00025E  @MULFF
-0002E4  @FTOSD
-00039D  TIMER0_isr
-0003A2  leer_dht22
-0003FA  leer_datos_dht
-000530  @PSTRINGCN7_630
-0005C1  @const687.call
-0005CA  @const701.call
-0005D1  @const708.call
-0005D8  lcd_init
-00063A  kbd_init
-00063D  kbd_getc
-00068D  @MUL88
-0006C7  MAIN
-0006C7  @cinit1
-0006DB  @cinit2
-0006EB  @PSTRINGC7_630
+00005F  @const686.call
+000064  @const688.call
+00006D  @delay_ms1
+000082  @ITOF
+00009F  @DIVFF
+000169  lcd_send_nibble
+000175  lcd_send_byte
+00017B  lcd_read_byte
+000190  lcd_read_nibble
+0001BD  lcd_putc
+0001EC  lcd_gotoxy
+000209  @DIV3232
+000258  @PRINTF_L32D_630FPFPF
+00026C  @MULFF
+0002F2  @FTOSD
+0003AB  TIMER0_isr
+0003B0  leer_dht22
+000408  leer_datos_dht
+00053E  @PSTRINGCN7_630
+0005CF  @const692.call
+0005D8  @const705.call
+0005DF  @const712.call
+0005E6  lcd_init
+000648  kbd_init
+00064B  kbd_getc
+00069B  @MUL88
+0006D5  MAIN
+0006D5  @cinit1
+0006E9  @cinit2
+0006F9  @PSTRINGC7_630
 
 Project Directory:
     Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 con teclado\DHT22 con teclado.X\
 
 Project Files:
-    DHT22 con teclado.c                                     [04-sept-25 14:03  CRC=CCA1F69B]
+    DHT22 con teclado.c                                     [04-sept-25 14:33  CRC=1E3ADB3F]
     C:\Program Files (x86)\PICC\devices\16F876A.h           [12-nov-13 14:35  CRC=7FE1E080]
     C:\Program Files (x86)\PICC\drivers\lcd.c               [19-sept-13 15:38  CRC=D1A6378A]
     C:\Program Files (x86)\PICC\drivers\kbd.c               [23-sept-10 09:09  CRC=8814BCFC]
 
-Source signature=2E53889D
+Source signature=7FEC6D41
 
 Units:
     DHT22 con teclado (main)

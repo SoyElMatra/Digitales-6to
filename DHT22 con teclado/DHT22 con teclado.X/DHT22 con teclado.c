@@ -16,9 +16,11 @@
 
 byte dht22_dat[5];
 short signo;
-float dhthum, dthtemp, temp1, humid;
+float dhthum, dthtemp, temp1, humid, tmin, tmax, tminold, tmaxold;
 int GlobalErr1, GlobalErr2, GlobalErr3, k;
+float humin, humax;
 byte leer_datos_dht();
+int1 neg = 0;
 
 byte leer_datos_dht() {
     byte i = 0;
@@ -102,6 +104,118 @@ Void leer_dht22(void) {
     dthtemp = (temp1) / 10;
 }
 
+void cambiar_temp() {
+    disable_interrupts(GLOBAL);
+    tminold = tmin;
+    tmaxold = tmax;
+    
+    //======TEMP MAX======\\
+
+    lcd_putc("Ingrese:(* = -)\n");
+    printf(lcd_putc, "Temper.Min (   )");
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (K != '*' & k != '0') {
+        k = kbd_getc();
+    }
+
+    if (k != '*') {
+        lcd_gotoxy(13, 2);
+        printf(lcd_putc, "\%c", k);
+        neg = 0;
+    } else {
+        lcd_gotoxy(13, 2);
+        printf(lcd_putc, "\%c", '-');
+        tmin = (k - 48)*100;
+        neg = 1;
+    }
+
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (k != '*' & k > (8 + 48) | (k > 4 + 48 & temp < 0)) {
+        k = kbd_getc();
+    }
+
+    lcd_gotoxy(13, 2);
+    printf(lcd_putc, "\%c", k);
+    if (neg == 1) {
+        tmin = -(k - 48)*10;
+    } else {
+        tmin = (k - 48)*10;
+    }
+
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (k == 0) {
+        k = kbd_getc();
+    }
+
+    lcd_gotoxy(13, 2);
+    printf(lcd_putc, "\%c", k);
+    if (neg == 1) {
+        tmin = -(k - 48);
+    } else {
+        tmin = (k - 48);
+    }
+    delay_ms(500);
+    
+    //======TEMP MAX======\\
+
+    lcd_putc("Ingrese:(* = -)\n");
+    printf(lcd_putc, "Temper.Max (   )");
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (K != '*' & k != '0') {
+        k = kbd_getc();
+    }
+
+    if (k != '*') {
+        lcd_gotoxy(13, 2);
+        printf(lcd_putc, "\%c", k);
+        neg = 0;
+    } else {
+        lcd_gotoxy(13, 2);
+        printf(lcd_putc, "\%c", '-');
+        tmax = (k - 48)*100;
+        neg = 1;
+    }
+
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (k != '*' & k > (8 + 48) | (k > 4 + 48 & neg = 1)) {
+        k = kbd_getc();
+    }
+
+    lcd_gotoxy(13, 2);
+    printf(lcd_putc, "\%c", k);
+    if (neg == 1) {
+        tmax = -(k - 48)*10;
+    } else {
+        tmax = (k - 48)*10;
+    }
+
+    k = kbd_getc(); //devuelve la tecla pulsada si no se apreta ninguna tecla devuelve el 0 en decimal
+    while (k == 0) {
+        k = kbd_getc();
+    }
+
+    lcd_gotoxy(13, 2);
+    printf(lcd_putc, "\%c", k);
+    if (neg == 1) {
+        tmax = -(k - 48);
+    } else {
+        tmax = (k - 48);
+    }
+    delay_ms(500);
+    
+    if(tmin >= tmax){
+        lcd_putc("ERROR:\nValores erroneos");
+        tmin = tminold;
+        tmax = tmaxold;
+    }else{
+        
+    }
+}
+
+void cambiar_hum() {
+
+}
+
 int contador;
 #int_TIMER0
 
@@ -149,6 +263,3 @@ void main() {
         }
     }
 }
-
-
-

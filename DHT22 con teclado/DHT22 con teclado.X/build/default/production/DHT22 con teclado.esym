@@ -1,7 +1,7 @@
 D G "__PCM__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
 D G "__DATE__" 0 0 ""04-sept-25""
-D G "__TIME__" 0 0 ""14:12:36""
+D G "__TIME__" 0 0 ""14:42:53""
 D G "__16F876A" 0 0 "1" "funciona ok"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
@@ -839,10 +839,12 @@ C L "leer_dht22" 0 52 1 "FUNCTION"
 C L "leer_dht22" 0 52 1 "FUNCTION"
 C L "leer_dht22" 0 52 1 "FUNCTION"
 C L "leer_dht22" 0 52 2 "FUNCTION"
-V G "contador" 0 105 "int8" `685 
-F G "TIMER0_isr" 0 108 "void()" `686 
+F G "cambiar_temp" 0 105 "void()" `685 
+F G "cambiar_hum" 0 110 "void()" `689 
+V G "contador" 0 114 "int8" `690 
+F G "TIMER0_isr" 0 117 "void()" `691 
 C L "MAIN" 0 52 1 "FUNCTION"
-F G "MAIN" 0 129 "void()" `705 
+F G "MAIN" 0 138 "void()" `709 
 C L "MAIN" 0 52 1 "FUNCTION"
 C L "MAIN" 0 52 1 "FUNCTION"
 C L "MAIN" 0 52 1 "FUNCTION"
