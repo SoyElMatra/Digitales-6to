@@ -1,0 +1,5 @@
+Z:\6 Electronica\Affre\6_Elec\Digitales\SRF04_varios sensores(INT_RB).X\SRF04_RB4-7+RB0.c:123:1:  Warning#203  Condition always TRUE
+Z:\6 Electronica\Affre\6_Elec\Digitales\SRF04_varios sensores(INT_RB).X\SRF04_RB4-7+RB0.c:36:10:  Warning#202  Variable never used:   dummy
+      Memory usage:   ROM=14%      RAM=5% - 12%
+      0 Errors,  2 Warnings.
+Build Successful.

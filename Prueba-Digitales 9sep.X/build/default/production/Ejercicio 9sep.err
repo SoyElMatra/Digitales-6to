@@ -1,0 +1,20 @@
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:50:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:60:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:60:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:80:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:80:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:194:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:194:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:220:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:258:1:  Warning#203  Condition always TRUE
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_663)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGCN_663)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:265:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_U_663)
+C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\Ejercicio 9sep.c:18:31:  Warning#202  Variable never used:   humid
+      Memory usage:   ROM=15%      RAM=3% - 5%
+      0 Errors,  17 Warnings.
+Build Successful.

@@ -1,0 +1,238 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     kbd_getc.kbd_call_count
+018.0   kbd_getc.kbd_down
+018.1   signo
+019     kbd_getc.last_key
+01A     kbd_getc.col
+01B-01F dht22_dat
+020     i
+021     valor1
+022-025 dhthum
+026-029 dthtemp
+02A-02D temp1
+02E-031 humid
+032     GlobalErr1
+033     GlobalErr2
+034     GlobalErr3
+035     temp
+036     tmin
+037     tmax
+038     hum
+039     hmin
+03A     hmax
+03B     K
+03C     contador
+03D     kbd_getc.kchar
+03D     lcd_init.i
+03D     cambiar_temp.@SCRATCH1
+03D     MAIN.@SCRATCH1
+03E     kbd_getc.row
+03E-041 lcd_init.LCD_INIT_STRING
+03F     kbd_getc.@SCRATCH1
+040     kbd_getc.@SCRATCH2
+042     lcd_init.@SCRATCH1
+04A     @PRINTF_U_663.P1
+04A     leer_dht22.dht22_in
+04A-04D @PRINTF_L32D_663FPFPF.P1
+04A     @PSTRINGCN_663.P2
+04A     @PSTRINGC_663.@SCRATCH1
+04A     TIMER0_isr.@SCRATCH1
+04B     @PRINTF_U_663.P1
+04B-04E @FLT.P2
+04B     leer_dht22.i
+04B     @PSTRINGC_663.@SCRATCH2
+04B     @PSTRINGCN_663.@SCRATCH1
+04C     leer_dht22.dht22_checksum
+04C     @DIV88.P1
+04C     @PSTRINGCN_663.@SCRATCH2
+04D-04E leer_dht22.temperatura
+04D     @DIV88.P1
+04E     @PRINTF_L32D_663FPFPF.P1
+04E     @DIV88.@SCRATCH1
+04F-050 leer_dht22.humedad
+04F-052 @FLT.P1
+04F     @PRINTF_L32D_663FPFPF.@SCRATCH1
+050     @PRINTF_L32D_663FPFPF.@SCRATCH2
+051-054 leer_dht22.temp1
+051     @PRINTF_L32D_663FPFPF.@SCRATCH3
+052     @PRINTF_L32D_663FPFPF.@SCRATCH4
+053     @PRINTF_L32D_663FPFPF.@SCRATCH5
+053     @FLT.@SCRATCH1
+054     @PRINTF_L32D_663FPFPF.@SCRATCH6
+054     @FLT.@SCRATCH2
+055-058 leer_dht22.hum
+055     @PRINTF_L32D_663FPFPF.@SCRATCH7
+056     @PRINTF_L32D_663FPFPF.@SCRATCH8
+057-05A @MULFF.P1
+057-05A @FTOSD.P2
+057     lcd_putc.c
+057-05A @DIV3232.P1
+058     lcd_gotoxy.x
+059     @delay_ms1.P1
+059-05A @ITOF.P2
+059     lcd_gotoxy.y
+059-05C @DIVFF.P1
+059     leer_dht22.@SCRATCH1
+05A     lcd_gotoxy.address
+05A     leer_dht22.@SCRATCH2
+05B-05E @MULFF.P1
+05B-05E @DIV3232.P2
+05B     leer_datos_dht.i
+05B     lcd_gotoxy.@SCRATCH1
+05B     @FTOSD.@SCRATCH1
+05C     lcd_send_byte.address
+05C     leer_datos_dht.result
+05D     lcd_send_byte.n
+05D-060 @DIVFF.P1
+05D     leer_datos_dht.@SCRATCH1
+05E     lcd_read_byte.low
+05E     lcd_send_byte.@SCRATCH1
+05F     lcd_read_byte.high
+05F     lcd_send_nibble.n
+05F     @MULFF.@SCRATCH1
+05F     @DIV3232.@SCRATCH1
+060     lcd_read_byte.@SCRATCH1
+060     @MULFF.@SCRATCH2
+060     @DIV3232.@SCRATCH2
+061     @DIVFF.@SCRATCH1
+061     @MULFF.@SCRATCH3
+061     @DIV3232.@SCRATCH3
+062     @DIVFF.@SCRATCH2
+062     @DIV3232.@SCRATCH4
+063     @DIVFF.@SCRATCH3
+063     @DIV3232.@SCRATCH5
+064     @DIVFF.@SCRATCH4
+065     @DIVFF.@SCRATCH5
+066     @DIVFF.@SCRATCH6
+092.2   dht_io
+F81     kbd
+F81     lcd
+F8A     lcdlat
+F93     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  kbd_init
+000096  KEYS.call
+0000B0  KEYS.data
+0000BC  @const709.call
+0000C6  @const711.call
+0000D2  @const712.call
+0000DC  @const713.call
+0000E8  @const714.call
+0000F2  @const715.call
+0000FC  @const716.call
+000106  @const717.call
+000110  @const721.call
+00012A  @const722.call
+000132  @const731.call
+00013A  @delay_ms1
+000162  leer_datos_dht
+0001B2  @ITOF
+0001E8  @DIVFF
+000342  leer_dht22
+0004BA  lcd_read_nibble
+0004C6  lcd_read_byte
+000502  lcd_send_nibble
+00051A  lcd_send_byte
+000554  lcd_gotoxy
+000576  lcd_putc
+0005C6  @PSTRINGC_663
+0005E6  @PSTRINGCN_663
+000604  @MULFF
+0006F8  @FTOSD
+000738  @DIV3232
+0007C6  @PRINTF_L32D_663FPFPF
+00093E  @DIV88
+000966  @PRINTF_U_663
+0009CC  @FLT
+000A42  TIMER0_isr
+000C88  @const749.call
+000C9A  @const750.call
+000CA6  @const762.call
+000CB4  @const763.call
+000CC0  @const764.call
+000CCA  @const765.call
+000CD4  @const766.call
+000CDE  @const767.call
+000CE8  @const774.call
+000CF6  lcd_init
+000DC2  kbd_getc
+000E7C  cambiar_temp
+00128A  MAIN
+00128A  @cinit1
+0012AC  @cinit2
+
+Project Directory:
+    C:\Users\Electronica\Desktop\Prueba-Digitales 9sep.X\
+
+Project Files:
+    Ejercicio 9sep.c                                        [09-sept-25 16:23  CRC=78FEAF2E]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F2550.h  [12-nov-13 14:35  CRC=13DBFC6E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c      [19-sept-13 15:38  CRC=D1A6378A]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\kbd.c      [23-sept-10 09:09  CRC=8814BCFC]
+
+Source signature=6EAA5D1E
+
+Units:
+    Ejercicio 9sep (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F2550 1
+
+Output Files:
+    XREF file:   build\default\production\Ejercicio 9sep.xsym
+    Errors:      build\default\production\Ejercicio 9sep.err
+    Ext Symbols: build\default\production\Ejercicio 9sep.esym
+    INHX32:      build\default\production\Ejercicio 9sep.hex
+    Symbols:     build\default\production\Ejercicio 9sep.sym
+    List:        build\default\production\Ejercicio 9sep.lst
+    Debug/COFF:  build\default\production\Ejercicio 9sep.cof
+    Project:     Ejercicio 9sep.ccspjt
+    Call Tree:   build\default\production\Ejercicio 9sep.tre
+    Statistics:  build\default\production\Ejercicio 9sep.STA
