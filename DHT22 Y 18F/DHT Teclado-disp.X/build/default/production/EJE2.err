@@ -1,0 +1,21 @@
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:50:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:60:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:60:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:80:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:80:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:194:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:194:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:220:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:233:1:  Warning#214  Operator precedance rules may not be as intended, use () to clarify
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:271:1:  Warning#203  Condition always TRUE
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_663)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGCN_663)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:278:1:  Warning#216  Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_U_663)
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\DHT22 Y 18F\DHT Teclado-disp.X\EJE2.c:18:31:  Warning#202  Variable never used:   humid
+      Memory usage:   ROM=16%      RAM=3% - 5%
+      0 Errors,  18 Warnings.
+Build Successful.
