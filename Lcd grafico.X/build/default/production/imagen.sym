@@ -1,0 +1,132 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-023 MAIN.A5
+024-026 MAIN.A4
+027-029 MAIN.A3
+02A-02C MAIN.A2
+02D-02F MAIN.A1
+030-032 MAIN.A0
+033-03B MAIN.IN
+03C     glcd_init.mode
+03C     glcd_imagen.imagen
+03C     MAIN.@SCRATCH1
+03D     @delay_ms1.P1
+03D     glcd_fillScreen.color
+03D     glcd_imagen.i
+03E     glcd_imagen.j
+03E     glcd_fillScreen.i
+03F     glcd_fillScreen.j
+03F     glcd_imagen.k
+040     @MUL88.P1
+040     glcd_rect.x1
+040     glcd_fillScreen.@SCRATCH1
+040     glcd_imagen.@SCRATCH1
+041     @MUL88.P1
+041     glcd_rect.y1
+041     glcd_imagen.@SCRATCH2
+042     glcd_rect.x2
+043     glcd_rect.y2
+044     glcd_rect.fill
+045     glcd_rect.color
+046     glcd_rect.i
+047     glcd_rect.xmin
+048     glcd_rect.xmax
+049     glcd_rect.ymin
+04A     glcd_rect.ymax
+04B     glcd_line.x1
+04C     glcd_line.y1
+04D     glcd_line.x2
+04E     glcd_line.y2
+04F     glcd_line.color
+050-051 glcd_line.dy
+052-053 glcd_line.dx
+054     glcd_line.addx
+055     glcd_line.addy
+056-057 glcd_line.P
+058-059 glcd_line.diff
+05A     glcd_line.i
+05B     glcd_pixel.x
+05B     glcd_line.@SCRATCH1
+05C     glcd_pixel.y
+05D     glcd_pixel.color
+05E     glcd_pixel.data
+05F.0   glcd_pixel.side
+060     glcd_pixel.@SCRATCH1
+061     glcd_readByte.side
+061     glcd_pixel.@SCRATCH2
+062     glcd_readByte.data
+062     glcd_writeByte.side
+063     glcd_writeByte.data
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  imagen_1.call
+00000D  imagen_1.data
+00040D  glcd_writeByte
+00043E  @MUL88
+000463  glcd_init
+0004AA  glcd_fillScreen
+0004F2  glcd_readByte
+000523  glcd_pixel
+000599  glcd_line
+00064F  glcd_imagen
+000658  glcd_rect
+00075C  @delay_ms1
+000770  @cinit1
+000770  MAIN
+00077C  @cinit2
+000800  imagen_2.call
+000809  imagen_2.data
+
+Project Directory:
+    Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\
+
+Project Files:
+    imagen.c                                                [25-sept-25 14:05  CRC=A0933722]
+    C:\Program Files (x86)\PICC\devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
+    C:\Program Files (x86)\PICC\drivers\HDM64GS12.c         [08-jul-10 08:47  CRC=C1C373EF]
+    C:\Program Files (x86)\PICC\drivers\graphics.c          [06-jul-10 08:49  CRC=70BB89DE]
+
+Source signature=C50106D5
+
+Units:
+    imagen (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F877 1
+
+Output Files:
+    XREF file:   build\default\production\imagen.xsym
+    Errors:      build\default\production\imagen.err
+    Ext Symbols: build\default\production\imagen.esym
+    INHX8:       build\default\production\imagen.hex
+    Symbols:     build\default\production\imagen.sym
+    List:        build\default\production\imagen.lst
+    Debug/COFF:  build\default\production\imagen.cof
+    Project:     imagen.ccspjt
+    Call Tree:   build\default\production\imagen.tre
+    Statistics:  build\default\production\imagen.STA

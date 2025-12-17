@@ -1,0 +1,11 @@
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:184:1:  Warning#203  Condition always TRUE
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:175:10:  Warning#202  Variable never used:   A5
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:176:10:  Warning#202  Variable never used:   A4
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:177:10:  Warning#202  Variable never used:   A3
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:178:10:  Warning#202  Variable never used:   A2
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:179:10:  Warning#202  Variable never used:   A1
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:180:10:  Warning#202  Variable never used:   A0
+Z:\6 Electronica\Martin\6to Año\Digitales-6to\Lcd grafico.X\imagen.c:181:10:  Warning#202  Variable never used:   IN
+      Memory usage:   ROM=37%      RAM=10% - 20%
+      0 Errors,  8 Warnings.
+Build Successful.
